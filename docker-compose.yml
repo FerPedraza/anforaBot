@@ -1,0 +1,11 @@
+version: '3'
+services:
+  bot:
+    image: bot_bot4evolucion
+    container_name: bot_bot4evolucion
+    build: .
+    volumes:
+      - .:/chatbots-frameworkbot
+    command: tail -f /dev/null
+    ports:
+      - '5000:5000'
