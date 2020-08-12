@@ -11,7 +11,7 @@ from text.limpia_texto import  clean_text
 from conversion.convierte_a_letras import convert_to_letters
 from validacion.valida_telefono import validar_telefono
 
-import validacion.valida_correo
+from validacion.valid_email import is_valid_email
 
 class SmartBot():
     def __init__(self, facebook=False):
@@ -406,7 +406,7 @@ class SmartBot():
                     +  " nuestra página https://www.almacenesanfora.com/ @#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
 
             elif intencion == "dar_correo":
-                if valida_correo(text):
+                if is_valid_email(text):
                     mensaje = "¡Perfecto! 👏, Prepárate 📝"\
                         + "💡 TIP: Puedes mandar la foto de tu lista con el nombre de cada artículo y cantidad que " \
                         + "necesitas (piezas)" \
