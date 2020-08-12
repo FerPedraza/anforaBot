@@ -1,0 +1,9 @@
+**/old_models/
+**/tar.gz
+**/*tar.gz
+*tar.gz
+.idea
+__pycache__
+cinemex/models/*tar.gz
+cinemex/models/train/*tar.gz
+.DS_Store
