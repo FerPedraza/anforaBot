@@ -22,13 +22,13 @@
 - operador
 
 ## intent:sucursales
-- Sucursales (Horario, telefono y ubicacion) 
+- sucursales horario telefono y ubicacion 
 - buscar una sucursal
+- sucursales
 
 ## intent:tienda_linea
 - tienda en linea
 - tienda linea
-
 
 ## intent:cotizaciones
 - ver cotizaciones
@@ -45,139 +45,143 @@
 
 
 ## intent:salir
-- 
--
+- salir
+- adios
+- bye
+- nos vemos
+- hasta luego
+- see you
 
-## intent:aguascalientes:
+## intent:aguascalientes
 - aguascalientes
 - soy del estado de aguascalientes
 
-## intent:baja_california:
+## intent:baja_california
 - baja California
 - soy del estado de baja california
 
-## intent:baja_california_sur:
+## intent:baja_california_sur
 - baja california sur
 - soy del estado de baja california sur
 
-## intent:campeche:
+## intent:campeche
 - campeche
 - soy del estado de campeche
 
-## intent:coahuila:
+## intent:coahuila
 - coahuila
 - soy del estado de coahuila
 
-## intent:colima:
+## intent:colima
 - colima
 - soy del estado de colima
 
-## intent:chiapas:
+## intent:chiapas
 - chiapas
 - soy del estado de chiapas
 
-## intent:chihuahua:
+## intent:chihuahua
 - chihuahua
 - soy del estado de chihuahua
 
-## intent:durango:
+## intent:durango
 - durango
 - soy del estado de durango
 
-## intent:ciudad_de_mexico:
+## intent:ciudad_de_mexico
 - ciudad de mexico
 - soy del estado de ciudad de mexico
 - distrito federal
 - soy del estado de distrito federal
 
-## intent:guanajuato:
+## intent:guanajuato
 - guanajuato
 - soy del estado de guanajuato
 
-## intent:guerrero:
+## intent:guerrero
 - guerrero
 - soy del estado de guerrero
 
-## intent:hidalgo:
+## intent:hidalgo
 - hidalgo
 - soy del estado de hidalgo
 
-## intent:jalisco:
+## intent:jalisco
 - jalisco
 - soy del estado de jalisco
 
-## intent:mexico:
+## intent:mexico
 - mexico
 - soy del estado de mexico
 - del estado
 - soy del estado
 - toluca
 
-## intent:michoacan:
+## intent:michoacan
 - michoacan
 - soy del estado de michoacan
 
-## intent:morelos:
+## intent:morelos
 - morelos
 - soy del estado de morelos
 
-## intent:nayarit:
+## intent:nayarit
 - nayarit
 - soy del estado de nayarit
 
-## intent:nuevo leon:
+## intent:nuevo leon
 - nuevo leon
 - soy del estado de nuevo leon
 
-## intent:oaxaca:
+## intent:oaxaca
 - oaxaca
 - soy del estado de oaxaca
 
-## intent:puebla:
+## intent:puebla
 - puebla
 - soy del estado de puebla
 
-## intent:queretaro:
+## intent:queretaro
 - queretaro
 - soy del estado de queretaro
 
-## intent:quintana Roo:
+## intent:quintana Roo
 - quintana Roo
 - soy del estado de quintana Roo
 
-## intent:san luis potosi:
+## intent:san luis potosi
 - san luis potosi
 - soy del estado de san luis potosi
 
-## intent:sinaloa:
+## intent:sinaloa
 - sinaloa
 - soy del estado de sinaloa
 
-## intent:sonora:
+## intent:sonora
 - sonora
 - soy del estado de sonora
 
-## intent:tabasco:
+## intent:tabasco
 - tabasco
 - soy del estado de tabasco
 
-## intent:tamaulipas:
+## intent:tamaulipas
 - tamaulipas
 - soy del estado de tamaulipas
 
-## intent:tlaxcala:
+## intent:tlaxcala
 - tlaxcala
 - soy del estado de tlaxcala
 
-## intent:veracruz:
+## intent:veracruz
 - veracruz
 - soy del estado de veracruz
 
-## intent:yucatan:
+## intent:yucatan
 - yucatan
 - soy del estado de yucatan
 
-## intent:zacatecas:
+## intent:zacatecas
 - zacatecas
 - soy del estado de zacatecas
 
@@ -220,7 +224,7 @@
 - leon delta
 - tuxtla gutierrez
 
-## intent:dar_numero:
+## intent:dar_numero
 - 1234567890
 - 3698520147
 
@@ -229,7 +233,7 @@
 -
 
 ## intent:agente_quiero_comprar
--
+- 
 -
 
 ## intent:dar_fecha_nacimiento
