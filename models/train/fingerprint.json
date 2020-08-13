@@ -3,9 +3,9 @@
   "core-config": "95c1b632bd1c398582f24965d588acc2",
   "nlu-config": "b7d7e4d209b4a466873bc2625b1b884b",
   "domain": 2157563449571653326,
-  "nlg": "a3763b4c37e94a48030704da835ed4bd",
-  "messages": 681952437557793742,
-  "stories": 2050731538181874905,
-  "trained_at": 1597309225.9011805,
+  "nlg": "2091b0d6fcc0bbdba4540a66328b009e",
+  "messages": 615223813883527849,
+  "stories": 2095538114233309409,
+  "trained_at": 1597311983.2609653,
   "version": "1.5.0"
 }

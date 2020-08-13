@@ -406,7 +406,7 @@ templates:
       title: Regresar al menú principal
     - payload: /salir
       title: Salir
-    text: ''
+    text: ¿Qué deseas? Escribe el número.
   utter_tlaxcala:
   - buttons:
     - payload: /saludar

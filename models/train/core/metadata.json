@@ -3,19 +3,25 @@
     "action_listen": {
       "slots": []
     },
-    "utter_mensaje_covid": {
-      "slots": []
-    },
-    "utter_rastrear_pedido": {
-      "slots": []
-    },
-    "utter_baja_california": {
+    "utter_agente": {
       "slots": []
     },
     "utter_cotizaciones": {
       "slots": []
     },
+    "utter_sucursales": {
+      "slots": []
+    },
+    "utter_mensaje_covid": {
+      "slots": []
+    },
     "utter_problema_pedido": {
+      "slots": []
+    },
+    "utter_baja_california": {
+      "slots": []
+    },
+    "utter_tienda_linea": {
       "slots": []
     },
     "utter_quiero_comprar": {
@@ -24,10 +30,7 @@
     "utter_baja_california_sur": {
       "slots": []
     },
-    "utter_sucursales": {
-      "slots": []
-    },
-    "utter_agente": {
+    "utter_rastrear_pedido": {
       "slots": []
     }
   },
@@ -43,7 +46,7 @@
     "rasa.core.policies.keras_policy.KerasPolicy",
     "rasa.core.policies.mapping_policy.MappingPolicy"
   ],
-  "trained_at": "20200813-040112",
+  "trained_at": "20200813-044713",
   "rasa": "1.5.0",
   "tensorflow": "1.15.2",
   "sklearn": "0.20.4"

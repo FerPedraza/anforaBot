@@ -1,1 +1,6 @@
-[]
+[
+    {
+        "name": "regex_mail",
+        "pattern": "^\\d{6}$"
+    }
+]

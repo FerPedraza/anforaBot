@@ -29,6 +29,10 @@
 ## intent:tienda_linea
 - tienda en linea
 - tienda linea
+- linea tienda
+- en tienda en linea
+- ver la tienda en linea
+- opcion de la tienda en linea
 
 ## intent:cotizaciones
 - ver cotizaciones
@@ -188,6 +192,8 @@
 ## intent:quiero_comprar
 - quiero comprar
 - comprar quiero
+- quisiera comprar
+- quiero ir a comprar
 
 ## intent:rastrear_pedido
 - quiero rastrear mi pedido
@@ -229,12 +235,18 @@
 - 3698520147
 
 ## intent:dar_correo
--
--
+- email@gmail.com
+- email@hotmail.com
+- email@live.com
+- email@yahoo.com
+- email@e-bitware.com
+
+## regex:regex_mail
+- ^\d{6}$
 
 ## intent:agente_quiero_comprar
-- 
--
+- agente quiero comprar
+- hablar con agente quiero comprar
 
 ## intent:dar_fecha_nacimiento
 - 1 de enero de 2019

@@ -95,7 +95,7 @@ templates:
         payload: /salir
 
   utter_tienda_linea:
-  - text: ""
+  - text: "¿Qué deseas? Escribe el número."
     buttons:
       - title: "Quiero comprar"
         payload: /quiero_comprar
