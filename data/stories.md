@@ -33,7 +33,27 @@
 ## baja_california_sur
 * baja_california_sur
  - utter_baja_california_sur
+
+## quintana_roo
+* quintana_roo
+ - utter_quintana_roo
+ 
+## nuevo_leon
+* nuevo_leon
+ - utter_nuevo_leon
+  
+## san_luis_potosi
+* san_luis_potosi
+ - utter_san_luis_potosi
  
 ## tienda_linea
 * tienda_linea
  - utter_tienda_linea 
+
+## agente_quiero_comprar
+* agente_quiero_comprar
+ - utter_agente_quiero_comprar 
+  
+## salir
+* salir
+ - utter_salir  

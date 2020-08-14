@@ -18,11 +18,11 @@ actions:
 - utter_michoacán
 - utter_morelos
 - utter_nayarit
-- utter_nuevo león
+- utter_nuevo_leon
 - utter_oaxaca
 - utter_puebla
-- utter_quintana Roo
-- utter_san luis potosí
+- utter_quintana_roo
+- utter_san_luis_potosi
 - utter_sinaloa
 - utter_sonora
 - utter_tabasco
@@ -32,6 +32,8 @@ actions:
 - utter_zacatecas
 - utter_cotizaciones
 - utter_mensaje_covid
+- utter_salir
+- utter_agente_quiero_comprar
 
 intents:
 - saludar
@@ -66,11 +68,11 @@ intents:
 - michoacan
 - morelos
 - nayarit
-- nuevo leon
+- nuevo_leon
 - oaxaca
 - puebla
-- quintana Roo
-- san luis potosi
+- quintana_roo
+- san_luis_potosi
 - sinaloa
 - sonora
 - tabasco
@@ -85,7 +87,11 @@ intents:
 - dar_fecha_nacimiento
 - agente
 
+
 templates:
+  utter_salir:
+  - text: "Muchas gracias por haberte contactado. ¡Hasta luego!"
+
   utter_sucursales:
   - text: "¡Escribe el ESTADO del cual nos contactas, por favor"
     buttons:
@@ -232,7 +238,7 @@ templates:
       - title: "Salir"
         payload: /salir
 
-  utter_nuevo león:
+  utter_nuevo_leon:
   - text: "No hay ninguna tienda cerca"
     buttons:
       - title: "Regresar al menú principal"
@@ -256,7 +262,7 @@ templates:
       - title: "Salir"
         payload: /salir
 
-  utter_quintana Roo:
+  utter_quintana_roo:
   - text: "No hay ninguna tienda cerca"
     buttons:
       - title: "Regresar al menú principal"
@@ -264,7 +270,7 @@ templates:
       - title: "Salir"
         payload: /salir
 
-  utter_san luis potosí:
+  utter_san_luis_potosi:
   - text: "No hay ninguna tienda cerca"
     buttons:
       - title: "Regresar al menú principal"
@@ -355,6 +361,9 @@ templates:
         payload: /saludar
       - title: "Salir"
         payload: /salir
+
+  utter_agente_quiero_comprar:
+  - text: "En seguida te contactaré con un agente de Ventas. @#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
 
   utter_agente:
   - text: "@#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"

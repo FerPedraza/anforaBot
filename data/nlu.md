@@ -33,6 +33,7 @@
 - en tienda en linea
 - ver la tienda en linea
 - opcion de la tienda en linea
+- en tienda linea
 
 ## intent:cotizaciones
 - ver cotizaciones
@@ -194,10 +195,15 @@
 - comprar quiero
 - quisiera comprar
 - quiero ir a comprar
+- a quiero comprar
+- en quiero comprar
+- opcion de quiero comprar
 
 ## intent:rastrear_pedido
 - quiero rastrear mi pedido
 - rastrear pedido
+- quiero rastrear mi pedido
+- rastrear mi pedido
 
 ## intent:problema_pedido
 - tengo un problema con mi pedido
@@ -247,6 +253,10 @@
 ## intent:agente_quiero_comprar
 - agente quiero comprar
 - hablar con agente quiero comprar
+- agente para comprar
+- comprar con un agente
+- comunicar con un agente para comprar
+- si agente para compra
 
 ## intent:dar_fecha_nacimiento
 - 1 de enero de 2019

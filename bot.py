@@ -87,7 +87,7 @@ class SmartBot:
         # 172.17.0.3 docker server default 172.31.0.2 #docker local 172.17.0.2
         b_client = pymongo.MongoClient(ip, 27017)
         db = b_client['Chatbots']
-        self.colection = db['quatro_evolucion']
+        self.colection = db['anfora']
         self.facebook = facebook
 
     def bot(self, text, users):
@@ -126,12 +126,13 @@ class SmartBot:
         elif intencion == "quiero_comprar" or intencion == "rastrear_pedido" or intencion == "problema_pedido" \
                 or intencion == "cancelar_pedido":
             tz = pytz.timezone('America/Mexico_City')
-            ct = datetime.now(tz=tz)
+            ct = datetime.now(tz=tz).replace(tzinfo=None)
+            print("CT DE 130",ct)
             self.update_request(campo="menu_tienda_linea", valor=intencion, date=ct)
         if users['name'] == 'Humano':
             # Este if evalua la confianza del texto, si es una frase o palabra diferente a las del entrenamiento
             # la tomara como que no la conoce y se ejecutará esta parte del codigo.
-            if confianza < 0.55:
+            if confianza < 0.55 and intencion != "dar_correo" and intencion != "dar_numero":
                 mensaje, users = saludar(users)
 
                 # self.save_info(text, mensaje, NLU, users['buttons'])
@@ -360,8 +361,18 @@ class SmartBot:
 
             elif intencion == "dar_numero":
                 # mp = self.colection.find_one({"user_id": self.main_user}).get("request").get("menu_principal")
-                mtl = self.colection.find_one({"user_id": self.main_user}).get("request").get("menu_tienda_linea")
-                if mtl == "quiero_comprar":
+                mtl0 = self.colection.find_one({"user_id": self.main_user}).get("request").get("menu_tienda_linea")
+                mtl = mtl0.get("opcion")
+                date = mtl0.get("date")
+                tz = pytz.timezone('America/Mexico_City')
+                ct_now = datetime.now(tz=tz).replace(tzinfo=None)
+
+
+                print("MTL", mtl)
+                print("DATE", date)
+                print("ct_NOW", ct_now)
+                print("ct_now - timedelta(minutes=5)",ct_now - timedelta(minutes=5))
+                if mtl == "quiero_comprar" and ct_now - date < timedelta(minutes=5):
                     if validar_telefono(text):
                         mensaje = "Por favor compárteme tu correo electrónico" \
                                   + "\n1. Regresar al menú principal" \
@@ -446,7 +457,7 @@ class SmartBot:
                               + "💡 TIP: Puedes mandar la foto de tu lista con el nombre de cada artículo y cantidad " \
                                 "que " \
                               + "necesitas (piezas)" \
-                                "@#ADDITIONALTEXT#@ Un agente tomará tu pedido ¿Estás listo?" \
+                                 "Un agente tomará tu pedido ¿Estás listo?" \
                               + "\n1. Si" \
                               + "\n2. No" \
                               + "\n3. Regresar al menú principal" \
@@ -470,10 +481,6 @@ class SmartBot:
                     users = menu_principal_salir(users)
                 return mensaje, users
 
-            elif intencion == "agente_quiero_comprar":
-                mensaje = "En seguida te contactaré con un agente de Ventas." \
-                          + " @#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
-                return mensaje, users
 
         #        else:
         #            print("A1090")

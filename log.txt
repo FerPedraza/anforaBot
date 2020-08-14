@@ -132,3 +132,544 @@ AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
 127.0.0.1 - - [13/Aug/2020 04:51:13] "[37mPOST /webhook HTTP/1.1[0m" 200 -
 127.0.0.1 - - [13/Aug/2020 04:51:45] "[37mPOST /webhook HTTP/1.1[0m" 200 -
 127.0.0.1 - - [13/Aug/2020 04:51:52] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [13/Aug/2020 10:44:23] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 10:44:27] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 10:44:30] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 10:44:34] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [13/Aug/2020 11:07:02] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 11:07:06] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 11:07:08] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 11:07:13] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 11:07:17] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 11:07:21] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 11:07:23] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [13/Aug/2020 11:11:51] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 11:12:17] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 11:12:20] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 11:12:22] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 11:12:25] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 11:12:30] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [13/Aug/2020 11:16:39] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 11:16:41] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 11:16:43] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 11:16:46] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 11:16:48] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 11:16:55] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 11:17:04] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 11:17:19] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [13/Aug/2020 11:18:27] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 11:18:30] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 11:18:34] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 11:18:40] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 11:18:47] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [13/Aug/2020 11:19:48] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 11:19:50] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 11:19:55] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 11:20:02] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 11:20:09] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 11:20:20] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [13/Aug/2020 11:21:55] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [13/Aug/2020 11:23:31] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 11:23:48] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [13/Aug/2020 11:32:55] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 11:32:57] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 11:33:01] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 11:33:10] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 11:33:17] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [13/Aug/2020 11:40:46] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 11:40:48] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 11:40:51] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 11:40:55] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+Exception on /webhook [POST]
+Traceback (most recent call last):
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "bot_service.py", line 36, in webhook
+    return Bot.get_response(D,interpreter,agent,users)
+  File "/home/uziel/repositorios/chatbot-botanfora/bot.py", line 725, in get_response
+    respuesta, users[self.main_user] = self.bot(self.original_text, users[self.main_user])
+  File "/home/uziel/repositorios/chatbot-botanfora/bot.py", line 370, in bot
+    if mtl == "quiero_comprar" and date_now - timedelta(minutes=5) > date:
+TypeError: can't compare offset-naive and offset-aware datetimes
+127.0.0.1 - - [13/Aug/2020 11:41:06] "[35m[1mPOST /webhook HTTP/1.1[0m" 500 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+Exception on /webhook [POST]
+Traceback (most recent call last):
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "bot_service.py", line 36, in webhook
+    return Bot.get_response(D,interpreter,agent,users)
+  File "/home/uziel/repositorios/chatbot-botanfora/bot.py", line 725, in get_response
+    respuesta, users[self.main_user] = self.bot(self.original_text, users[self.main_user])
+  File "/home/uziel/repositorios/chatbot-botanfora/bot.py", line 370, in bot
+    if mtl == "quiero_comprar" and date_now - timedelta(minutes=5) > date:
+TypeError: can't compare offset-naive and offset-aware datetimes
+127.0.0.1 - - [13/Aug/2020 11:48:35] "[35m[1mPOST /webhook HTTP/1.1[0m" 500 -
+127.0.0.1 - - [13/Aug/2020 11:48:41] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 11:48:46] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 11:48:56] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 11:49:04] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+Exception on /webhook [POST]
+Traceback (most recent call last):
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "bot_service.py", line 36, in webhook
+    return Bot.get_response(D,interpreter,agent,users)
+  File "/home/uziel/repositorios/chatbot-botanfora/bot.py", line 725, in get_response
+    respuesta, users[self.main_user] = self.bot(self.original_text, users[self.main_user])
+  File "/home/uziel/repositorios/chatbot-botanfora/bot.py", line 370, in bot
+    if mtl == "quiero_comprar" and date_now - timedelta(minutes=5) > date:
+TypeError: can't compare offset-naive and offset-aware datetimes
+127.0.0.1 - - [13/Aug/2020 11:49:13] "[35m[1mPOST /webhook HTTP/1.1[0m" 500 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [13/Aug/2020 12:39:51] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 12:39:59] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 12:40:03] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 12:40:10] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 12:40:18] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 12:41:36] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 12:41:55] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 12:41:58] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 12:42:02] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 12:42:06] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 12:42:18] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [13/Aug/2020 22:10:03] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 22:10:07] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 22:10:13] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 22:10:16] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 22:10:21] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 22:10:27] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 22:10:34] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 22:10:41] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 22:53:06] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 22:53:09] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 22:53:12] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 22:53:21] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 22:53:30] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [13/Aug/2020 23:03:40] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 23:03:47] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 23:03:51] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 23:03:58] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 23:04:07] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [13/Aug/2020 23:07:27] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 23:07:33] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 23:07:37] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 23:07:44] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 23:07:50] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [13/Aug/2020 23:12:45] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 23:12:48] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 23:12:53] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 23:12:57] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 23:13:05] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [13/Aug/2020 23:23:20] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 23:23:23] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 23:23:27] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 23:23:34] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 23:23:40] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [13/Aug/2020 23:28:05] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 23:28:16] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 23:28:24] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 23:28:28] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 23:28:35] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [13/Aug/2020 23:50:06] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 23:50:11] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 23:50:14] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 23:50:19] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+Exception on /webhook [POST]
+Traceback (most recent call last):
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "bot_service.py", line 36, in webhook
+    return Bot.get_response(D,interpreter,agent,users)
+  File "/home/uziel/repositorios/chatbot-botanfora/bot.py", line 737, in get_response
+    respuesta, users[self.main_user] = self.bot(self.original_text, users[self.main_user])
+  File "/home/uziel/repositorios/chatbot-botanfora/bot.py", line 379, in bot
+    print("MTL",mtl, date, date_now)
+NameError: name 'date_now' is not defined
+127.0.0.1 - - [13/Aug/2020 23:51:00] "[35m[1mPOST /webhook HTTP/1.1[0m" 500 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [13/Aug/2020 23:52:51] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 23:52:54] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 23:52:55] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 23:53:01] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+Exception on /webhook [POST]
+Traceback (most recent call last):
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "bot_service.py", line 36, in webhook
+    return Bot.get_response(D,interpreter,agent,users)
+  File "/home/uziel/repositorios/chatbot-botanfora/bot.py", line 736, in get_response
+    respuesta, users[self.main_user] = self.bot(self.original_text, users[self.main_user])
+  File "/home/uziel/repositorios/chatbot-botanfora/bot.py", line 381, in bot
+    if mtl == "quiero_comprar" and ct_now - timedelta(minutes=5) > date:
+TypeError: can't compare offset-naive and offset-aware datetimes
+127.0.0.1 - - [13/Aug/2020 23:53:08] "[35m[1mPOST /webhook HTTP/1.1[0m" 500 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [13/Aug/2020 23:57:13] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 23:57:20] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 23:57:23] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 23:57:28] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+Exception on /webhook [POST]
+Traceback (most recent call last):
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "bot_service.py", line 36, in webhook
+    return Bot.get_response(D,interpreter,agent,users)
+  File "/home/uziel/repositorios/chatbot-botanfora/bot.py", line 736, in get_response
+    respuesta, users[self.main_user] = self.bot(self.original_text, users[self.main_user])
+  File "/home/uziel/repositorios/chatbot-botanfora/bot.py", line 381, in bot
+    if mtl == "quiero_comprar" and ct_now - timedelta(minutes=5) > date:
+TypeError: can't compare offset-naive and offset-aware datetimes
+127.0.0.1 - - [13/Aug/2020 23:57:35] "[35m[1mPOST /webhook HTTP/1.1[0m" 500 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [14/Aug/2020 00:07:15] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 00:07:20] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 00:07:23] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 00:07:29] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+Exception on /webhook [POST]
+Traceback (most recent call last):
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "bot_service.py", line 36, in webhook
+    return Bot.get_response(D,interpreter,agent,users)
+  File "/home/uziel/repositorios/chatbot-botanfora/bot.py", line 736, in get_response
+    respuesta, users[self.main_user] = self.bot(self.original_text, users[self.main_user])
+  File "/home/uziel/repositorios/chatbot-botanfora/bot.py", line 375, in bot
+    ct_now = datetime.now(tz=tz).replace(tzinfo='America/Mexico_City')
+TypeError: tzinfo argument must be None or of a tzinfo subclass, not type 'str'
+127.0.0.1 - - [14/Aug/2020 00:07:47] "[35m[1mPOST /webhook HTTP/1.1[0m" 500 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [14/Aug/2020 00:10:44] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 00:10:47] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 00:10:50] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 00:10:57] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+Exception on /webhook [POST]
+Traceback (most recent call last):
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "bot_service.py", line 36, in webhook
+    return Bot.get_response(D,interpreter,agent,users)
+  File "/home/uziel/repositorios/chatbot-botanfora/bot.py", line 736, in get_response
+    respuesta, users[self.main_user] = self.bot(self.original_text, users[self.main_user])
+  File "/home/uziel/repositorios/chatbot-botanfora/bot.py", line 381, in bot
+    if mtl == "quiero_comprar" and ct_now - timedelta(minutes=5) > date:
+TypeError: can't compare offset-naive and offset-aware datetimes
+127.0.0.1 - - [14/Aug/2020 00:11:05] "[35m[1mPOST /webhook HTTP/1.1[0m" 500 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [14/Aug/2020 00:16:30] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 00:16:38] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 00:16:41] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 00:16:53] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+Exception on /webhook [POST]
+Traceback (most recent call last):
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "bot_service.py", line 36, in webhook
+    return Bot.get_response(D,interpreter,agent,users)
+  File "/home/uziel/repositorios/chatbot-botanfora/bot.py", line 736, in get_response
+    respuesta, users[self.main_user] = self.bot(self.original_text, users[self.main_user])
+  File "/home/uziel/repositorios/chatbot-botanfora/bot.py", line 372, in bot
+    date = mtl0.get("date").replace(tzinfo=tz)
+UnboundLocalError: local variable 'tz' referenced before assignment
+127.0.0.1 - - [14/Aug/2020 00:17:11] "[35m[1mPOST /webhook HTTP/1.1[0m" 500 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [14/Aug/2020 00:19:42] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 00:19:47] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 00:19:54] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 00:20:00] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+Exception on /webhook [POST]
+Traceback (most recent call last):
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "bot_service.py", line 36, in webhook
+    return Bot.get_response(D,interpreter,agent,users)
+  File "/home/uziel/repositorios/chatbot-botanfora/bot.py", line 736, in get_response
+    respuesta, users[self.main_user] = self.bot(self.original_text, users[self.main_user])
+  File "/home/uziel/repositorios/chatbot-botanfora/bot.py", line 372, in bot
+    date = mtl0.get("date").replace(tzinfo=pytz.tz)
+AttributeError: module 'pytz' has no attribute 'tz'
+127.0.0.1 - - [14/Aug/2020 00:20:14] "[35m[1mPOST /webhook HTTP/1.1[0m" 500 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [14/Aug/2020 00:39:32] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 00:39:36] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 00:39:39] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 00:39:43] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 00:39:49] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [14/Aug/2020 00:42:01] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 00:42:04] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 00:42:09] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 00:42:15] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 00:42:22] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [14/Aug/2020 01:36:43] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 01:36:45] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 01:36:50] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 01:36:54] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+Exception on /webhook [POST]
+Traceback (most recent call last):
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "bot_service.py", line 36, in webhook
+    return Bot.get_response(D,interpreter,agent,users)
+  File "/home/uziel/repositorios/chatbot-botanfora/bot.py", line 736, in get_response
+    respuesta, users[self.main_user] = self.bot(self.original_text, users[self.main_user])
+  File "/home/uziel/repositorios/chatbot-botanfora/bot.py", line 372, in bot
+    date = mtl0.get("date").replace(timezone='America/Mexico_City')
+TypeError: 'timezone' is an invalid keyword argument for replace()
+127.0.0.1 - - [14/Aug/2020 01:37:08] "[35m[1mPOST /webhook HTTP/1.1[0m" 500 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [14/Aug/2020 01:38:24] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 01:38:31] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 01:38:36] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 01:38:40] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+Exception on /webhook [POST]
+Traceback (most recent call last):
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "bot_service.py", line 36, in webhook
+    return Bot.get_response(D,interpreter,agent,users)
+  File "/home/uziel/repositorios/chatbot-botanfora/bot.py", line 736, in get_response
+    respuesta, users[self.main_user] = self.bot(self.original_text, users[self.main_user])
+  File "/home/uziel/repositorios/chatbot-botanfora/bot.py", line 372, in bot
+    date = mtl0.get("date").timezone('America/Mexico_City')
+AttributeError: 'datetime.datetime' object has no attribute 'timezone'
+127.0.0.1 - - [14/Aug/2020 01:38:44] "[35m[1mPOST /webhook HTTP/1.1[0m" 500 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+Exception on /webhook [POST]
+Traceback (most recent call last):
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/uziel/entornos/bot3715/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "bot_service.py", line 36, in webhook
+    return Bot.get_response(D,interpreter,agent,users)
+  File "/home/uziel/repositorios/chatbot-botanfora/bot.py", line 736, in get_response
+    respuesta, users[self.main_user] = self.bot(self.original_text, users[self.main_user])
+  File "/home/uziel/repositorios/chatbot-botanfora/bot.py", line 381, in bot
+    if mtl == "quiero_comprar" and ct_now - timedelta(minutes=5) > date:
+TypeError: can't compare offset-naive and offset-aware datetimes
+127.0.0.1 - - [14/Aug/2020 01:39:59] "[35m[1mPOST /webhook HTTP/1.1[0m" 500 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [14/Aug/2020 01:48:17] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 01:48:19] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 01:48:21] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 01:48:27] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [14/Aug/2020 01:50:55] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 01:50:58] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 01:51:01] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 01:51:08] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 01:51:14] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [14/Aug/2020 01:55:00] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 01:55:02] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 01:55:04] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 01:55:07] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 01:55:15] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [14/Aug/2020 01:56:14] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 01:56:16] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 01:56:18] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 01:56:23] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 01:56:30] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [14/Aug/2020 01:58:17] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 01:58:18] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 01:58:20] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 01:58:25] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 01:58:32] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 01:58:45] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 01:59:03] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [14/Aug/2020 02:02:54] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 02:02:58] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 02:03:01] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 02:03:05] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 02:03:12] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [14/Aug/2020 02:04:22] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 02:04:27] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 02:04:29] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 02:04:34] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 02:04:40] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 02:04:50] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 02:04:56] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 02:05:06] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 02:05:08] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 02:05:13] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [14/Aug/2020 02:08:45] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 02:08:49] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 02:08:53] "[37mPOST /webhook HTTP/1.1[0m" 200 -
