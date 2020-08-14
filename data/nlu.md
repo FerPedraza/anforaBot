@@ -148,6 +148,8 @@
 ## intent:puebla
 - puebla
 - soy del estado de puebla
+- poblano
+- prueba
 
 ## intent:queretaro
 - queretaro

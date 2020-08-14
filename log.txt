@@ -1083,3 +1083,40 @@ TypeError: can't compare offset-naive and offset-aware datetimes
  * Debugger PIN: 115-640-555
 127.0.0.1 - - [14/Aug/2020 06:35:18] "[37mPOST /webhook HTTP/1.1[0m" 200 -
 127.0.0.1 - - [14/Aug/2020 06:35:21] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-640-555
+127.0.0.1 - - [14/Aug/2020 13:51:41] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 14:05:23] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 14:05:28] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 14:05:34] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 14:05:46] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Detected change in '/home/uziel/repositorios/chatbot-botanfora/bot.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-640-555
+127.0.0.1 - - [14/Aug/2020 14:07:51] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 14:07:55] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 14:10:49] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 14:10:53] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 14:10:58] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-640-555
+127.0.0.1 - - [14/Aug/2020 14:15:05] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 14:15:17] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 14:19:36] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 14:19:40] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 14:19:56] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-640-555
+127.0.0.1 - - [14/Aug/2020 14:24:14] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 14:24:21] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 14:24:33] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 14:24:40] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 14:24:47] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 14:36:33] "[37mPOST /webhook HTTP/1.1[0m" 200 -

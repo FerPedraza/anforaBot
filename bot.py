@@ -9,7 +9,7 @@ import platform
 from text.limpia_texto import clean_text
 from conversion.convierte_a_letras import convert_to_letters
 from validacion.valida_telefono import validar_telefono
-
+from text.limpia_texto import middle_clean_text
 from validacion.valid_email import is_valid_email
 
 
@@ -113,6 +113,7 @@ class SmartBot:
                 print("113a")
                 text = option[0]
                 bandera_botones = True
+        text = middle_clean_text(text)
         speech = self.extraer_texto(text)
         NLU = self.extraer_intenciones(text)
         intencion = NLU['intent']['name']

@@ -375,7 +375,7 @@ templates:
   - text: "En seguida te contactaré con un agente de Ventas. @#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
 
   utter_agente:
-  - text: "@#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
+  - text: "Comunicando con un operador @#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
 
 session_config:
   session_expiration_time: 60
