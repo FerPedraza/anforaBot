@@ -121,7 +121,7 @@ class SmartBot:
         if intencion == "sucursales" or intencion == "tienda_linea" or intencion == "cotizaciones" \
                 or intencion == "promociones" or intencion == "mensaje_covid":
             tz = pytz.timezone('America/Mexico_City')
-            ct = datetime.now(tz=tz)
+            ct = datetime.now(tz=tz).replace(tzinfo=None)
             self.update_request(campo="menu_principal", valor=intencion, date=ct)
         elif intencion == "quiero_comprar" or intencion == "rastrear_pedido" or intencion == "problema_pedido" \
                 or intencion == "cancelar_pedido":
@@ -372,7 +372,7 @@ class SmartBot:
                 print("DATE", date)
                 print("ct_NOW", ct_now)
                 print("ct_now - timedelta(minutes=5)",ct_now - timedelta(minutes=5))
-                if mtl == "quiero_comprar" and ct_now - date < timedelta(minutes=5):
+                if mtl == "quiero_comprar" and ct_now - date < timedelta(minutes=5) and text.isdigit():
                     if validar_telefono(text):
                         mensaje = "Por favor compárteme tu correo electrónico" \
                                   + "\n1. Regresar al menú principal" \
@@ -382,8 +382,9 @@ class SmartBot:
                                   + "\n1. Regresar al menú principal" \
                                   + "\n2. Salir"
                     users = menu_principal_salir(users)
-                elif mtl == "rastrear_pedido":
-                    if len(text) == 6:
+                elif mtl == "rastrear_pedido" and ct_now - date < timedelta(minutes=5) and text.isdigit():
+                    if len(text) == 4:
+                        self.update_request('numero_orden',)
                         mensaje = "Por último, escribe tu fecha de nacimiento, sigue mi ejemplo: 1 de enero de 2019. " \
                                   + "🤗" \
                                   + "\n1. Regresar al menú principal" \
@@ -394,7 +395,7 @@ class SmartBot:
                                   + "\n1. Regresar al menú principal" \
                                   + "\n2. Salir"
                         users = menu_principal_salir(users)
-                elif mtl == "problema_pedido":
+                elif mtl == "problema_pedido" and text.isdigit():
                     mensaje = "Por último, escribe tu fecha de nacimiento, sigue mi ejemplo: 1 de enero de 2019. 🤗" \
                               + "\n1. Regresar al menú principal" \
                               + "\n2. Salir"
@@ -408,8 +409,9 @@ class SmartBot:
                 return mensaje, users
 
             elif intencion == "dar_fecha_nacimiento":
-                mtl = self.colection.find_one({"user_id": self.main_user}).get("request").get("menu_tienda_linea")
+                mtl = self.colection.find_one({"user_id": self.main_user}).get("request").get("menu_tienda_linea").get("opcion")
                 lista = text.split()
+                print("LISTA",lista)
                 if len(lista) == 3:
                     if lista[0].isdigit() and lista[1].isalpha() and lista[2].isdigit():
                         valido = True
@@ -423,6 +425,7 @@ class SmartBot:
                         valido = False
                 else:
                     valido = False
+                print("VALIDO", valido)
                 if mtl == "rastrear_pedido" and valido:
                     if valido:
                         # aqui va un ws
@@ -567,7 +570,7 @@ class SmartBot:
                                'last_bot': {'date': date, 'text': respuesta, 'buttons': buttons},
                                'last_user': {'date': date, 'text': text, 'intent': intent, 'confidence': confidence}
                                },
-                   'request': {'numero_internet': None,
+                   'request': {'numero_orden': None,
                                'nombre': None,
                                'telefono': None,
                                'compania': None,

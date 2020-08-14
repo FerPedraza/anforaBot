@@ -34,6 +34,8 @@
 - ver la tienda en linea
 - opcion de la tienda en linea
 - en tienda linea
+- menu tienda en linea
+- opciones tienda en linea
 
 ## intent:cotizaciones
 - ver cotizaciones
@@ -204,10 +206,15 @@
 - rastrear pedido
 - quiero rastrear mi pedido
 - rastrear mi pedido
+- voy a rastrear pedido
+- pedido rastrear
 
 ## intent:problema_pedido
 - tengo un problema con mi pedido
 - problema con mi pedido
+- problema pedido
+- tengo un problema con mi pedido
+- problema de pedido
 
 ## intent:decir_sucursal
 - san lorenzo
