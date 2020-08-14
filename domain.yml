@@ -34,6 +34,7 @@ actions:
 - utter_mensaje_covid
 - utter_salir
 - utter_agente_quiero_comprar
+- utter_cancelar_pedido
 
 intents:
 - saludar
@@ -90,7 +91,7 @@ intents:
 
 templates:
   utter_salir:
-  - text: "Muchas gracias por haberte contactado. ¡Hasta luego!"
+  - text: "Muchas gracias por haberte contactado. ¡Hasta luego! @#ADDITIONALTEXT#@@#COMPLETE#@"
 
   utter_sucursales:
   - text: "¡Escribe el ESTADO del cual nos contactas, por favor"
@@ -355,7 +356,15 @@ templates:
   - text: "@#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
 
   utter_mensaje_covid:
-  - text: "[Infografia COVID]"
+  - text: ""
+    buttons:
+      - title: "Regresar al menú principal"
+        payload: /saludar
+      - title: "Salir @#ADDITIONALTEXT#@https://www.broadcasterbot.com/cliente/almacenesanfora/0001.jpg"
+        payload: /salir
+
+  utter_cancelar_pedido:
+  - text: "Escribe tu Nº de orden para ver el estatus de tu pedido 📈🤔"
     buttons:
       - title: "Regresar al menú principal"
         payload: /saludar

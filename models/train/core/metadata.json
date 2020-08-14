@@ -3,49 +3,52 @@
     "action_listen": {
       "slots": []
     },
-    "utter_quiero_comprar": {
-      "slots": []
-    },
-    "utter_rastrear_pedido": {
-      "slots": []
-    },
-    "utter_agente": {
-      "slots": []
-    },
-    "utter_tienda_linea": {
-      "slots": []
-    },
-    "utter_sucursales": {
-      "slots": []
-    },
-    "utter_agente_quiero_comprar": {
-      "slots": []
-    },
-    "utter_nuevo_leon": {
-      "slots": []
-    },
-    "utter_mensaje_covid": {
-      "slots": []
-    },
-    "utter_san_luis_potosi": {
-      "slots": []
-    },
-    "utter_problema_pedido": {
+    "utter_cancelar_pedido": {
       "slots": []
     },
     "utter_quintana_roo": {
       "slots": []
     },
-    "utter_baja_california": {
+    "utter_sucursales": {
       "slots": []
     },
     "utter_salir": {
+      "slots": []
+    },
+    "utter_tienda_linea": {
+      "slots": []
+    },
+    "utter_baja_california": {
+      "slots": []
+    },
+    "utter_nuevo_leon": {
+      "slots": []
+    },
+    "utter_quiero_comprar": {
       "slots": []
     },
     "utter_baja_california_sur": {
       "slots": []
     },
     "utter_cotizaciones": {
+      "slots": []
+    },
+    "utter_problema_pedido": {
+      "slots": []
+    },
+    "utter_agente_quiero_comprar": {
+      "slots": []
+    },
+    "utter_san_luis_potosi": {
+      "slots": []
+    },
+    "utter_rastrear_pedido": {
+      "slots": []
+    },
+    "utter_mensaje_covid": {
+      "slots": []
+    },
+    "utter_agente": {
       "slots": []
     }
   },
@@ -61,7 +64,7 @@
     "rasa.core.policies.keras_policy.KerasPolicy",
     "rasa.core.policies.mapping_policy.MappingPolicy"
   ],
-  "trained_at": "20200814-025932",
+  "trained_at": "20200814-063412",
   "rasa": "1.5.0",
   "tensorflow": "1.15.2",
   "sklearn": "0.20.4"

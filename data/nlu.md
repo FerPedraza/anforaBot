@@ -45,11 +45,12 @@
 - ver promociones 
 - promociones
 
-
 ## intent:mensaje_covid
 - mensaje covid
 - covid
-
+- ver covid
+- medidas de proteccion
+- peligro covid
 
 ## intent:salir
 - salir
@@ -200,6 +201,12 @@
 - a quiero comprar
 - en quiero comprar
 - opcion de quiero comprar
+- quiero hacer una compra
+- hacer mis compras
+- quiero compra ahora
+- quiero
+- quisiera comprar
+- que comprar
 
 ## intent:rastrear_pedido
 - quiero rastrear mi pedido
@@ -208,6 +215,9 @@
 - rastrear mi pedido
 - voy a rastrear pedido
 - pedido rastrear
+- hacer rastreo
+- rastrear
+- rastreo
 
 ## intent:problema_pedido
 - tengo un problema con mi pedido
@@ -258,19 +268,22 @@
 - ^\d{6}$
 
 ## intent:agente_quiero_comprar
-- agente quiero comprar
-- hablar con agente quiero comprar
-- agente para comprar
+- agente quiero
+- hablar con agente quiero 
+- agente para 
 - comprar con un agente
 - comunicar con un agente para comprar
 - si agente para compra
+- quiero con agente
 
 ## intent:dar_fecha_nacimiento
 - 1 de enero de 2019
 - 5 de abril de 1990
 - 3 de septiembre de 1990
 
-
+## intent:cancelar_pedido
+- necesito cancelar mi pedido
+- cancelar pedido
 
 
 

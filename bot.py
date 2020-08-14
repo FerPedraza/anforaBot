@@ -54,7 +54,7 @@ def saludar(users):
               + "\n3. Cotizaciones 💰" \
               + "\n4. Promociones 🔔" \
               + "\n5. Almacenes Anfora: Antes de visitarnos, te invitamos a conocer las medidas preventivas que " \
-              + "tenemos actualmente en nuestras tiendas, solo escribe 6 (Se anexa infografía de COVID – 19)" \
+              + "tenemos actualmente en nuestras tiendas, solo escribe 5 (Se anexa infografía de COVID – 19)" \
               + "\n6. Salir @#ADDITIONALTEXT#@https://www.broadcasterbot.com/cliente/almacenesanfora/logo.jpg"
     # if horarioNoHabil:
         # mensaje = mensaje + '[mensaje horario no habil]'
@@ -68,7 +68,7 @@ def saludar(users):
                 'title': 'Promociones'},
                {'payload': 'mensaje_covid',
                 'title': 'Almacenes Anfora: Antes de visitarnos, te invitamos a conocer las medidas preventivas que " \
-        +  "tenemos actualmente en nuestras tiendas, solo escribe 6 (Se anexa infografía de COVID – 19)'},
+        +  "tenemos actualmente en nuestras tiendas, solo escribe 5 '},
                {'payload': 'salir',
                 'title': 'salir'}]
     for i in range(len(botones)):
@@ -87,17 +87,21 @@ class SmartBot:
         # 172.17.0.3 docker server default 172.31.0.2 #docker local 172.17.0.2
         b_client = pymongo.MongoClient(ip, 27017)
         db = b_client['Chatbots']
-        self.colection = db['anfora']
+        self.colection = db['Anfora']
         self.facebook = facebook
 
     def bot(self, text, users):
         bandera_botones = False
+        print("95a")
         if users['buttons']:
+            print("97a")
             # Las siguientes 5 lineas son para verificar que si se introdujo un número, este se encuentre dentro
             # del rango de opciones de botones que se tienen, de lo contrario soltará un mensaje de error.
             num_btns = [x.get('payload') for x in users['buttons']]
             if self.original_text.isdigit() and num_btns and int(self.original_text) < 9:
+                print("102a")
                 if len(num_btns) < int(self.original_text):
+                    print("104a")
                     print("BOTONES NO SE ENTENDIO")
                     mensaje = 'Lo siento no entendí qué quisiste decir, por favor introduce una opción válida'
                     return mensaje, users
@@ -106,6 +110,7 @@ class SmartBot:
             option = [x['payload'] for x in users['buttons'] if
                       str(clean_text(text)).lower() in map(lambda valor: valor.lower(), x.values())]
             if option:
+                print("113a")
                 text = option[0]
                 bandera_botones = True
         speech = self.extraer_texto(text)
@@ -120,19 +125,23 @@ class SmartBot:
         # Aqui se guarda informacion de alguna opcion del menú principal sin que implique respuesta al usuario
         if intencion == "sucursales" or intencion == "tienda_linea" or intencion == "cotizaciones" \
                 or intencion == "promociones" or intencion == "mensaje_covid":
+            print("128a")
             tz = pytz.timezone('America/Mexico_City')
             ct = datetime.now(tz=tz).replace(tzinfo=None)
             self.update_request(campo="menu_principal", valor=intencion, date=ct)
         elif intencion == "quiero_comprar" or intencion == "rastrear_pedido" or intencion == "problema_pedido" \
                 or intencion == "cancelar_pedido":
+            print("134a")
             tz = pytz.timezone('America/Mexico_City')
             ct = datetime.now(tz=tz).replace(tzinfo=None)
             print("CT DE 130",ct)
             self.update_request(campo="menu_tienda_linea", valor=intencion, date=ct)
         if users['name'] == 'Humano':
+            print("140a")
             # Este if evalua la confianza del texto, si es una frase o palabra diferente a las del entrenamiento
             # la tomara como que no la conoce y se ejecutará esta parte del codigo.
-            if confianza < 0.55 and intencion != "dar_correo" and intencion != "dar_numero":
+            if confianza < 0.55 and intencion != "dar_correo" and intencion != "dar_numero" and intencion != "agente_quiero_comprar" and intencion != "problema_pedido":
+                print("144a")
                 mensaje, users = saludar(users)
 
                 # self.save_info(text, mensaje, NLU, users['buttons'])
@@ -140,6 +149,7 @@ class SmartBot:
             # Se despliegan todas las intenciones dinamicas
             # Se despliegan todas las intenciones dinamicas
             elif intencion == "saludar":
+                print("152a")
                 mensaje, users = saludar(users)
                 self.save_info(text, mensaje, NLU, users['buttons'])
                 return mensaje, users
@@ -400,6 +410,9 @@ class SmartBot:
                               + "\n1. Regresar al menú principal" \
                               + "\n2. Salir"
                     users = menu_principal_salir(users)
+                elif mtl == "cancelar_pedido" and text.isdigit():
+                    mensaje = "@#ADDITIONALTEXT#@#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
+
                 else:
                     mensaje = "Ingresa nuevamente tu N°" \
                               + "\n1. Regresar al menú principal" \
@@ -432,12 +445,12 @@ class SmartBot:
                         mensaje = "Hemos recibido tu fecha de nacimiento, estamos buscando tu pedido 🔎 \n¡Espera un " \
                                   "momento! "
                         mensaje = mensaje + "\nTu pedido ya está listo. 👇 \n¡Gracias por utilizar este servicio!" \
+                                  + "\n1. Regresar al menú principal" \
+                                  + "\n2. Salir"
                             # mensaje si no esta el pedido
                         # Almacenes Anfora: A tu pedido le falta un poco más de tiempo, ten paciencia, por f
                 elif mtl == "problema_pedido" and valido:
-                    mensaje = "Escribe tu Nº de orden para ver el estatus de tu pedido 📈🤔" \
-                              + "\n1. Regresar al menú principal" \
-                              + "\n2. Salir @#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
+                    mensaje = "@#ADDITIONALTEXT#@#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
                 else:
                     mensaje = "Vuelve a ingresar tu fecha de nacimiento por favor" \
                               + "\n1. Regresar al menú principal" \
@@ -449,9 +462,8 @@ class SmartBot:
                 mensaje_ws = "[Arte promociones]"
                 mensaje = f"{mensaje_ws}" \
                           + "\nEn seguida te contactaré con un agente de Ventas " \
-                          + "(Se anexa arte de promociones) y link a" \
-                          + "nuestra página https://www.almacenesanfora.com/ @#ADDITIONALTEXT#@@#COMPLETE#@ " \
-                            "@#ADDITIONALTEXT#@@#DELEGATE#@ "
+                          + "https://www.almacenesanfora.com @#ADDITIONALTEXT#@@#COMPLETE#@ " \
+                          +  "@#ADDITIONALTEXT#@@#DELEGATE#@ "
                 return mensaje, users
 
             elif intencion == "dar_correo":
@@ -503,11 +515,14 @@ class SmartBot:
         #            mensaje = mensaje.format(nombre=users['name'])
         mensaje = ''
         if bandera_botones:
+            print("516a")
             users['buttons'] = []
         if speech:
+            print("519a")
             mensaje, users = valida_botones(speech, users)
         var = re.compile("{nombre}")
         if re.search(var, mensaje):
+            print("523a")
             mensaje = mensaje.format(nombre=users['name'])
         self.save_info(text, mensaje, NLU, users['buttons'])
         print("*" * 40)
@@ -747,7 +762,7 @@ class SmartBot:
         for i in range(len(banderas)):
             mensajes.append(banderas[i])
 
-        return {"cuerpo": mensajes, "imagen": imagenes, "compania": "Quatro Evolución"}
+        return {"cuerpo": mensajes, "imagen": imagenes, "compania": "Almacenes Anfora"}
 
 # 3
 # if __name__ == '__main__':

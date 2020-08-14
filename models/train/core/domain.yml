@@ -5,6 +5,7 @@ actions:
 - utter_baja_california
 - utter_baja_california_sur
 - utter_campeche
+- utter_cancelar_pedido
 - utter_chihuahua
 - utter_coahuila
 - utter_colima
@@ -224,6 +225,13 @@ templates:
     - payload: /salir
       title: Salir
     text: No hay ninguna tienda cerca
+  utter_cancelar_pedido:
+  - buttons:
+    - payload: /saludar
+      title: Regresar al menú principal
+    - payload: /salir
+      title: Salir
+    text: Escribe tu Nº de orden para ver el estatus de tu pedido 📈🤔
   utter_chihuahua:
   - buttons:
     - payload: /saludar
@@ -273,8 +281,8 @@ templates:
     - payload: /saludar
       title: Regresar al menú principal
     - payload: /salir
-      title: Salir
-    text: '[Infografia COVID]'
+      title: Salir @#ADDITIONALTEXT#@https://www.broadcasterbot.com/cliente/almacenesanfora/0001.jpg
+    text: ''
   utter_michoacán:
   - buttons:
     - payload: /saludar
@@ -356,7 +364,7 @@ templates:
     text: Escribe tu Nº de orden para ver el estatus de tu pedido 📈🤔 O si lo prefieres,
       escribe OPERADOR para ayudarte en otros temas.
   utter_salir:
-  - text: Muchas gracias por haberte contactado. ¡Hasta luego!
+  - text: Muchas gracias por haberte contactado. ¡Hasta luego! @#ADDITIONALTEXT#@@#COMPLETE#@
   utter_san_luis_potosi:
   - buttons:
     - payload: /saludar

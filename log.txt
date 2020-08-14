@@ -758,3 +758,328 @@ TypeError: can't compare offset-naive and offset-aware datetimes
 127.0.0.1 - - [14/Aug/2020 03:05:48] "[37mPOST /webhook HTTP/1.1[0m" 200 -
 127.0.0.1 - - [14/Aug/2020 03:05:53] "[37mPOST /webhook HTTP/1.1[0m" 200 -
 127.0.0.1 - - [14/Aug/2020 03:05:57] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-640-555
+127.0.0.1 - - [14/Aug/2020 03:13:27] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Detected change in '/home/uziel/repositorios/chatbot-botanfora/bot.py', reloading
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-640-555
+127.0.0.1 - - [14/Aug/2020 03:14:56] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 03:15:01] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Detected change in '/home/uziel/repositorios/chatbot-botanfora/bot.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-640-555
+ * Detected change in '/home/uziel/repositorios/chatbot-botanfora/bot.py', reloading
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-640-555
+127.0.0.1 - - [14/Aug/2020 03:24:09] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 03:24:13] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Detected change in '/home/uziel/repositorios/chatbot-botanfora/bot.py', reloading
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-640-555
+127.0.0.1 - - [14/Aug/2020 03:26:18] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 03:26:23] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Detected change in '/home/uziel/repositorios/chatbot-botanfora/bot.py', reloading
+ * Restarting with stat
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-640-555
+127.0.0.1 - - [14/Aug/2020 03:29:31] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 03:29:35] "[35m[1mPOST /webhook HTTP/1.1[0m" 500 -
+ * Detected change in '/home/uziel/repositorios/chatbot-botanfora/bot.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-640-555
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-640-555
+127.0.0.1 - - [14/Aug/2020 03:40:16] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 03:40:16] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 03:40:19] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 03:40:25] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 03:40:27] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 04:39:00] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 04:39:08] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 04:39:11] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 04:39:14] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 04:39:16] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 04:39:20] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 04:39:26] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 04:39:32] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 04:39:39] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 04:39:46] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 04:39:49] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 04:39:51] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 04:39:53] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 04:39:58] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 04:40:10] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Detected change in '/home/uziel/repositorios/chatbot-botanfora/bot.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-640-555
+127.0.0.1 - - [14/Aug/2020 04:41:45] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 04:41:45] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 04:41:49] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 04:41:53] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 04:41:56] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Detected change in '/home/uziel/repositorios/chatbot-botanfora/bot.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-640-555
+127.0.0.1 - - [14/Aug/2020 04:42:43] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 04:42:58] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 04:43:00] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 04:43:07] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 04:43:12] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 04:43:14] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 04:43:19] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 04:43:26] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 04:43:33] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 04:43:48] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 04:43:56] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 04:44:00] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 04:44:05] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Detected change in '/home/uziel/repositorios/chatbot-botanfora/bot.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-640-555
+ * Detected change in '/home/uziel/repositorios/chatbot-botanfora/bot.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-640-555
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-640-555
+127.0.0.1 - - [14/Aug/2020 04:58:23] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 04:58:39] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 04:58:43] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 04:58:48] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-640-555
+127.0.0.1 - - [14/Aug/2020 05:03:20] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:03:24] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:03:26] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:03:29] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:03:31] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:03:34] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:03:38] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:03:52] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:04:01] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:04:11] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-640-555
+127.0.0.1 - - [14/Aug/2020 05:09:09] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:09:12] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:09:14] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:09:18] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:09:24] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:09:49] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-640-555
+127.0.0.1 - - [14/Aug/2020 05:13:57] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:14:00] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:14:02] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:14:05] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:14:09] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:14:12] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-640-555
+127.0.0.1 - - [14/Aug/2020 05:17:42] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:17:44] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:17:47] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:17:50] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:17:54] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:17:57] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-640-555
+127.0.0.1 - - [14/Aug/2020 05:21:38] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:21:41] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:21:46] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:21:49] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:21:51] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:21:54] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:22:02] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:22:09] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:22:33] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:22:39] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:22:45] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:22:47] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:22:51] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-640-555
+127.0.0.1 - - [14/Aug/2020 05:26:34] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:26:48] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:26:51] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:26:53] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:26:55] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:26:57] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:26:59] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:27:01] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:27:02] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:27:10] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:27:15] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:27:16] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:27:18] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:27:22] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:27:33] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Detected change in '/home/uziel/repositorios/chatbot-botanfora/bot.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-640-555
+127.0.0.1 - - [14/Aug/2020 05:28:28] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:28:30] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:28:34] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:29:00] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:29:06] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:29:44] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:29:47] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:29:56] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:30:10] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:30:59] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:31:00] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Detected change in '/home/uziel/repositorios/chatbot-botanfora/bot.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-640-555
+127.0.0.1 - - [14/Aug/2020 05:32:43] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:32:48] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:32:53] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:32:55] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:33:01] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:33:08] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:33:10] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Detected change in '/home/uziel/repositorios/chatbot-botanfora/bot.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-640-555
+ * Detected change in '/home/uziel/repositorios/chatbot-botanfora/bot.py', reloading
+ * Restarting with stat
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-640-555
+127.0.0.1 - - [14/Aug/2020 05:41:23] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:41:26] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:41:29] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:41:33] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:41:34] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:41:36] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:41:41] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:41:46] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:41:56] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:42:00] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-640-555
+127.0.0.1 - - [14/Aug/2020 05:59:43] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:59:45] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:59:48] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:59:51] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:59:53] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:59:54] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 05:59:59] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 06:00:04] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 06:00:15] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 06:00:20] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Detected change in '/home/uziel/repositorios/chatbot-botanfora/bot.py', reloading
+ * Restarting with stat
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-640-555
+127.0.0.1 - - [14/Aug/2020 06:07:00] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 06:07:02] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 06:07:05] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 06:07:17] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 06:07:22] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 06:07:32] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 06:07:38] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 06:07:43] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 06:07:46] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 06:07:49] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 06:07:54] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 06:07:55] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 06:07:58] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Detected change in '/home/uziel/repositorios/chatbot-botanfora/bot.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-640-555
+127.0.0.1 - - [14/Aug/2020 06:09:30] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 06:09:34] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 06:09:35] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 06:09:40] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 06:09:44] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 06:09:50] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 06:09:54] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 06:09:56] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 06:09:59] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 06:10:13] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 06:10:14] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 06:10:57] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-640-555
+127.0.0.1 - - [14/Aug/2020 06:14:58] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 06:15:09] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 06:15:13] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 06:15:19] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 06:15:55] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 06:15:57] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 06:16:01] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 06:16:03] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Detected change in '/home/uziel/repositorios/chatbot-botanfora/bot.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-640-555
+127.0.0.1 - - [14/Aug/2020 06:17:34] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 06:17:39] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 06:17:46] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 06:17:53] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-640-555
+127.0.0.1 - - [14/Aug/2020 06:21:27] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 06:21:36] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Detected change in '/home/uziel/repositorios/chatbot-botanfora/bot.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-640-555
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-640-555
+127.0.0.1 - - [14/Aug/2020 06:32:15] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 06:32:25] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-640-555
+127.0.0.1 - - [14/Aug/2020 06:35:18] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 06:35:21] "[37mPOST /webhook HTTP/1.1[0m" 200 -
