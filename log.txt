@@ -746,3 +746,15 @@ TypeError: can't compare offset-naive and offset-aware datetimes
 127.0.0.1 - - [14/Aug/2020 02:56:27] "[37mPOST /webhook HTTP/1.1[0m" 200 -
 127.0.0.1 - - [14/Aug/2020 02:56:29] "[37mPOST /webhook HTTP/1.1[0m" 200 -
 127.0.0.1 - - [14/Aug/2020 02:56:30] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-640-555
+127.0.0.1 - - [14/Aug/2020 03:05:14] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 03:05:16] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 03:05:34] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 03:05:38] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 03:05:44] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 03:05:48] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 03:05:53] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+127.0.0.1 - - [14/Aug/2020 03:05:57] "[37mPOST /webhook HTTP/1.1[0m" 200 -

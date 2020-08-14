@@ -1,7 +1,7 @@
 def getContainerInfo() {
   def containersPrefix = 'bot_'
   def workspacePrefix = 'chatbots-'
-	def name = 'bot4evolucion'
+	def name = 'botanfora'
 
   return [
     name: "${containersPrefix}${name}",

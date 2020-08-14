@@ -1,8 +1,8 @@
 version: '3'
 services:
   bot:
-    image: bot_bot4evolucion
-    container_name: bot_bot4evolucion
+    image: bot_botanfora
+    container_name: bot_botanfora
     build: .
     volumes:
       - .:/chatbots-frameworkbot
