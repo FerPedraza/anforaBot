@@ -19,7 +19,7 @@ CORS(app)
 users = {}
 
 #logs
-logs()
+
 
 @app.route('/test', methods=['GET'])
 def test():
