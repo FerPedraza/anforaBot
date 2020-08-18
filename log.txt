@@ -1120,3 +1120,10 @@ TypeError: can't compare offset-naive and offset-aware datetimes
 127.0.0.1 - - [14/Aug/2020 14:24:40] "[37mPOST /webhook HTTP/1.1[0m" 200 -
 127.0.0.1 - - [14/Aug/2020 14:24:47] "[37mPOST /webhook HTTP/1.1[0m" 200 -
 127.0.0.1 - - [14/Aug/2020 14:36:33] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-640-555
+127.0.0.1 - - [18/Aug/2020 15:15:02] "[37mPOST /webhook HTTP/1.1[0m" 200 -
+ * Detected change in '/home/uziel/repositorios/chatbot-botanfora/unpacking_tar.py', reloading
+ * Restarting with stat

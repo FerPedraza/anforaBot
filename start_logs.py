@@ -1,5 +1,6 @@
+import logging.handlers
 
-def logs():
+def logs(app):
     handler = logging.handlers.RotatingFileHandler(
         'log.txt',
         maxBytes=1024 * 1024)

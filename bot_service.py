@@ -3,10 +3,13 @@ from flask_cors import CORS
 from rasa.core.agent import Agent
 from rasa.core.interpreter import RasaNLUInterpreter
 from bot import SmartBot
+from unpacking_tar import unpacking_tar
+from start_logs import logs
 import logging.handlers
 from start_logs import logs
 global interpreter,agent,users,B_Client
 
+unpacking_tar()
 path_model = './models/train/'
 path_nlu = './models/train/nlu'
 
@@ -19,7 +22,7 @@ CORS(app)
 users = {}
 
 #logs
-
+logs(app)
 
 @app.route('/test', methods=['GET'])
 def test():
