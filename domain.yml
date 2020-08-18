@@ -1,5 +1,4 @@
 actions:
-- utter_agente
 - utter_sucursales
 - utter_tienda_linea
 - utter_quiero_comprar
@@ -91,7 +90,7 @@ intents:
 
 templates:
   utter_salir:
-  - text: "Muchas gracias por haberte contactado. ¡Hasta luego! @#ADDITIONALTEXT#@@#COMPLETE#@"
+  - text: "Te agradecemos haber utilizado el servicio de WhatsApp de Almacenes Anfora🍽️🛒 @#ADDITIONALTEXT#@@#COMPLETE#@"
 
   utter_sucursales:
   - text: "¡Escribe el ESTADO del cual nos contactas, por favor"
@@ -373,9 +372,6 @@ templates:
 
   utter_agente_quiero_comprar:
   - text: "En seguida te contactaré con un agente de Ventas. @#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
-
-  utter_agente:
-  - text: "Comunicando con un operador @#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
 
 session_config:
   session_expiration_time: 60

@@ -4,6 +4,7 @@ from rasa.core.agent import Agent
 from rasa.core.interpreter import RasaNLUInterpreter
 from bot import SmartBot
 import logging.handlers
+from start_logs import logs
 global interpreter,agent,users,B_Client
 
 path_model = './models/train/'
@@ -18,13 +19,7 @@ CORS(app)
 users = {}
 
 #logs
-handler = logging.handlers.RotatingFileHandler(
-        'log.txt',
-        maxBytes=1024 * 1024)
-logging.getLogger('werkzeug').setLevel(logging.DEBUG)
-logging.getLogger('werkzeug').addHandler(handler)
-app.logger.setLevel(logging.DEBUG)
-app.logger.addHandler(handler)
+logs()
 
 @app.route('/test', methods=['GET'])
 def test():

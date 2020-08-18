@@ -46,18 +46,27 @@ def saludar(users):
     # ct = datetime.now(tz=tz)
     # hour = ct.hour
     # weekday = ct.isoweekday()
-    horarioNoHabil = False
-    mensaje = "¡Hola! 👋 Soy el Asistente Virtual de Almacenes Anfora. 🤖 🍴" \
-              + "\n¿Qué deseas? Escribe el número." \
-              + "\n1. Sucursales (Horario, teléfono y ubicación) ☎️" \
-              + "\n2. Tienda en línea 🛒" \
-              + "\n3. Cotizaciones 💰" \
-              + "\n4. Promociones 🔔" \
-              + "\n5. Almacenes Anfora: Antes de visitarnos, te invitamos a conocer las medidas preventivas que " \
-              + "tenemos actualmente en nuestras tiendas, solo escribe 5 (Se anexa infografía de COVID – 19)" \
-              + "\n6. Salir @#ADDITIONALTEXT#@https://www.broadcasterbot.com/cliente/almacenesanfora/logo.jpg"
-    # if horarioNoHabil:
-        # mensaje = mensaje + '[mensaje horario no habil]'
+    if self.laboral():
+        mensaje = "¡Hola! 👋 Soy el Asistente Virtual de Almacenes Anfora. 🤖 🍴" \
+                  + "\n¿Qué deseas? Escribe el número." \
+                  + "\n1. Sucursales (Horario, teléfono y ubicación) ☎️" \
+                  + "\n2. Tienda en línea 🛒" \
+                  + "\n3. Cotizaciones 💰" \
+                  + "\n4. Promociones 🔔" \
+                  + "\n5. Almacenes Anfora: Antes de visitarnos, te invitamos a conocer las medidas preventivas que " \
+                  + "tenemos actualmente en nuestras tiendas, solo escribe 5" \
+                  + "\n6. Salir @#ADDITIONALTEXT#@https://www.broadcasterbot.com/cliente/almacenesanfora/logo.jpg"
+    else:
+        mensaje = "¡Hola! 👋 Soy el Asistente Virtual de Almacenes Anfora. 🤖 🍴" \
+                  + "Nuestros horarios de servicio son de Lunes a Sábado de 08:00 am a 05:00 pm." \
+                  + "\n¿Qué deseas? Escribe el número." \
+                  + "\n1. Sucursales (Horario, teléfono y ubicación) ☎️" \
+                  + "\n2. Tienda en línea 🛒" \
+                  + "\n3. Cotizaciones 💰" \
+                  + "\n4. Promociones 🔔" \
+                  + "\n5. Almacenes Anfora: Antes de visitarnos, te invitamos a conocer las medidas preventivas que " \
+                  + "tenemos actualmente en nuestras tiendas, solo escribe 5" \
+                  + "\n6. Salir @#ADDITIONALTEXT#@https://www.broadcasterbot.com/cliente/almacenesanfora/logo.jpg"
     botones = [{'payload': 'sucursales',
                 'title': 'Sucursales (Horario, teléfono y ubicación)'},
                {'payload': 'tienda_linea',
@@ -412,7 +421,10 @@ class SmartBot:
                               + "\n2. Salir"
                     users = menu_principal_salir(users)
                 elif mtl == "cancelar_pedido" and text.isdigit():
-                    mensaje = "@#ADDITIONALTEXT#@#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
+                    if self.laboral():
+                        mensaje = "En seguida te contacté con un agente de Ventas @#ADDITIONALTEXT#@#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
+                    else:
+                        mensaje = "Hemos recibido tu mensaje y una persona te atenderá lo antes posible.Nuestros horarios de servicio son de Lunes a Sábado de 0 8: 00 am a 05: 00 pm. @#ADDITIONALTEXT#@#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
 
                 else:
                     mensaje = "Ingresa nuevamente tu N°" \
@@ -495,6 +507,14 @@ class SmartBot:
                               + "\n1. Regresar al menú principal" \
                               + "\n2. Salir"
                     users = menu_principal_salir(users)
+                return mensaje, users
+
+            elif intencion == "agente":
+                laboral = self.laboral()
+                if laboral:
+                    mensaje = "Comunicando con un operador @#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
+                else:
+                    mensaje = "Hemos recibido tu mensaje y una persona te atenderá lo antes posible.Nuestros horarios de servicio son de Lunes a Sábado de 0 8: 00 am a 05: 00 pm. @#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
                 return mensaje, users
 
 
@@ -663,6 +683,17 @@ class SmartBot:
             else:
                 self.colection.update_one({'user_id': self.main_user}, {'$set': {'request.' + campo: valor}})
 
+    def laboral(self):
+        tz = pytz.timezone('America/Mexico_City')
+        ct = datetime.datetime.now(tz=tz)
+        hour = ct.hour
+        weekday = ct.isoweekday()
+        if 1 <= weekday <= 6 and 8 <= hour <= 16:
+            laboral = True
+        else:
+            laboral = False
+        return laboral
+
     def delegate_requests(self, opcion, minutes, seconds):
         br = self.colection.find_one({"user_id": self.main_user}).get("request").get("bad_requests")
         values_list = []
@@ -681,43 +712,6 @@ class SmartBot:
         else:
             contador = 0
         return contador
-
-    #            for key in dicc.keys
-    #
-    #        if len(br) > 2:
-    #            br.sort()
-    #            ti = br[-1] - timedelta(minutes=2, seconds=30)
-    #            contador = 0
-    #            for i in range(-3, 0):
-    #                if br[i] > ti:
-    #                    contador = contador + 1
-    #            if contador > 2:
-    #                mensaje = "Transfiere el control de la conversación con un agente 🙋‍♂
-    #                + "@#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"  #
-    #            else:
-    #                mensaje = ""
-    #        else:
-    #            mensaje = ""
-    #        return mensaje
-    #
-    # if len(br) > 1:
-    #                            values_list = []
-    #                            for dicc in br:
-    #                                for key in dicc.keys:
-    #                                    if key == "contratar_plan_dar_numero":
-    #                                        for value in dicc.values():
-    #                                            values_list.append(value)
-    #
-    #    def count_br(self,opcion):
-    #        br = self.colection.find_one({"user_id": self.main_user}).get("request").get("bad_requests")
-    #        if len(br) > 1:
-    #
-    #            br.sort()
-    #                        ti = br[-1]  -timedelta(minutes=1, seconds=30)
-    #                        contador = 0
-    #                        for i in range(-3, 0):
-    #                            if br[i] > ti:
-    #                                contador = contador + 1
 
     def get_response(self, D, interpreter, agent, users):
         # Se definen las variables del modelo
