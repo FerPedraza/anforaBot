@@ -40,53 +40,6 @@ def valida_botones(speech, users):
     return mensaje, users
 
 
-def saludar(users):
-    # abril 5  octubre 25
-    # tz = pytz.timezone('America/Mexico_City')
-    # ct = datetime.now(tz=tz)
-    # hour = ct.hour
-    # weekday = ct.isoweekday()
-    if self.laboral():
-        mensaje = "¡Hola! 👋 Soy el Asistente Virtual de Almacenes Anfora. 🤖 🍴" \
-                  + "\n¿Qué deseas? Escribe el número." \
-                  + "\n1. Sucursales (Horario, teléfono y ubicación) ☎️" \
-                  + "\n2. Tienda en línea 🛒" \
-                  + "\n3. Cotizaciones 💰" \
-                  + "\n4. Promociones 🔔" \
-                  + "\n5. Almacenes Anfora: Antes de visitarnos, te invitamos a conocer las medidas preventivas que " \
-                  + "tenemos actualmente en nuestras tiendas, solo escribe 5" \
-                  + "\n6. Salir @#ADDITIONALTEXT#@https://www.broadcasterbot.com/cliente/almacenesanfora/logo.jpg"
-    else:
-        mensaje = "¡Hola! 👋 Soy el Asistente Virtual de Almacenes Anfora. 🤖 🍴" \
-                  + "Nuestros horarios de servicio son de Lunes a Sábado de 08:00 am a 05:00 pm." \
-                  + "\n¿Qué deseas? Escribe el número." \
-                  + "\n1. Sucursales (Horario, teléfono y ubicación) ☎️" \
-                  + "\n2. Tienda en línea 🛒" \
-                  + "\n3. Cotizaciones 💰" \
-                  + "\n4. Promociones 🔔" \
-                  + "\n5. Almacenes Anfora: Antes de visitarnos, te invitamos a conocer las medidas preventivas que " \
-                  + "tenemos actualmente en nuestras tiendas, solo escribe 5" \
-                  + "\n6. Salir @#ADDITIONALTEXT#@https://www.broadcasterbot.com/cliente/almacenesanfora/logo.jpg"
-    botones = [{'payload': 'sucursales',
-                'title': 'Sucursales (Horario, teléfono y ubicación)'},
-               {'payload': 'tienda_linea',
-                'title': 'Tienda en línea'},
-               {'payload': 'cotizaciones',
-                'title': 'Cotizaciones'},
-               {'payload': 'promociones',
-                'title': 'Promociones'},
-               {'payload': 'mensaje_covid',
-                'title': 'Almacenes Anfora: Antes de visitarnos, te invitamos a conocer las medidas preventivas que " \
-        +  "tenemos actualmente en nuestras tiendas, solo escribe 5 '},
-               {'payload': 'salir',
-                'title': 'salir'}]
-    for i in range(len(botones)):
-        botones[i]['number'] = str(i + 1)
-        botones[i]['letter number'] = convert_to_letters(i + 1)
-    users['buttons'] = botones
-    return mensaje, users
-
-
 class SmartBot:
     def __init__(self, facebook=False):
         if platform.node() == "u1" or platform.node() == "DESKTOP-0CKRHA6":
@@ -152,7 +105,7 @@ class SmartBot:
             # la tomara como que no la conoce y se ejecutará esta parte del codigo.
             if confianza < 0.55 and intencion != "dar_correo" and intencion != "dar_numero" and intencion != "agente_quiero_comprar" and intencion != "problema_pedido":
                 print("144a")
-                mensaje, users = saludar(users)
+                mensaje, users = self.saludar(users)
 
                 # self.save_info(text, mensaje, NLU, users['buttons'])
                 return mensaje, users
@@ -160,7 +113,7 @@ class SmartBot:
             # Se despliegan todas las intenciones dinamicas
             elif intencion == "saludar":
                 print("152a")
-                mensaje, users = saludar(users)
+                mensaje, users = self.saludar(users)
                 self.save_info(text, mensaje, NLU, users['buttons'])
                 return mensaje, users
 
@@ -685,7 +638,7 @@ class SmartBot:
 
     def laboral(self):
         tz = pytz.timezone('America/Mexico_City')
-        ct = datetime.datetime.now(tz=tz)
+        ct = datetime.now(tz=tz)
         hour = ct.hour
         weekday = ct.isoweekday()
         if 1 <= weekday <= 6 and 8 <= hour <= 16:
@@ -693,6 +646,52 @@ class SmartBot:
         else:
             laboral = False
         return laboral
+
+    def saludar(self, users):
+        # abril 5  octubre 25
+        # tz = pytz.timezone('America/Mexico_City')
+        # ct = datetime.now(tz=tz)
+        # hour = ct.hour
+        # weekday = ct.isoweekday()
+        if self.laboral():
+            mensaje = "¡Hola! 👋 Soy el Asistente Virtual de Almacenes Anfora. 🤖 🍴" \
+                      + "\n¿Qué deseas? Escribe el número." \
+                      + "\n1. Sucursales (Horario, teléfono y ubicación) ☎️" \
+                      + "\n2. Tienda en línea 🛒" \
+                      + "\n3. Cotizaciones 💰" \
+                      + "\n4. Promociones 🔔" \
+                      + "\n5. Almacenes Anfora: Antes de visitarnos, te invitamos a conocer las medidas preventivas que " \
+                      + "tenemos actualmente en nuestras tiendas, solo escribe 5" \
+                      + "\n6. Salir @#ADDITIONALTEXT#@https://www.broadcasterbot.com/cliente/almacenesanfora/logo.jpg"
+        else:
+            mensaje = "¡Hola! 👋 Soy el Asistente Virtual de Almacenes Anfora. 🤖 🍴" \
+                      + "Nuestros horarios de servicio son de Lunes a Sábado de 08:00 am a 05:00 pm." \
+                      + "\n¿Qué deseas? Escribe el número." \
+                      + "\n1. Sucursales (Horario, teléfono y ubicación) ☎️" \
+                      + "\n2. Tienda en línea 🛒" \
+                      + "\n3. Cotizaciones 💰" \
+                      + "\n4. Promociones 🔔" \
+                      + "\n5. Almacenes Anfora: Antes de visitarnos, te invitamos a conocer las medidas preventivas que " \
+                      + "tenemos actualmente en nuestras tiendas, solo escribe 5" \
+                      + "\n6. Salir @#ADDITIONALTEXT#@https://www.broadcasterbot.com/cliente/almacenesanfora/logo.jpg"
+        botones = [{'payload': 'sucursales',
+                    'title': 'Sucursales (Horario, teléfono y ubicación)'},
+                   {'payload': 'tienda_linea',
+                    'title': 'Tienda en línea'},
+                   {'payload': 'cotizaciones',
+                    'title': 'Cotizaciones'},
+                   {'payload': 'promociones',
+                    'title': 'Promociones'},
+                   {'payload': 'mensaje_covid',
+                    'title': 'Almacenes Anfora: Antes de visitarnos, te invitamos a conocer las medidas preventivas que " \
+            +  "tenemos actualmente en nuestras tiendas, solo escribe 5 '},
+                   {'payload': 'salir',
+                    'title': 'salir'}]
+        for i in range(len(botones)):
+            botones[i]['number'] = str(i + 1)
+            botones[i]['letter number'] = convert_to_letters(i + 1)
+        users['buttons'] = botones
+        return mensaje, users
 
     def delegate_requests(self, opcion, minutes, seconds):
         br = self.colection.find_one({"user_id": self.main_user}).get("request").get("bad_requests")
