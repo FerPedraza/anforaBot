@@ -279,9 +279,22 @@
 - quiero con agente
 
 ## intent:dar_fecha_nacimiento
-- 1 de enero de 2019
-- 5 de abril de 1990
-- 3 de septiembre de 1990
+- 16 de enero de 1998
+- 21 de febrero de 2003
+- 6 marzo 1996
+- 31 de agosto de 1990
+- [0-9]{2} de enero de [0-9]{4}
+- [0-9]{2} de febrero de [0-9]{4}
+- [0-9]{2} de marzo de 19[0-9]{2}
+- [0-9]{2} de abril de [0-9]{4}
+- [0-9]{2} de mayo de [0-9]{4}
+- [0-9]{2} de junio de [0-9]{4}
+- [0-9]{2} de julio de [0-9]{4}
+- [0-9]{2} de agosto de [0-9]{4}
+- [0-9]{2} de septiembre de [0-9]{4}
+- [0-9]{2} de octubre de [0-9]{4}
+- [0-9]{2} de noviembre de [0-9]{4}
+- [0-9]{2} de diciembre de [0-9]{4}
 
 ## intent:cancelar_pedido
 - necesito cancelar mi pedido

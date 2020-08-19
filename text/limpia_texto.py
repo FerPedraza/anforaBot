@@ -19,7 +19,7 @@ def middle_clean_text(texto):
     texto = texto.replace('á', 'a').replace('é', 'e').replace('í', 'i').replace('ó', 'o').replace('ú', 'u').strip()
     for i in range(len(texto)):
         if texto[i].isalpha() == False and texto[i].isdigit() == False and texto[i] != "-"\
-                and texto[i] != "." and texto[i] != "@" and texto[i] != " ":
+                and texto[i] != "." and texto[i] != "@" and texto[i] != " " and texto[i] != "_":
             texto = texto.replace(texto[i], ' ')
     texto = texto.strip()
     if texto == '':

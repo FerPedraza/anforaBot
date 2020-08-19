@@ -32,7 +32,7 @@ def valida_botones(speech, users):
             botones[i]['number'] = str(i + 1)
             botones[i]['letter number'] = convert_to_letters(i + 1)
         users['buttons'] = botones
-        mensaje = speech[0]['text'] + '\n' + '\n'.join([x['number'] + '.- ' + x['title'] for x in botones]).format(
+        mensaje = speech[0]['text'] + '\n' + '\n'.join([x['number'] + '. ' + x['title'] for x in botones]).format(
             nombre=users['name'])
         print('mensaje de valida botones', mensaje)
     else:
@@ -129,13 +129,13 @@ class SmartBot:
                               + "\n🏨Alfredo del Mazo 702, Delegación San Lorenzo Tepaltitlán, C.P. 50010 Toluca de " \
                                 "Lerdo" \
                               + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
-                              + "\n  Domingo: 10:00 am a 6:00 pm" \
+                              + "\n   Domingo: 10:00 am a 6:00 pm" \
                               + "\n📞722 237 3726" \
                               + "\n" \
                               + "\n  Almacenes Anfora – Metepec" \
                               + "\n🏨Av. Pino Suárez 2400-A, Fraccionamiento Xinantécatl,  C.P. 52140 Metepec" \
                               + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
-                              + "\n  Domingo: 10:00 am a 6:00 pm" \
+                              + "\n   Domingo: 10:00 am a 6:00 pm" \
                               + "\n📞" \
                               + "\n" \
                               + "\n  Almacenes Anfora – Tenancingo" \
@@ -143,14 +143,14 @@ class SmartBot:
                               + "\n🕑Lunes, martes, miércoles y viernes" \
                               + "\n  10:00 am a 8:00 pm" \
                               + "\n  Jueves y Sábado: 09:00 am a 8:00 pm" \
-                              + "\n  Domingos: de 9:00 am a 7:00 pm" \
+                              + "\n   Domingos: de 9:00 am a 7:00 pm" \
                               + "\n📞" \
                               + "\n" \
                               + "\n  Almacenes Anfora – Zinacantepec" \
                               + "\n🏨PASEO ADOLFO LÓPEZ MATEOS No. 1608, COLONIA, San Mateo Oxtotitlán, C.P. 50100 " \
                                 "Toluca de Lerdo" \
                               + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
-                              + "\nDomingo: 10:00 am a 6:00 pm" \
+                              + "\n   Domingo: 10:00 am a 6:00 pm" \
                               + "\n📞" \
                               + "\n" \
                               + "\n  Almacenes Anfora – Juárez 1" \
@@ -167,20 +167,20 @@ class SmartBot:
                               + "\n  Almacenes Anfora – Portales" \
                               + "\n🏨Portal 20 de Noviembre No. 109 interiores D Y C Colonia  Centro C.p. 50000 Toluca" \
                               + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
-                              + "\n  Domingo: 10:00 am a 6:00 pm" \
+                              + "\n   Domingo: 10:00 am a 6:00 pm" \
                               + "\n📞" \
                               + "\n" \
                               + "\n  Almacenes Anfora – Terminal" \
                               + "\n🏨Avenida Paseo Tollocan 501, Américas Cárdenas, 50130 Toluca de Lerdo" \
                               + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
-                              + "\n  Domingo: 10:00 am a 6:00 pm" \
+                              + "\n   Domingo: 10:00 am a 6:00 pm" \
                               + "\n📞" \
                               + "\n" \
                               + "\n  Almacenes Anfora – Atizapán" \
                               + "\n🏨Carretera Atizapán Nicolas Romero Esq. Av Adolfo López Mateos 11, Local 6A y 7, " \
                               +  "El Pedregal de Atizapán, 52948 Atizapán De Zaragoza" \
                               + "\n🕑Lunes a Sábado: 9:00 am a 7:00 pm" \
-                              + "\n  Domingo: 10:00 am a 6:00 pm" \
+                              + "\n   Domingo: 10:00 am a 6:00 pm" \
                               + "\n📞" \
                               + "\n1. Regresar al menú principal🔙" \
                               + "\n2. Salir👋"
@@ -190,40 +190,40 @@ class SmartBot:
                               + "\nAlmacenes Anfora – Lopez" \
                               + "\n🏨LOPEZ No. 50 COLONIA CENTRO DELEGACION CUAUHTEMOC C.P. 06050" \
                               + "\n🕑Lunes a Sábado: 9:30 am a 8:00 pm" \
-                              + "\n  Domingo: 10:00 am a 6:00 pm" \
+                              + "\n   Domingo: 10:00 am a 6:00 pm" \
                               + "\n📞" \
                               + "\n" \
                               + "\n  Almacenes Anfora – Aranda" \
                               + "\n🏨ARANDA No. 18 o AYUNTAMIENTO No. 15 COLONIA CENTRO DELEGACION CUAUHTEMOC " \
                               + "C.P.06050" \
                               + "\n🕑Lunes a Sábado: 9:30 am a 8:00 pm" \
-                              + "\n  Domingo: 10:00 am a 6:00 pm" \
+                              + "\n   Domingo: 10:00 am a 6:00 pm" \
                               + "\n📞" \
                               + "\n" \
                               + "\n  Almacenes Anfora – Artículo 123" \
                               + "\n🏨ARTICULO 123 No. 10 COLONIA CENTRO C.P.06050 DELGACION CUAUHTEMOC" \
                               + "\n🕑Lunes a Sábado: 9:00 am a 7:00 pm" \
-                              + "\n  Domingo: 10:30 am a 6:30 pm" \
+                              + "\n   Domingo: 10:30 am a 6:30 pm" \
                               + "\n📞" \
                               + "\n" \
                               + "\n  Almacenes Anfora – Ecatepec" \
                               + "\n🏨Blvd. Insurgentes Esq. Emiliano Zapata locales 02 Y 03, San Cristóbal Centro, " \
                                 "55000 Ecatepec de Morelos" \
                               + "\n🕑Lunes a Sábado: 9:30 am a 7:30 pm" \
-                              + "\n  Domingo: 10:00 am a 6:00 pm" \
+                              + "\n   Domingo: 10:00 am a 6:00 pm" \
                               + "\n📞" \
                               + "\n" \
                               + "\n  Almacenes Anfora – Chalco" \
                               + "\n🏨Av. Nacional no.57 Col. San Sebastian Mpio. De Chalco, Estado de México, " \
                                 "C.P.  56600" \
                               + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
-                              + "\n  Domingo: 10:00 am a 6:00 pm" \
+                              + "\n   Domingo: 10:00 am a 6:00 pm" \
                               + "\n📞" \
                               + "\n" \
                               + "\n  Almacenes Anfora – Tacubaya" \
                               + "\n🏨ANTONIO MACEO No. 27 COLONIA TACUBAYA C.P.11870 MIGUEL HIDALGO" \
                               + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
-                              + "\n  Domingo: 10:00 am a 6:00 pm" \
+                              + "\n   Domingo: 10:00 am a 6:00 pm" \
                               + "\n📞" \
                               + "\n" \
                               + "\n1. Regresar al menú principal🔙" \
@@ -234,20 +234,20 @@ class SmartBot:
                               + "\nAlmacenes Anfora – Querétaro Zaragoza" \
                               + "\n🏨Calle Ignacio Zaragoza 41, El Carrizal, 76030 Santiago de Querétaro, QRO" \
                               + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
-                              + "\nDomingo: 10:00 am a 6:00 pm" \
+                              + "\n   Domingo: 10:00 am a 6:00 pm" \
                               + "\n📞" \
                               + "\n" \
                               + "\nAlmacenes Anfora – Querétaro Alameda" \
                               + "\n🏨Avenida Michoacán No 119, Colonia Centro, 76000 Querétaro, Qro." \
                               + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
-                              + "\nDomingo: 10:00 am a 6:00 pm" \
+                              + "\n   Domingo: 10:00 am a 6:00 pm" \
                               + "\n📞" \
                               + "\n" \
                               + "\nAlmacenes Anfora – San Juan del Río" \
                               + "\n🏨Boulevard Hidalgo 66, Colonia Centro San Juan del Río, San Juan Del Río " \
                                 "Querétaro, México, C.P. 76800" \
                               + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
-                              + "\nDomingo: 10:00 am a 6:00 pm" \
+                              + "\n   Domingo: 10:00 am a 6:00 pm" \
                               + "\n📞" \
                               + "\n" \
                               + "\n1. Regresar al menú principal🔙" \
@@ -258,7 +258,7 @@ class SmartBot:
                               + "\nAlmacenes Anfora – Orizaba" \
                               + "\n🏨AVENIDA ORIENTE 4 No. 40 COLONIA CENTRO, ORIZABA VERACRUZ C.P.94300" \
                               + "\n🕑Lunes a Sábado: 10:30 am a 8:30 pm" \
-                              + "\nDomingo: 10:00 am a 6:00 pm" \
+                              + "\n   Domingo: 10:00 am a 6:00 pm" \
                               + "\n📞" \
                               + "\n" \
                               + "\n1. Regresar al menú principal🔙" \
@@ -270,20 +270,20 @@ class SmartBot:
                               + "\n🏨ALLE LEANDRO VALLE NO. 102 PLANTA BAJA, COL. CENTRO, MPIO. TULA DE ALLENDE, " \
                               + "ESTADO DE HIDALGO, C.P. 42800" \
                               + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
-                              + "\nDomingo: 10:00 am a 6:00 pm" \
+                              + "\n   Domingo: 10:00 am a 6:00 pm" \
                               + "\n📞" \
                               + "\n" \
                               + "\nAlmacenes Anfora – Tulancingo" \
                               + "\n🏨CALLE SAN LUIS POTOSI NO. 101 ESQUINA. AV. 21 DE MARZO COL. VICENTE GUERRERO " \
                               + "MPIO. TULANCINGO DE BRAVO ESTADO DE HIDALGO C.P. 43630" \
                               + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
-                              + "\nDomingo: 10:00 am a 6:00 pm" \
+                              + "\n   Domingo: 10:00 am a 6:00 pm" \
                               + "\n📞" \
                               + "\n" \
                               + "\nAlmacenes Anfora – Pachuca" \
                               + "\n🏨AVENIDA JUAREZ No. 501 COLONIA PERIODISTA ,PACHUCA DE SOTO HIDALGO C.P.:42060" \
                               + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
-                              + "\nDomingo: 11:00 am a 6:00 pm" \
+                              + "\n   Domingo: 11:00 am a 6:00 pm" \
                               + "\n📞" \
                               + "\n" \
                               + "\n1. Regresar al menú principal🔙" \
@@ -295,13 +295,13 @@ class SmartBot:
                               + "\n🏨Calle Belisario Domínguez, Col. León de los Aldamas Centro, León, Guanajuato, " \
                                 "CP 37000" \
                               + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
-                              + "\nDomingo: 10:00 am a 6:00 pm" \
+                              + "\n   Domingo: 10:00 am a 6:00 pm" \
                               + "\n📞" \
                               + "\n" \
                               + "\nAlmacenes Anfora – León Delta" \
                               + "\n🏨Blvd. Delta 101, Col. Fracc. Industrial Delta, León, Guanajuato, CP 37545" \
                               + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
-                              + "\nDomingo: 10:00 am a 6:00 pm" \
+                              + "\n   Domingo: 10:00 am a 6:00 pm" \
                               + "\n📞" \
                               + "\n" \
                               + "\n1. Regresar al menú principal🔙" \
@@ -312,7 +312,7 @@ class SmartBot:
                               + "\nAlmacenes Anfora – Tuxtla Gutièrrez" \
                               + "\n🏨11A Oriente Norte 221, Col. Hidalgo, Tuxtla Gutiérrez, Chiapas, CP 29040" \
                               + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
-                              + "\nDomingo: 10:00 am a 6:00 pm" \
+                              + "\n   Domingo: 10:00 am a 6:00 pm" \
                               + "\n📞" \
                               + "\n" \
                               + "\n1. Regresar al menú principal🔙" \
@@ -358,26 +358,19 @@ class SmartBot:
                 elif mtl == "rastrear_pedido" and ct_now - date < timedelta(minutes=5) and text.isdigit():
                     if len(text) == 4:
                         self.update_request('numero_orden',)
-                        mensaje = "Por último, escribe tu fecha de nacimiento, sigue mi ejemplo: 1 de enero de 2019. " \
-                                  + "🤗" \
-                                  + "\n1. Regresar al menú principal" \
-                                  + "\n2. Salir"
-                        users = menu_principal_salir(users)
+                        mensaje = "En seguida te contactaré con un agente de Ventas @#ADDITIONALTEXT#@#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
                     else:
                         mensaje = "Ingresa nuevamente tu N° de orden por favor" \
                                   + "\n1. Regresar al menú principal" \
                                   + "\n2. Salir"
                         users = menu_principal_salir(users)
                 elif mtl == "problema_pedido" and text.isdigit():
-                    mensaje = "Por último, escribe tu fecha de nacimiento, sigue mi ejemplo: 1 de enero de 2019. 🤗" \
-                              + "\n1. Regresar al menú principal" \
-                              + "\n2. Salir"
-                    users = menu_principal_salir(users)
+                    mensaje = "En seguida te contactaré con un agente de Ventas @#ADDITIONALTEXT#@#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
                 elif mtl == "cancelar_pedido" and text.isdigit():
                     if self.laboral():
                         mensaje = "En seguida te contacté con un agente de Ventas @#ADDITIONALTEXT#@#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
                     else:
-                        mensaje = "Hemos recibido tu mensaje y una persona te atenderá lo antes posible.Nuestros horarios de servicio son de Lunes a Sábado de 0 8: 00 am a 05: 00 pm. @#ADDITIONALTEXT#@#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
+                        mensaje = "Hemos recibido tu mensaje y una persona te atenderá lo antes posible. Nuestros horarios de servicio son de Lunes a Sábado de 0 8: 00 am a 05: 00 pm. @#ADDITIONALTEXT#@#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
 
                 else:
                     mensaje = "Ingresa nuevamente tu N°" \
@@ -425,14 +418,11 @@ class SmartBot:
                 return mensaje, users
 
             elif intencion == "promociones":
-                mensaje_ws = "[Arte promociones]"
-                mensaje = f"{mensaje_ws}" \
-                          + "\nEn seguida te contactaré con un agente de Ventas " \
-                          + "https://www.almacenesanfora.com @#ADDITIONALTEXT#@@#COMPLETE#@ " \
-                          +  "@#ADDITIONALTEXT#@@#DELEGATE#@ "
+                mensaje = "En seguida  te contactaré con un agente de Ventas https://www.almacenesanfora.com/ @#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
                 return mensaje, users
 
             elif intencion == "dar_correo":
+                print(text)
                 if is_valid_email(text):
                     mensaje = "¡Perfecto! 👏, Prepárate 📝" \
                               + "💡 TIP: Puedes mandar la foto de tu lista con el nombre de cada artículo y cantidad " \
@@ -467,7 +457,7 @@ class SmartBot:
                 if laboral:
                     mensaje = "Comunicando con un operador @#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
                 else:
-                    mensaje = "Hemos recibido tu mensaje y una persona te atenderá lo antes posible.Nuestros horarios de servicio son de Lunes a Sábado de 0 8: 00 am a 05: 00 pm. @#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
+                    mensaje = "Hemos recibido tu mensaje y una persona te atenderá lo antes posible. Nuestros horarios de servicio son de Lunes a Sábado de 0 8: 00 am a 05: 00 pm. @#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
                 return mensaje, users
 
 

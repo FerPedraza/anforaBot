@@ -251,7 +251,8 @@ templates:
       title: Salir
     text: No hay ninguna tienda cerca
   utter_cotizaciones:
-  - text: '@#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@'
+  - text: En seguida te contacté con un agente de Ventas @#ADDITIONALTEXT#@@#COMPLETE#@
+      @#ADDITIONALTEXT#@@#DELEGATE#@
   utter_durango:
   - buttons:
     - payload: /saludar

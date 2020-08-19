@@ -1,5 +1,5 @@
 {
-    "language": "en",
+    "language": "es",
     "pipeline": [
         {
             "intent_tokenization_flag": false,
@@ -120,6 +120,6 @@
             "class": "rasa.nlu.classifiers.embedding_intent_classifier.EmbeddingIntentClassifier"
         }
     ],
-    "trained_at": "20200818-145511",
+    "trained_at": "20200819-000253",
     "rasa_version": "1.5.0"
 }

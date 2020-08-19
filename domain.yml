@@ -352,7 +352,7 @@ templates:
         payload: /salir
 
   utter_cotizaciones:
-  - text: "@#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
+  - text: "En seguida te contacté con un agente de Ventas @#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
 
   utter_mensaje_covid:
   - text: ""
