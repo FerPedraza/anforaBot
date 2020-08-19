@@ -4,8 +4,8 @@
   "nlu-config": "e9aa5c2ecccc9a4a273b7d67a64c85c7",
   "domain": 694935036576808449,
   "nlg": "de179bd0ecfabaa055af401c66238eaa",
-  "messages": 299803165657198933,
+  "messages": 423391939882956011,
   "stories": 1973352878547048506,
-  "trained_at": 1597813293.5839186,
+  "trained_at": 1597851712.6691914,
   "version": "1.5.0"
 }

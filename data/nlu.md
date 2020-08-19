@@ -36,6 +36,8 @@
 - en tienda linea
 - menu tienda en linea
 - opciones tienda en linea
+- ir a tienda en linea
+- tienda online
 
 ## intent:cotizaciones
 - ver cotizaciones

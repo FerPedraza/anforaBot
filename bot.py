@@ -129,13 +129,13 @@ class SmartBot:
                               + "\n🏨Alfredo del Mazo 702, Delegación San Lorenzo Tepaltitlán, C.P. 50010 Toluca de " \
                                 "Lerdo" \
                               + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
-                              + "\n   Domingo: 10:00 am a 6:00 pm" \
+                              + "\n" + "  Domingo: 10:00 am a 6:00 pm" \
                               + "\n📞722 237 3726" \
                               + "\n" \
                               + "\n  Almacenes Anfora – Metepec" \
                               + "\n🏨Av. Pino Suárez 2400-A, Fraccionamiento Xinantécatl,  C.P. 52140 Metepec" \
                               + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
-                              + "\n   Domingo: 10:00 am a 6:00 pm" \
+                              + "\n" + "  Domingo: 10:00 am a 6:00 pm" \
                               + "\n📞" \
                               + "\n" \
                               + "\n  Almacenes Anfora – Tenancingo" \
