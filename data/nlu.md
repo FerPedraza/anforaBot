@@ -39,6 +39,7 @@
 - opciones tienda en linea
 - ir a tienda en linea
 - tienda online
+- tienda en linea por favor
 
 ## intent:cotizaciones
 - ver cotizaciones
@@ -54,6 +55,7 @@
 - ver covid
 - medidas de proteccion
 - peligro covid
+- covid mensaje
 
 ## intent:salir
 - salir
@@ -104,6 +106,9 @@
 - soy del estado de ciudad de mexico
 - distrito federal
 - soy del estado de distrito federal
+- cdmx
+- sucursales en cdmx
+- valle de mexico
 
 ## intent:guanajuato
 - guanajuato
@@ -260,6 +265,31 @@
 - leon centro
 - leon delta
 - tuxtla gutierrez
+- sucursal san lorenzo
+- sucursal metepec
+- sucursal tenancingo
+- sucursal zinacantepec
+- sucursal juarez 1
+- sucursal juarez 2
+- sucursal portales
+- sucursal terminal
+- sucursal atizapan
+- sucursal lopez
+- sucursal aranda
+- sucursal articulo 123
+- sucursal ecatepec
+- sucursal chalco
+- sucursal tacubaya
+- sucursal queretaro zaragoza
+- sucursal queretaro alameda
+- sucursal san juan del rio
+- sucursal orizaba
+- sucursal tula de allende
+- sucursal tulancingo
+- sucursal pachuca
+- sucursal leon centro
+- sucursal leon delta
+- sucursal tuxtla gutierrez
 
 ## intent:dar_numero
 - 1234567890
