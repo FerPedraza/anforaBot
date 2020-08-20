@@ -33,7 +33,11 @@ def unpacking_tar():
             call(" tar -xzvf {}".format(modelo), shell=True)
             print("PASE 30" * 5)
             chdir("../")
-            call("rm *tar.gz", shell=True)
+            lista_2 = listdir(".")
+            for i in lista_2:
+                if i.find(".tar.gz") != -1:
+                    call("rm "+i,shell=True)
+
             #if len(list_number) > 1:
             #    print("PASE 32" * 5)
             #    print("PASO 27" * 10)

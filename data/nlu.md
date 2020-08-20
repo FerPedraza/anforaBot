@@ -25,6 +25,7 @@
 - sucursales horario telefono y ubicacion 
 - buscar una sucursal
 - sucursales
+- quiero ver las sucursales
 
 ## intent:tienda_linea
 - tienda en linea

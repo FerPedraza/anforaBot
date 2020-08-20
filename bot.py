@@ -119,7 +119,7 @@ class SmartBot:
 
             elif intencion == "mexico" or intencion == "ciudad_de_mexico" or intencion == "queretaro" \
                     or intencion == "veracruz" or intencion == "hidalgo" or intencion == "guanajuato" \
-                    or intencion == "chiapas":
+                    or intencion == "chiapas" or intencion == "toluca":
                 print("PASO 149")
                 estado = intencion
                 if estado == "toluca":
