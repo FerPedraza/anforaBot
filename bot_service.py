@@ -9,7 +9,9 @@ import logging.handlers
 from start_logs import logs
 global interpreter,agent,users,B_Client
 
+# desempaqueta ultimo modelo entrenado
 unpacking_tar()
+
 path_model = './models/train/'
 path_nlu = './models/train/nlu'
 
