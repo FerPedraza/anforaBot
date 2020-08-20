@@ -301,6 +301,16 @@
 - email@live.com
 - email@yahoo.com
 - email@e-bitware.com
+- [a-z]{6}@[a-z].mx
+- [a-z]{6}@[a-z].org
+- email@uam.mx
+- email@unam.mx
+- email@.mx
+- email@yahoo.com
+- email@outlook.com
+- email@gmx.com
+- email@zoho.com
+- email@protomail.com
 
 ## regex:regex_mail
 - ^\d{6}$
