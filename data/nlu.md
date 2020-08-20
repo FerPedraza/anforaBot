@@ -125,7 +125,10 @@
 - soy del estado de mexico
 - del estado
 - soy del estado
+
+## intent:toluca
 - toluca
+- de toluca
 
 ## intent:michoacan
 - michoacan
