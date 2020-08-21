@@ -61,7 +61,7 @@
     "rasa.core.policies.keras_policy.KerasPolicy",
     "rasa.core.policies.mapping_policy.MappingPolicy"
   ],
-  "trained_at": "20200820-182238",
+  "trained_at": "20200820-221553",
   "rasa": "1.5.0",
   "tensorflow": "1.15.2",
   "sklearn": "0.20.4"

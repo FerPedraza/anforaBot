@@ -345,6 +345,8 @@
 ## intent:cancelar_pedido
 - necesito cancelar mi pedido
 - cancelar pedido
+- cancelar mi pedido
+- quiero cancelar un pedido
 
 
 

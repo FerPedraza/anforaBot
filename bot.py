@@ -15,7 +15,7 @@ from validacion.valid_email import is_valid_email
 
 def menu_principal_salir(users):
     botones = [{'payload': 'saludar',
-                'title': 'Regresar al menú inicial'},
+                'title': 'Regresar al menú inicial🔙'},
                {'payload': 'salir',
                 'title': 'Salir'}]
     for i in range(len(botones)):
@@ -355,7 +355,7 @@ class SmartBot:
             elif intencion == "decir_sucursal":
 
                 mensaje = "Por favor compárteme tu número de teléfono a 10 dígitos" \
-                          + "\n1. Regresar al menú principal" \
+                          + "\n1. Regresar al menú principal🔙" \
                           + "\n2. Salir"
                 users = menu_principal_salir(users)
                 return mensaje, users
@@ -376,34 +376,34 @@ class SmartBot:
                 if mtl == "quiero_comprar" and ct_now - date < timedelta(minutes=5) and text.isdigit():
                     if validar_telefono(text):
                         mensaje = "Por favor compárteme tu correo electrónico" \
-                                  + "\n1. Regresar al menú principal" \
+                                  + "\n1. Regresar al menú principal🔙" \
                                   + "\n2. Salir"
                     else:
                         mensaje = "Vuelve a introducir tu número por favor" \
-                                  + "\n1. Regresar al menú principal" \
+                                  + "\n1. Regresar al menú principal🔙" \
                                   + "\n2. Salir"
                     users = menu_principal_salir(users)
                 elif mtl == "rastrear_pedido" and ct_now - date < timedelta(minutes=5) and text.isdigit():
                     if len(text) == 4:
                         self.update_request('numero_orden',)
-                        mensaje = "En seguida te contactaré con un agente de Ventas @#ADDITIONALTEXT#@#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
+                        mensaje = "En seguida te contactaré con un agente de Ventas @#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
                     else:
                         mensaje = "Ingresa nuevamente tu N° de orden por favor" \
-                                  + "\n1. Regresar al menú principal" \
+                                  + "\n1. Regresar al menú principal🔙" \
                                   + "\n2. Salir"
                         users = menu_principal_salir(users)
                 elif mtl == "problema_pedido" and text.isdigit():
-                    mensaje = "En seguida te contactaré con un agente de Ventas @#ADDITIONALTEXT#@#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
+                    mensaje = "En seguida te contactaré con un agente de Ventas @#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
                 elif mtl == "cancelar_pedido" and text.isdigit():
                     if self.laboral():
-                        mensaje = "En seguida te contacté con un agente de Ventas @#ADDITIONALTEXT#@#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
+                        mensaje = "En seguida te contacté con un agente de Ventas @#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
                     else:
-                        mensaje = "Hemos recibido tu mensaje y una persona te atenderá lo antes posible. Nuestros horarios de servicio son de Lunes a Sábado de 0 8: 00 am a 05: 00 pm. @#ADDITIONALTEXT#@#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
+                        mensaje = "Hemos recibido tu mensaje y una persona te atenderá lo antes posible. Nuestros horarios de servicio son de Lunes a Sábado de 0 8: 00 am a 05: 00 pm. @#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
 
                 else:
                     mensaje = "Ingresa nuevamente tu N°" \
-                              + "\n1. Regresar al menú principal" \
-                              + "\n2. Salir"
+                              + "\n1. Regresar al menú principal🔙" \
+                              + "\n2. Salir👋"
                     users = menu_principal_salir(users)
 
                 return mensaje, users
@@ -432,16 +432,16 @@ class SmartBot:
                         mensaje = "Hemos recibido tu fecha de nacimiento, estamos buscando tu pedido 🔎 \n¡Espera un " \
                                   "momento! "
                         mensaje = mensaje + "\nTu pedido ya está listo. 👇 \n¡Gracias por utilizar este servicio!" \
-                                  + "\n1. Regresar al menú principal" \
-                                  + "\n2. Salir"
+                                  + "\n1. Regresar al menú principal🔙" \
+                                  + "\n2. Salir👋"
                             # mensaje si no esta el pedido
                         # Almacenes Anfora: A tu pedido le falta un poco más de tiempo, ten paciencia, por f
                 elif mtl == "problema_pedido" and valido:
-                    mensaje = "@#ADDITIONALTEXT#@#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
+                    mensaje = "@#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
                 else:
                     mensaje = "Vuelve a ingresar tu fecha de nacimiento por favor" \
-                              + "\n1. Regresar al menú principal" \
-                              + "\n2. Salir"
+                              + "\n1. Regresar al menú principal🔙" \
+                              + "\n2. Salir👋"
                 users = menu_principal_salir(users)
                 return mensaje, users
 
@@ -455,28 +455,28 @@ class SmartBot:
                     mensaje = "¡Perfecto! 👏, Prepárate 📝" \
                               + "💡 TIP: Puedes mandar la foto de tu lista con el nombre de cada artículo y cantidad " \
                                 "que " \
-                              + "necesitas (piezas)" \
-                                 "Un agente tomará tu pedido ¿Estás listo?" \
+                              + "necesitas (piezas)." \
+                                 " Un agente tomará tu pedido ¿Estás listo?" \
                               + "\n1. Si" \
                               + "\n2. No" \
-                              + "\n3. Regresar al menú principal" \
-                              + "\n4. Salir"
+                              + "\n3. Regresar al menú principal🔙" \
+                              + "\n4. Salir👋"
                     botones = [{'payload': 'agente_quiero_comprar',
                                 'title': 'Si'},
                                {'payload': 'saludar',
                                 'title': 'No'},
                                {'payload': 'saludar',
-                                'title': 'Regresar al menú inicial'},
+                                'title': 'Regresar al menú inicial🔙'},
                                {'payload': 'salir',
-                                'title': 'Salir'}]
+                                'title': 'Salir👋'}]
                     for i in range(len(botones)):
                         botones[i]['number'] = str(i + 1)
                         botones[i]['letter number'] = convert_to_letters(i + 1)
                     users['buttons'] = botones
                 else:
                     mensaje = "Vuelve a ingresar tu correo por favor" \
-                              + "\n1. Regresar al menú principal" \
-                              + "\n2. Salir"
+                              + "\n1. Regresar al menú principal🔙" \
+                              + "\n2. Salir👋"
                     users = menu_principal_salir(users)
                 return mensaje, users
 
@@ -488,23 +488,6 @@ class SmartBot:
                     mensaje = "Hemos recibido tu mensaje y una persona te atenderá lo antes posible. Nuestros horarios de servicio son de Lunes a Sábado de 0 8: 00 am a 05: 00 pm. @#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
                 return mensaje, users
 
-
-        #        else:
-        #            print("A1090")
-        #            if speech:
-        #                print("A1092")
-        #                mensaje, users = self.valida_botones(speech, users)
-        #            else:
-        #                print("A1095")
-        #                mensaje = mensaje.format(nombre=users['name'])
-
-        #        if bandera_botones:
-        #            users['buttons'] = []
-        #        if not speech:
-        #            mensaje, users = self.valida_botones(speech, users)
-        #        var = re.compile("{nombre}")
-        #        if re.search(var, mensaje):
-        #            mensaje = mensaje.format(nombre=users['name'])
         mensaje = ''
         if bandera_botones:
             print("516a")
@@ -680,7 +663,7 @@ class SmartBot:
                       + "\n4. Promociones 🔔" \
                       + "\n5. Almacenes Anfora: Antes de visitarnos, te invitamos a conocer las medidas preventivas que " \
                       + "tenemos actualmente en nuestras tiendas, solo escribe 5" \
-                      + "\n6. Salir @#ADDITIONALTEXT#@https://www.broadcasterbot.com/cliente/almacenesanfora/logo.jpg"
+                      + "\n6. Salir👋 @#ADDITIONALTEXT#@https://www.broadcasterbot.com/cliente/almacenesanfora/logo.jpg"
         else:
             mensaje = "¡Hola! 👋 Soy el Asistente Virtual de Almacenes Anfora. 🤖 🍴" \
                       + "Nuestros horarios de servicio son de Lunes a Sábado de 08:00 am a 05:00 pm." \
@@ -691,7 +674,7 @@ class SmartBot:
                       + "\n4. Promociones 🔔" \
                       + "\n5. Almacenes Anfora: Antes de visitarnos, te invitamos a conocer las medidas preventivas que " \
                       + "tenemos actualmente en nuestras tiendas, solo escribe 5" \
-                      + "\n6. Salir @#ADDITIONALTEXT#@https://www.broadcasterbot.com/cliente/almacenesanfora/logo.jpg"
+                      + "\n6. Salir👋 @#ADDITIONALTEXT#@https://www.broadcasterbot.com/cliente/almacenesanfora/logo.jpg"
         botones = [{'payload': 'sucursales',
                     'title': 'Sucursales (Horario, teléfono y ubicación)'},
                    {'payload': 'tienda_linea',

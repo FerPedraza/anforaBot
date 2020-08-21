@@ -197,58 +197,58 @@ templates:
   utter_aguascalientes:
   - buttons:
     - payload: /saludar
-      title: Regresar al menú principal
+      title: Regresar al menú principal🔙
     - payload: /salir
-      title: Salir
+      title: Salir👋
     text: No hay ninguna tienda cerca
   utter_baja_california:
   - buttons:
     - payload: /saludar
-      title: Regresar al menú principal
+      title: Regresar al menú principal🔙
     - payload: /salir
-      title: Salir
+      title: Salir👋
     text: No hay ninguna tienda cerca
   utter_baja_california_sur:
   - buttons:
     - payload: /saludar
-      title: Regresar al menú principal
+      title: Regresar al menú principal🔙
     - payload: /salir
-      title: Salir
+      title: Salir👋
     text: No hay ninguna tienda cerca
   utter_campeche:
   - buttons:
     - payload: /saludar
-      title: Regresar al menú principal
+      title: Regresar al menú principal🔙
     - payload: /salir
-      title: Salir
+      title: Salir👋
     text: No hay ninguna tienda cerca
   utter_cancelar_pedido:
   - buttons:
     - payload: /saludar
-      title: Regresar al menú principal
+      title: Regresar al menú principal🔙
     - payload: /salir
-      title: Salir
+      title: Salir👋
     text: Escribe tu Nº de orden para ver el estatus de tu pedido 📈🤔
   utter_chihuahua:
   - buttons:
     - payload: /saludar
-      title: Regresar al menú principal
+      title: Regresar al menú principal🔙
     - payload: /salir
-      title: Salir
+      title: Salir👋
     text: No hay ninguna tienda cerca
   utter_coahuila:
   - buttons:
     - payload: /saludar
       title: Regresar al menú principal
     - payload: /salir
-      title: Salir
+      title: Salir👋
     text: No hay ninguna tienda cerca
   utter_colima:
   - buttons:
     - payload: /saludar
-      title: Regresar al menú principal
+      title: Regresar al menú principal🔙
     - payload: /salir
-      title: Salir
+      title: Salir👋
     text: No hay ninguna tienda cerca
   utter_cotizaciones:
   - text: En seguida te contacté con un agente de Ventas @#ADDITIONALTEXT#@@#COMPLETE#@
@@ -258,132 +258,132 @@ templates:
     - payload: /saludar
       title: Regresar al menú principal
     - payload: /salir
-      title: Salir
+      title: Salir👋
     text: No hay ninguna tienda cerca
   utter_guerrero:
   - buttons:
     - payload: /saludar
-      title: Regresar al menú principal
+      title: Regresar al menú principal🔙
     - payload: /salir
-      title: Salir
+      title: Salir👋
     text: No hay ninguna tienda cerca
   utter_jalisco:
   - buttons:
     - payload: /saludar
-      title: Regresar al menú principal
+      title: Regresar al menú principal🔙
     - payload: /salir
-      title: Salir
+      title: Salir👋
     text: No hay ninguna tienda cerca
   utter_mensaje_covid:
   - buttons:
     - payload: /saludar
-      title: Regresar al menú principal
+      title: Regresar al menú principal🔙
     - payload: /salir
-      title: Salir @#ADDITIONALTEXT#@https://www.broadcasterbot.com/cliente/almacenesanfora/0001.jpg
+      title: Salir👋 @#ADDITIONALTEXT#@https://www.broadcasterbot.com/cliente/almacenesanfora/0001.jpg
     text: ''
   utter_michoacán:
   - buttons:
     - payload: /saludar
-      title: Regresar al menú principal
+      title: Regresar al menú principal🔙
     - payload: /salir
-      title: Salir
+      title: Salir👋
     text: No hay ninguna tienda cerca
   utter_morelos:
   - buttons:
     - payload: /saludar
-      title: Regresar al menú principal
+      title: Regresar al menú principal🔙
     - payload: /salir
-      title: Salir
+      title: Salir👋
     text: No hay ninguna tienda cerca
   utter_méxico:
   - buttons:
     - payload: /saludar
-      title: Regresar al menú principal
+      title: Regresar al menú principal🔙
     - payload: /salir
-      title: Salir
+      title: Salir👋
     text: No hay ninguna tienda cerca
   utter_nayarit:
   - buttons:
     - payload: /saludar
-      title: Regresar al menú principal
+      title: Regresar al menú principal🔙
     - payload: /salir
-      title: Salir
+      title: Salir👋
     text: No hay ninguna tienda cerca
   utter_nuevo_leon:
   - buttons:
     - payload: /saludar
-      title: Regresar al menú principal
+      title: Regresar al menú principal🔙
     - payload: /salir
       title: Salir
     text: No hay ninguna tienda cerca
   utter_oaxaca:
   - buttons:
     - payload: /saludar
-      title: Regresar al menú principal
+      title: Regresar al menú principal🔙
     - payload: /salir
-      title: Salir
+      title: Salir👋
     text: No hay ninguna tienda cerca
   utter_problema_pedido:
   - buttons:
     - payload: /saludar
-      title: Regresar al menú principal
+      title: Regresar al menú principal🔙
     - payload: /salir
-      title: Salir
+      title: Salir👋
     text: Escribe tu Nº de orden para ver el estatus de tu pedido 📈🤔
   utter_puebla:
   - buttons:
     - payload: /saludar
-      title: Regresar al menú principal
+      title: Regresar al menú principal🔙
     - payload: /salir
-      title: Salir
+      title: Salir👋
     text: No hay ninguna tienda cerca
   utter_quiero_comprar:
   - buttons:
     - payload: /saludar
-      title: Regresar al menú principal
+      title: Regresar al menú principal🔙
     - payload: /salir
-      title: Salir
+      title: Salir👋
     text: "¡Equipa tu cocina! \U0001F37D️ \n¿Quieres que mandemos tu pedido a domicilio\
       \ o prefieres recogerlo alguna de nuestras sucursales? \nEscribe la dirección\
       \ o el nombre de la tienda \U0001F447"
   utter_quintana_roo:
   - buttons:
     - payload: /saludar
-      title: Regresar al menú principal
+      title: Regresar al menú principal🔙
     - payload: /salir
-      title: Salir
+      title: Salir👋
     text: No hay ninguna tienda cerca
   utter_rastrear_pedido:
   - buttons:
     - payload: /saludar
-      title: Regresar al menú principal
+      title: Regresar al menú principal🔙
     - payload: /salir
-      title: Salir
-    text: Escribe tu Nº de orden para ver el estatus de tu pedido 📈🤔 O si lo prefieres,
-      escribe OPERADOR para ayudarte en otros temas.
+      title: Salir👋
+    text: "Escribe tu Nº de orden para ver el estatus de tu pedido \U0001F4C8\U0001F914\
+      . \nO si lo prefieres, escribe OPERADOR para ayudarte en otros temas."
   utter_salir:
   - text: Te agradecemos haber utilizado el servicio de WhatsApp de Almacenes Anfora🍽️🛒
       @#ADDITIONALTEXT#@@#COMPLETE#@
   utter_san_luis_potosi:
   - buttons:
     - payload: /saludar
-      title: Regresar al menú principal
+      title: Regresar al menú principal🔙
     - payload: /salir
-      title: Salir
+      title: Salir👋
     text: No hay ninguna tienda cerca
   utter_sinaloa:
   - buttons:
     - payload: /saludar
-      title: Regresar al menú principal
+      title: Regresar al menú principal🔙
     - payload: /salir
-      title: Salir
+      title: Salir👋
     text: No hay ninguna tienda cerca
   utter_sonora:
   - buttons:
     - payload: /saludar
-      title: Regresar al menú principal
+      title: Regresar al menú principal🔙
     - payload: /salir
-      title: Salir
+      title: Salir👋
     text: No hay ninguna tienda cerca
   utter_sucursales:
   - buttons:
@@ -395,50 +395,50 @@ templates:
   utter_tabasco:
   - buttons:
     - payload: /saludar
-      title: Regresar al menú principal
+      title: Regresar al menú principal🔙
     - payload: /salir
-      title: Salir
+      title: Salir👋
     text: No hay ninguna tienda cerca
   utter_tamaulipas:
   - buttons:
     - payload: /saludar
-      title: Regresar al menú principal
+      title: Regresar al menú principal🔙
     - payload: /salir
-      title: Salir
+      title: Salir👋
     text: No hay ninguna tienda cerca
   utter_tienda_linea:
   - buttons:
     - payload: /quiero_comprar
-      title: Quiero comprar
+      title: Quiero comprar🍽
     - payload: /rastrear_pedido
       title: Quiero rastrear mi pedido 🚚
     - payload: /problema_pedido
       title: Tengo un problema con mi pedido 💬
     - payload: /cancelar_pedido
-      title: Necesito cancelar mi pedido
+      title: Necesito cancelar mi pedido❌
     - payload: /saludar
-      title: Regresar al menú principal
+      title: Regresar al menú principal🔙
     - payload: /salir
-      title: Salir
+      title: Salir👋
     text: ¿Qué deseas? Escribe el número.
   utter_tlaxcala:
   - buttons:
     - payload: /saludar
-      title: Regresar al menú principal
+      title: Regresar al menú principal🔙
     - payload: /salir
-      title: Salir
+      title: Salir👋
     text: No hay ninguna tienda cerca
   utter_yucatán:
   - buttons:
     - payload: /saludar
-      title: Regresar al menú principal
+      title: Regresar al menú principal🔙
     - payload: /salir
-      title: Salir
+      title: Salir👋
     text: No hay ninguna tienda cerca
   utter_zacatecas:
   - buttons:
     - payload: /saludar
-      title: Regresar al menú principal
+      title: Regresar al menú principal🔙
     - payload: /salir
-      title: Salir
+      title: Salir👋
     text: No hay ninguna tienda cerca
