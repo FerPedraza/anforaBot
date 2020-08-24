@@ -118,8 +118,7 @@ templates:
 
   utter_quiero_comprar:
   - text: "¡Equipa tu cocina! 🍽️
-           \n¿Quieres que mandemos tu pedido a domicilio o prefieres recogerlo alguna de nuestras sucursales?
-           \nEscribe la dirección o el nombre de la tienda 👇"
+           \nEscribe la dirección o nombre de la tienda 👇"
     buttons:
       - title: "Regresar al menú principal🔙"
         payload: /saludar
