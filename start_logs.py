@@ -8,3 +8,10 @@ def logs(app):
     logging.getLogger('werkzeug').addHandler(handler)
     app.logger.setLevel(logging.DEBUG)
     app.logger.addHandler(handler)
+
+    gunicorn_error_handlers = logging.getLogger('gunicorn.error').handlers
+    app.logger.handlers.extend(gunicorn_error_handlers)
+    #app.logger.addHandler(myhandler1)
+    #app.logger.addHandler(myhandler2)
+    app.logger.info('my info')
+    app.logger.debug('debug message')

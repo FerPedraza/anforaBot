@@ -5,8 +5,6 @@ from rasa.core.interpreter import RasaNLUInterpreter
 from bot import SmartBot
 from unpacking_tar import unpacking_tar
 from start_logs import logs
-import logging.handlers
-from start_logs import logs
 global interpreter,agent,users,B_Client
 
 # desempaqueta ultimo modelo entrenado
