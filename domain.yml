@@ -14,7 +14,7 @@ actions:
 - utter_durango
 - utter_guerrero
 - utter_jalisco
-- utter_michoacán
+- utter_michoacan
 - utter_morelos
 - utter_nayarit
 - utter_nuevo_leon
@@ -27,7 +27,7 @@ actions:
 - utter_tabasco
 - utter_tamaulipas
 - utter_tlaxcala
-- utter_yucatán
+- utter_yucatan
 - utter_zacatecas
 - utter_cotizaciones
 - utter_mensaje_covid
@@ -127,7 +127,7 @@ templates:
         payload: /salir
 
   utter_aguascalientes:
-  - text: "No hay ninguna tienda cerca"
+  - text: "El estado que introdujo no cuenta con sucursales"
     buttons:
       - title: "Regresar al menú principal🔙"
         payload: /saludar
@@ -135,7 +135,7 @@ templates:
         payload: /salir
 
   utter_baja_california:
-  - text: "No hay ninguna tienda cerca"
+  - text: "El estado que introdujo no cuenta con sucursales"
     buttons:
       - title: "Regresar al menú principal🔙"
         payload: /saludar
@@ -143,7 +143,7 @@ templates:
         payload: /salir
 
   utter_baja_california_sur:
-  - text: "No hay ninguna tienda cerca"
+  - text: "El estado que introdujo no cuenta con sucursales"
     buttons:
       - title: "Regresar al menú principal🔙"
         payload: /saludar
@@ -151,7 +151,7 @@ templates:
         payload: /salir
 
   utter_campeche:
-  - text: "No hay ninguna tienda cerca"
+  - text: "El estado que introdujo no cuenta con sucursales"
     buttons:
       - title: "Regresar al menú principal🔙"
         payload: /saludar
@@ -159,7 +159,7 @@ templates:
         payload: /salir
 
   utter_coahuila:
-  - text: "No hay ninguna tienda cerca"
+  - text: "El estado que introdujo no cuenta con sucursales"
     buttons:
       - title: "Regresar al menú principal"
         payload: /saludar
@@ -167,7 +167,7 @@ templates:
         payload: /salir
 
   utter_colima:
-  - text: "No hay ninguna tienda cerca"
+  - text: "El estado que introdujo no cuenta con sucursales"
     buttons:
       - title: "Regresar al menú principal🔙"
         payload: /saludar
@@ -175,7 +175,7 @@ templates:
         payload: /salir
 
   utter_chihuahua:
-  - text: "No hay ninguna tienda cerca"
+  - text: "El estado que introdujo no cuenta con sucursales"
     buttons:
       - title: "Regresar al menú principal🔙"
         payload: /saludar
@@ -183,7 +183,7 @@ templates:
         payload: /salir
 
   utter_durango:
-  - text: "No hay ninguna tienda cerca"
+  - text: "El estado que introdujo no cuenta con sucursales"
     buttons:
       - title: "Regresar al menú principal"
         payload: /saludar
@@ -191,7 +191,7 @@ templates:
         payload: /salir
 
   utter_guerrero:
-  - text: "No hay ninguna tienda cerca"
+  - text: "El estado que introdujo no cuenta con sucursales"
     buttons:
       - title: "Regresar al menú principal🔙"
         payload: /saludar
@@ -199,23 +199,23 @@ templates:
         payload: /salir
 
   utter_jalisco:
-  - text: "No hay ninguna tienda cerca"
+  - text: "El estado que introdujo no cuenta con sucursales"
     buttons:
       - title: "Regresar al menú principal🔙"
         payload: /saludar
       - title: "Salir👋"
         payload: /salir
 
-  utter_méxico:
-  - text: "No hay ninguna tienda cerca"
+  utter_mexico:
+  - text: "El estado que introdujo no cuenta con sucursales"
     buttons:
       - title: "Regresar al menú principal🔙"
         payload: /saludar
       - title: "Salir👋"
         payload: /salir
 
-  utter_michoacán:
-  - text: "No hay ninguna tienda cerca"
+  utter_michoacan:
+  - text: "El estado que introdujo no cuenta con sucursales"
     buttons:
       - title: "Regresar al menú principal🔙"
         payload: /saludar
@@ -223,7 +223,7 @@ templates:
         payload: /salir
 
   utter_morelos:
-  - text: "No hay ninguna tienda cerca"
+  - text: "El estado que introdujo no cuenta con sucursales"
     buttons:
       - title: "Regresar al menú principal🔙"
         payload: /saludar
@@ -231,7 +231,7 @@ templates:
         payload: /salir
 
   utter_nayarit:
-  - text: "No hay ninguna tienda cerca"
+  - text: "El estado que introdujo no cuenta con sucursales"
     buttons:
       - title: "Regresar al menú principal🔙"
         payload: /saludar
@@ -239,7 +239,7 @@ templates:
         payload: /salir
 
   utter_nuevo_leon:
-  - text: "No hay ninguna tienda cerca"
+  - text: "El estado que introdujo no cuenta con sucursales"
     buttons:
       - title: "Regresar al menú principal🔙"
         payload: /saludar
@@ -247,7 +247,7 @@ templates:
         payload: /salir
 
   utter_oaxaca:
-  - text: "No hay ninguna tienda cerca"
+  - text: "El estado que introdujo no cuenta con sucursales"
     buttons:
       - title: "Regresar al menú principal🔙"
         payload: /saludar
@@ -255,7 +255,7 @@ templates:
         payload: /salir
 
   utter_puebla:
-  - text: "No hay ninguna tienda cerca"
+  - text: "El estado que introdujo no cuenta con sucursales"
     buttons:
       - title: "Regresar al menú principal🔙"
         payload: /saludar
@@ -263,7 +263,7 @@ templates:
         payload: /salir
 
   utter_quintana_roo:
-  - text: "No hay ninguna tienda cerca"
+  - text: "El estado que introdujo no cuenta con sucursales"
     buttons:
       - title: "Regresar al menú principal🔙"
         payload: /saludar
@@ -271,7 +271,7 @@ templates:
         payload: /salir
 
   utter_san_luis_potosi:
-  - text: "No hay ninguna tienda cerca"
+  - text: "El estado que introdujo no cuenta con sucursales"
     buttons:
       - title: "Regresar al menú principal🔙"
         payload: /saludar
@@ -279,7 +279,7 @@ templates:
         payload: /salir
 
   utter_sinaloa:
-  - text: "No hay ninguna tienda cerca"
+  - text: "El estado que introdujo no cuenta con sucursales"
     buttons:
       - title: "Regresar al menú principal🔙"
         payload: /saludar
@@ -287,7 +287,7 @@ templates:
         payload: /salir
 
   utter_sonora:
-  - text: "No hay ninguna tienda cerca"
+  - text: "El estado que introdujo no cuenta con sucursales"
     buttons:
       - title: "Regresar al menú principal🔙"
         payload: /saludar
@@ -295,7 +295,7 @@ templates:
         payload: /salir
 
   utter_tabasco:
-  - text: "No hay ninguna tienda cerca"
+  - text: "El estado que introdujo no cuenta con sucursales"
     buttons:
       - title: "Regresar al menú principal🔙"
         payload: /saludar
@@ -303,7 +303,7 @@ templates:
         payload: /salir
 
   utter_tamaulipas:
-  - text: "No hay ninguna tienda cerca"
+  - text: "El estado que introdujo no cuenta con sucursales"
     buttons:
       - title: "Regresar al menú principal🔙"
         payload: /saludar
@@ -311,15 +311,15 @@ templates:
         payload: /salir
 
   utter_tlaxcala:
-  - text: "No hay ninguna tienda cerca"
+  - text: "El estado que introdujo no cuenta con sucursales"
     buttons:
       - title: "Regresar al menú principal🔙"
         payload: /saludar
       - title: "Salir👋"
         payload: /salir
 
-  utter_yucatán:
-  - text: "No hay ninguna tienda cerca"
+  utter_yucatan:
+  - text: "El estado que introdujo no cuenta con sucursales"
     buttons:
       - title: "Regresar al menú principal🔙"
         payload: /saludar
@@ -327,7 +327,7 @@ templates:
         payload: /salir
 
   utter_zacatecas:
-  - text: "No hay ninguna tienda cerca"
+  - text: "El estado que introdujo no cuenta con sucursales"
     buttons:
       - title: "Regresar al menú principal🔙"
         payload: /saludar

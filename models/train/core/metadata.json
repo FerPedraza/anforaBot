@@ -3,22 +3,88 @@
     "action_listen": {
       "slots": []
     },
+    "utter_morelos": {
+      "slots": []
+    },
+    "utter_michoacan": {
+      "slots": []
+    },
+    "utter_salir": {
+      "slots": []
+    },
+    "utter_quintana_roo": {
+      "slots": []
+    },
+    "utter_coahuila": {
+      "slots": []
+    },
+    "utter_baja_california_sur": {
+      "slots": []
+    },
+    "utter_sinaloa": {
+      "slots": []
+    },
+    "utter_mensaje_covid": {
+      "slots": []
+    },
+    "utter_chihuahua": {
+      "slots": []
+    },
+    "utter_tlaxcala": {
+      "slots": []
+    },
+    "utter_quiero_comprar": {
+      "slots": []
+    },
+    "utter_puebla": {
+      "slots": []
+    },
+    "utter_guerrero": {
+      "slots": []
+    },
+    "utter_zacatecas": {
+      "slots": []
+    },
+    "utter_oaxaca": {
+      "slots": []
+    },
+    "utter_campeche": {
+      "slots": []
+    },
+    "utter_nayarit": {
+      "slots": []
+    },
+    "utter_durango": {
+      "slots": []
+    },
+    "utter_sucursales": {
+      "slots": []
+    },
+    "utter_tienda_linea": {
+      "slots": []
+    },
     "utter_rastrear_pedido": {
       "slots": []
     },
     "utter_problema_pedido": {
       "slots": []
     },
-    "utter_sucursales": {
+    "utter_cotizaciones": {
+      "slots": []
+    },
+    "utter_tamaulipas": {
+      "slots": []
+    },
+    "utter_colima": {
       "slots": []
     },
     "utter_agente_quiero_comprar": {
       "slots": []
     },
-    "utter_quiero_comprar": {
+    "utter_sonora": {
       "slots": []
     },
-    "utter_salir": {
+    "utter_tabasco": {
       "slots": []
     },
     "utter_san_luis_potosi": {
@@ -27,25 +93,16 @@
     "utter_baja_california": {
       "slots": []
     },
-    "utter_tienda_linea": {
-      "slots": []
-    },
-    "utter_cotizaciones": {
-      "slots": []
-    },
     "utter_nuevo_leon": {
-      "slots": []
-    },
-    "utter_baja_california_sur": {
       "slots": []
     },
     "utter_cancelar_pedido": {
       "slots": []
     },
-    "utter_quintana_roo": {
+    "utter_yucatan": {
       "slots": []
     },
-    "utter_mensaje_covid": {
+    "utter_jalisco": {
       "slots": []
     }
   },
@@ -61,7 +118,7 @@
     "rasa.core.policies.keras_policy.KerasPolicy",
     "rasa.core.policies.mapping_policy.MappingPolicy"
   ],
-  "trained_at": "20200820-221553",
+  "trained_at": "20200824-141657",
   "rasa": "1.5.0",
   "tensorflow": "1.15.2",
   "sklearn": "0.20.4"
