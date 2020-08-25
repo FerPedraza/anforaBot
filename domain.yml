@@ -118,8 +118,11 @@ templates:
 
   utter_quiero_comprar:
   - text: "¡Equipa tu cocina! 🍽️
-           \nEscribe la dirección o nombre de la tienda 👇"
+           \nEscribe la dirección o nombre de la tienda 👇
+           \nO busca las tiendas mas cercanas a tu ubicación"
     buttons:
+      - title: "Sucursales (Horario, teléfono y ubicación)"
+        payload: /sucursales
       - title: "Regresar al menú principal🔙"
         payload: /saludar
       - title: "Salir👋"

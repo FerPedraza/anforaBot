@@ -339,13 +339,14 @@ templates:
     text: El estado que introdujo no cuenta con sucursales
   utter_quiero_comprar:
   - buttons:
+    - payload: /sucursales
+      title: Sucursales (Horario, teléfono y ubicación)
     - payload: /saludar
       title: Regresar al menú principal🔙
     - payload: /salir
       title: Salir👋
-    text: "¡Equipa tu cocina! \U0001F37D️ \n¿Quieres que mandemos tu pedido a domicilio\
-      \ o prefieres recogerlo alguna de nuestras sucursales? \nEscribe la dirección\
-      \ o el nombre de la tienda \U0001F447"
+    text: "¡Equipa tu cocina! \U0001F37D️ \nEscribe la dirección o nombre de la tienda\
+      \ \U0001F447 \nO busca las tiendas mas cercanas a tu ubicación"
   utter_quintana_roo:
   - buttons:
     - payload: /saludar

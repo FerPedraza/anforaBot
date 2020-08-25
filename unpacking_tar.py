@@ -17,6 +17,7 @@ def unpacking_tar():
             print("EL MODELO ES",modelo)
             call("ls", shell=True)
             call("mv models/{} models/train/.".format(modelo), shell=True)
+            chdir('models/train')
             call(" tar -xzvf {}".format(modelo), shell=True)
             chdir("../")
             lista_2 = listdir(".")
@@ -24,14 +25,8 @@ def unpacking_tar():
                 if i.find(".tar.gz") != -1:
                     call("rm "+i,shell=True)
             chdir('../')
-            #call("ls", shell=True)
         else:
             if len(listdir("./models/train/")) == 0:
                 print("NO EXISTE MODELO EN EL DIRECTORIO TRAIN!!")
                 print("SOLO EJECUTA \"rasa train\"")
                 exit()
-
-
-
-
-
