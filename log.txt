@@ -1661,3 +1661,8 @@ debug message
  * Restarting with stat
  * Debugger is active!
  * Debugger PIN: 259-934-499
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 259-934-499
+127.0.0.1 - - [25/Aug/2020 02:33:08] "[37mPOST /webhook HTTP/1.1[0m" 200 -
