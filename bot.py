@@ -1,6 +1,4 @@
 import asyncio
-from datetime import datetime, timedelta
-
 import pymongo
 import pytz
 import re
@@ -11,7 +9,7 @@ from conversion.convierte_a_letras import convert_to_letters
 from validacion.valida_telefono import validar_telefono
 from text.limpia_texto import middle_clean_text
 from validacion.valid_email import is_valid_email
-
+from datetime import datetime, timedelta
 
 def menu_principal_salir(users):
     botones = [{'payload': 'saludar',
@@ -80,7 +78,7 @@ class SmartBot:
         NLU = self.extraer_intenciones(text)
         intencion = NLU['intent']['name']
         confianza = NLU['intent']['confidence']
-        print("#"*30)
+        print("#" * 30)
         print(intencion)
         print(confianza)
         print("#" * 30)
@@ -97,13 +95,14 @@ class SmartBot:
             print("134a")
             tz = pytz.timezone('America/Mexico_City')
             ct = datetime.now(tz=tz).replace(tzinfo=None)
-            print("CT DE 130",ct)
+            print("CT DE 130", ct)
             self.update_request(campo="menu_tienda_linea", valor=intencion, date=ct)
         if users['name'] == 'Humano':
             print("140a")
             # Este if evalua la confianza del texto, si es una frase o palabra diferente a las del entrenamiento
             # la tomara como que no la conoce y se ejecutará esta parte del codigo.
-            if confianza < 0.55 and intencion != "dar_correo" and intencion != "dar_numero" and intencion != "agente_quiero_comprar" and intencion != "problema_pedido":
+            if confianza < 0.55 and intencion != "dar_correo" and intencion != "dar_numero" \
+                    and intencion != "agente_quiero_comprar" and intencion != "problema_pedido":
                 print("144a")
                 mensaje, users = self.saludar(users)
 
@@ -368,11 +367,6 @@ class SmartBot:
                 tz = pytz.timezone('America/Mexico_City')
                 ct_now = datetime.now(tz=tz).replace(tzinfo=None)
 
-
-                print("MTL", mtl)
-                print("DATE", date)
-                print("ct_NOW", ct_now)
-                print("ct_now - timedelta(minutes=5)",ct_now - timedelta(minutes=5))
                 if mtl == "quiero_comprar" and ct_now - date < timedelta(minutes=5) and text.isdigit():
                     if validar_telefono(text):
                         mensaje = "Por favor compárteme tu correo electrónico" \
@@ -385,20 +379,25 @@ class SmartBot:
                     users = menu_principal_salir(users)
                 elif mtl == "rastrear_pedido" and ct_now - date < timedelta(minutes=5) and text.isdigit():
                     if len(text) == 4:
-                        self.update_request('numero_orden',)
-                        mensaje = "En seguida te contactaré con un agente de Ventas @#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
+                        self.update_request('numero_orden', )
+                        mensaje = "En seguida te contactaré con un agente de Ventas @#ADDITIONALTEXT#@@#COMPLETE#@ " \
+                                  "@#ADDITIONALTEXT#@@#DELEGATE#@"
                     else:
                         mensaje = "Ingresa nuevamente tu N° de orden por favor" \
                                   + "\n1. Regresar al menú principal🔙" \
                                   + "\n2. Salir"
                         users = menu_principal_salir(users)
                 elif mtl == "problema_pedido" and text.isdigit():
-                    mensaje = "En seguida te contactaré con un agente de Ventas @#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
+                    mensaje = "En seguida te contactaré con un agente de Ventas @#ADDITIONALTEXT#@@#COMPLETE#@ " \
+                              "@#ADDITIONALTEXT#@@#DELEGATE#@"
                 elif mtl == "cancelar_pedido" and text.isdigit():
                     if self.laboral():
-                        mensaje = "En seguida te contacté con un agente de Ventas @#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
+                        mensaje = "En seguida te contacté con un agente de Ventas @#ADDITIONALTEXT#@@#COMPLETE#@ " \
+                                  "@#ADDITIONALTEXT#@@#DELEGATE#@"
                     else:
-                        mensaje = "Hemos recibido tu mensaje y una persona te atenderá lo antes posible. Nuestros horarios de servicio son de Lunes a Sábado de 0 8: 00 am a 05: 00 pm. @#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
+                        mensaje = "Hemos recibido tu mensaje y una persona te atenderá lo antes posible. Nuestros " \
+                                  "horarios de servicio son de Lunes a Sábado de 0 8: 00 am a 05: 00 pm. " \
+                                  "@#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
 
                 else:
                     mensaje = "Ingresa nuevamente tu N°" \
@@ -409,9 +408,9 @@ class SmartBot:
                 return mensaje, users
 
             elif intencion == "dar_fecha_nacimiento":
-                mtl = self.colection.find_one({"user_id": self.main_user}).get("request").get("menu_tienda_linea").get("opcion")
+                mtl = self.colection.find_one({"user_id": self.main_user}).get("request").get("menu_tienda_linea") \
+                    .get("opcion")
                 lista = text.split()
-                print("LISTA",lista)
                 if len(lista) == 3:
                     if lista[0].isdigit() and lista[1].isalpha() and lista[2].isdigit():
                         valido = True
@@ -432,10 +431,10 @@ class SmartBot:
                         mensaje = "Hemos recibido tu fecha de nacimiento, estamos buscando tu pedido 🔎 \n¡Espera un " \
                                   "momento! "
                         mensaje = mensaje + "\nTu pedido ya está listo. 👇 \n¡Gracias por utilizar este servicio!" \
-                                  + "\n1. Regresar al menú principal🔙" \
-                                  + "\n2. Salir👋"
-                            # mensaje si no esta el pedido
-                        # Almacenes Anfora: A tu pedido le falta un poco más de tiempo, ten paciencia, por f
+                            + "\n1. Regresar al menú principal🔙" \
+                            + "\n2. Salir👋"
+#                        mensaje si no esta el pedido
+#                        Almacenes Anfora: A tu pedido le falta un poco más de tiempo, ten paciencia, por f
                 elif mtl == "problema_pedido" and valido:
                     mensaje = "@#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
                 else:
@@ -446,7 +445,8 @@ class SmartBot:
                 return mensaje, users
 
             elif intencion == "promociones":
-                mensaje = "En seguida  te contactaré con un agente de Ventas https://www.almacenesanfora.com @#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
+                mensaje = "En seguida  te contactaré con un agente de Ventas https://www.almacenesanfora.com " \
+                          "@#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
                 return mensaje, users
 
             elif intencion == "dar_correo":
@@ -456,7 +456,7 @@ class SmartBot:
                               + "💡 TIP: Puedes mandar la foto de tu lista con el nombre de cada artículo y cantidad " \
                                 "que " \
                               + "necesitas (piezas)." \
-                                 " Un agente tomará tu pedido ¿Estás listo?" \
+                                " Un agente tomará tu pedido ¿Estás listo?" \
                               + "\n1. Si" \
                               + "\n2. No" \
                               + "\n3. Regresar al menú principal🔙" \
@@ -483,9 +483,12 @@ class SmartBot:
             elif intencion == "agente":
                 laboral = self.laboral()
                 if laboral:
-                    mensaje = "Comunicando con un operador @#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
+                    mensaje = "Comunicando con un operador @#ADDITIONALTEXT#@@#COMPLETE#@ " \
+                              "@#ADDITIONALTEXT#@@#DELEGATE#@"
                 else:
-                    mensaje = "Hemos recibido tu mensaje y una persona te atenderá lo antes posible. Nuestros horarios de servicio son de Lunes a Sábado de 0 8: 00 am a 05: 00 pm. @#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
+                    mensaje = "Hemos recibido tu mensaje y una persona te atenderá lo antes posible. Nuestros " \
+                              "horarios de servicio son de Lunes a Sábado de 0 8: 00 am a 05: 00 pm. " \
+                              "@#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
                 return mensaje, users
 
         mensaje = ''
@@ -661,8 +664,8 @@ class SmartBot:
                       + "\n2. Tienda en línea 🛒" \
                       + "\n3. Cotizaciones 💰" \
                       + "\n4. Promociones 🔔" \
-                      + "\n5. Almacenes Anfora: Antes de visitarnos, te invitamos a conocer las medidas preventivas que " \
-                      + "tenemos actualmente en nuestras tiendas, solo escribe 5" \
+                      + "\n5. Almacenes Anfora: Antes de visitarnos, te invitamos a conocer las medidas preventivas " \
+                        "que tenemos actualmente en nuestras tiendas, solo escribe 5" \
                       + "\n6. Salir👋 @#ADDITIONALTEXT#@https://www.broadcasterbot.com/cliente/almacenesanfora/logo.jpg"
         else:
             mensaje = "¡Hola! 👋 Soy el Asistente Virtual de Almacenes Anfora. 🤖 🍴" \
@@ -672,8 +675,8 @@ class SmartBot:
                       + "\n2. Tienda en línea 🛒" \
                       + "\n3. Cotizaciones 💰" \
                       + "\n4. Promociones 🔔" \
-                      + "\n5. Almacenes Anfora: Antes de visitarnos, te invitamos a conocer las medidas preventivas que " \
-                      + "tenemos actualmente en nuestras tiendas, solo escribe 5" \
+                      + "\n5. Almacenes Anfora: Antes de visitarnos, te invitamos a conocer las medidas preventivas " \
+                        "que tenemos actualmente en nuestras tiendas, solo escribe 5" \
                       + "\n6. Salir👋 @#ADDITIONALTEXT#@https://www.broadcasterbot.com/cliente/almacenesanfora/logo.jpg"
         botones = [{'payload': 'sucursales',
                     'title': 'Sucursales (Horario, teléfono y ubicación)'},
@@ -684,8 +687,8 @@ class SmartBot:
                    {'payload': 'promociones',
                     'title': 'Promociones'},
                    {'payload': 'mensaje_covid',
-                    'title': 'Almacenes Anfora: Antes de visitarnos, te invitamos a conocer las medidas preventivas que " \
-            +  "tenemos actualmente en nuestras tiendas, solo escribe 5 '},
+                    'title': 'Almacenes Anfora: Antes de visitarnos, te invitamos a conocer las medidas preventivas '
+                             'que tenemos actualmente en nuestras tiendas, solo escribe 5 '},
                    {'payload': 'salir',
                     'title': 'salir'}]
         for i in range(len(botones)):
