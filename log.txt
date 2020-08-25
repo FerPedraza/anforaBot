@@ -1645,3 +1645,5 @@ my info
 debug message
  * Debugger is active!
  * Debugger PIN: 259-934-499
+ * Detected change in '/home/uziel/repositorios/chatbot-botanfora/start_logs.py', reloading
+ * Restarting with stat
