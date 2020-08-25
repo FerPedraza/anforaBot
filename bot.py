@@ -446,7 +446,7 @@ class SmartBot:
                 return mensaje, users
 
             elif intencion == "promociones":
-                mensaje = "En seguida  te contactaré con un agente de Ventas https://www.almacenesanfora.com/ @#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
+                mensaje = "En seguida  te contactaré con un agente de Ventas https://www.almacenesanfora.com @#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
                 return mensaje, users
 
             elif intencion == "dar_correo":
