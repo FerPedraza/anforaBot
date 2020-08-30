@@ -119,7 +119,7 @@ templates:
   utter_quiero_comprar:
   - text: "¡Equipa tu cocina! 🍽️
            \nEscribe la dirección o nombre de la tienda 👇
-           \nO presiona 1 para buscas las tiendas mas cercanas a tu ubicación"
+           \nO presiona 1 para buscar las tiendas mas cercanas a tu ubicación"
     buttons:
       - title: "Sucursales (Horario, teléfono y ubicación)"
         payload: /sucursales
@@ -354,7 +354,7 @@ templates:
         payload: /salir
 
   utter_cotizaciones:
-  - text: "En seguida te contacté con un agente de Ventas @#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
+  - text: "En seguida te contactaré con un agente de Ventas @#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
 
   utter_mensaje_covid:
   - text: ""

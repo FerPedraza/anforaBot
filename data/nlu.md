@@ -131,6 +131,7 @@
 - soy del estado de mexico
 - del estado
 - soy del estado
+- edomex
 
 ## intent:toluca
 - toluca

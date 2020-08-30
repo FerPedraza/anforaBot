@@ -251,7 +251,7 @@ templates:
       title: Salir👋
     text: El estado que introdujo no cuenta con sucursales😯
   utter_cotizaciones:
-  - text: En seguida te contacté con un agente de Ventas @#ADDITIONALTEXT#@@#COMPLETE#@
+  - text: En seguida te contactaré con un agente de Ventas @#ADDITIONALTEXT#@@#COMPLETE#@
       @#ADDITIONALTEXT#@@#DELEGATE#@
   utter_durango:
   - buttons:
@@ -346,7 +346,7 @@ templates:
     - payload: /salir
       title: Salir👋
     text: "¡Equipa tu cocina! \U0001F37D️ \nEscribe la dirección o nombre de la tienda\
-      \ \U0001F447 \nO presiona 1 para buscas las tiendas mas cercanas a tu ubicación"
+      \ \U0001F447 \nO presiona 1 para buscar las tiendas mas cercanas a tu ubicación"
   utter_quintana_roo:
   - buttons:
     - payload: /saludar

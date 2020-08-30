@@ -392,7 +392,7 @@ class SmartBot:
                               "@#ADDITIONALTEXT#@@#DELEGATE#@"
                 elif mtl == "cancelar_pedido" and text.isdigit():
                     if self.laboral():
-                        mensaje = "En seguida te contacté con un agente de Ventas @#ADDITIONALTEXT#@@#COMPLETE#@ " \
+                        mensaje = "En seguida te contactaré con un agente de Ventas @#ADDITIONALTEXT#@@#COMPLETE#@ " \
                                   "@#ADDITIONALTEXT#@@#DELEGATE#@"
                     else:
                         mensaje = "Hemos recibido tu mensaje y una persona te atenderá lo antes posible. Nuestros " \
@@ -445,7 +445,7 @@ class SmartBot:
                 return mensaje, users
 
             elif intencion == "promociones":
-                mensaje = "En seguida  te contactaré con un agente de Ventas https://www.almacenesanfora.com " \
+                mensaje = "En seguida te contactaré con un agente de Ventas https://www.almacenesanfora.com " \
                           "@#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
                 return mensaje, users
 
