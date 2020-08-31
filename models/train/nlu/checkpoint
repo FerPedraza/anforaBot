@@ -1,2 +1,2 @@
-model_checkpoint_path: "/tmp/tmpqtid48bh/nlu/component_6_EmbeddingIntentClassifier.ckpt"
-all_model_checkpoint_paths: "/tmp/tmpqtid48bh/nlu/component_6_EmbeddingIntentClassifier.ckpt"
+model_checkpoint_path: "/tmp/tmp_qucqbt3/nlu/component_6_EmbeddingIntentClassifier.ckpt"
+all_model_checkpoint_paths: "/tmp/tmp_qucqbt3/nlu/component_6_EmbeddingIntentClassifier.ckpt"
