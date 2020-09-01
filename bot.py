@@ -345,7 +345,7 @@ class SmartBot:
                               + "\n1. Regresar al menú principal🔙" \
                               + "\n2. Salir👋"
                 else:
-                    mensaje = "No existe ninguna sucursal cerca de tu ubicación" \
+                    mensaje = "Por el momento, no contamos con sucursal en tu estado ☹. ¡Compra en https://www.almacenesanfora.com/, contamos con envió a toda la Republica Mexicana! 🚚" \
                               + "\n1. Regresar al menú principal🔙" \
                               + "\n2. Salir👋"
                 users = menu_principal_salir(users)
@@ -445,8 +445,15 @@ class SmartBot:
                 return mensaje, users
 
             elif intencion == "promociones":
-                mensaje = "En seguida te contactaré con un agente de Ventas https://www.almacenesanfora.com " \
+                tz = pytz.timezone('America/Mexico_City')
+                ct = datetime.now(tz=tz)
+                day = ct.day
+                if day <= 16:
+                    mensaje = "En seguida te contactaré con un agente de Ventas @#ADDITIONALTEXT#@https://www.broadcasterbot.com/cliente/almacenesanfora/1q.jpg " \
                           "@#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
+                else:
+                    mensaje = "En seguida te contactaré con un agente de Ventas @#ADDITIONALTEXT#@https://www.broadcasterbot.com/cliente/almacenesanfora/2q.jpg" \
+                              "@#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
                 return mensaje, users
 
             elif intencion == "dar_correo":
