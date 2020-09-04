@@ -449,7 +449,7 @@ class SmartBot:
                 ct = datetime.now(tz=tz)
                 day = ct.day
                 if day <= 16:
-                    mensaje = "En seguida te contactaré con un agente de Ventas @#ADDITIONALTEXT#@https://www.broadcasterbot.com/cliente/almacenesanfora/1q.jpg " \
+                    mensaje = "En seguida te contactaré con un agente de Ventas @#ADDITIONALTEXT#@hy cambttps://www.broadcasterbot.com/cliente/almacenesanfora/1q.jpg " \
                           "@#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
                 else:
                     mensaje = "En seguida te contactaré con un agente de Ventas @#ADDITIONALTEXT#@https://www.broadcasterbot.com/cliente/almacenesanfora/2q.jpg" \
