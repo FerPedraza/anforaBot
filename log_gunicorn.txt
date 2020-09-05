@@ -1,4 +1,0 @@
-my info
-debug message
- * Debugger is active!
- * Debugger PIN: 259-934-499
