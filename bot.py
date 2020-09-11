@@ -43,9 +43,9 @@ class SmartBot:
         if platform.node() == "u1" or platform.node() == "DESKTOP-0CKRHA6":
             ip = "localhost"
         else:
-            ip = "172.17.0.8" #172.17.0.3
+            ip = "172.17.0.3" #172.17.0.3
         # 172.17.0.3 docker server default 172.31.0.2 #docker local 172.17.0.2
-        b_client = pymongo.MongoClient(ip, 27017)
+        b_client = pymongo.MongoClient("172.17.0.2", 27017)
         db = b_client['Chatbots']
         self.colection = db['Anfora']
         self.facebook = facebook

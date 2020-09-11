@@ -14,7 +14,7 @@ def logs(app):
         maxBytes=1024 * 1024)
     # only use gunicorn.error logger for all logging
     logging.getLogger('gunicorn.error').setLevel(logging.DEBUG)
-    logging.getLogger('gunicorn.error').addHandler(handler)
+    logging.getLogger('gunicorn.error   ').addHandler(handler)
     app.logger.setLevel(logging.DEBUG)
     app.logger.addHandler(handler)
 
