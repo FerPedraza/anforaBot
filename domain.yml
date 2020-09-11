@@ -86,6 +86,7 @@ intents:
 - agente_quiero_comprar
 - dar_fecha_nacimiento
 - agente
+- toluca
 
 
 templates:
@@ -119,7 +120,7 @@ templates:
   utter_quiero_comprar:
   - text: "¡Equipa tu cocina! 🍽️
            \nEscribe la dirección o nombre de la tienda 👇
-           \nO presiona 1 para buscar las tiendas mas cercanas a tu ubicación"
+           \nO presiona 1 para buscar las tiendas más cercanas a tu ubicación"
     buttons:
       - title: "Sucursales (Horario, teléfono y ubicación)"
         payload: /sucursales

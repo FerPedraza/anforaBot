@@ -13,7 +13,7 @@ from datetime import datetime, timedelta
 
 def menu_principal_salir(users):
     botones = [{'payload': 'saludar',
-                'title': 'Regresar al menú inicial🔙'},
+                'title': 'Regresar al menú inicial'},
                {'payload': 'salir',
                 'title': 'Salir'}]
     for i in range(len(botones)):
@@ -63,7 +63,10 @@ class SmartBot:
                 if len(num_btns) < int(self.original_text):
                     print("104a")
                     print("BOTONES NO SE ENTENDIO")
-                    mensaje = 'Lo siento no entendí qué quisiste decir, por favor introduce una opción válida'
+                    mensaje = 'Lo siento no entendí qué quisiste decir, por favor introduce una opción válida' \
+                        + "\n1. Regresar al menú principal🔙" \
+                        + "\n2. Salir👋"
+                    users = menu_principal_salir(users)
                     return mensaje, users
             # El siguiente if sirve para validar si la entrada recibida (text) hace referencia a un boton del mensaje
             # anterior, ya sea como número o texto.
@@ -121,9 +124,15 @@ class SmartBot:
                     or intencion == "chiapas" or intencion == "toluca":
                 print("PASO 149")
                 estado = intencion
+                mp = self.colection.find_one({"user_id": self.main_user}).get("request").get("menu_principal").get('opcion')
+                print("ESTO ES MP")
+                print(mp)
+                #intencion == "sucursales" or intencion == "tienda_linea" or intencion == "cotizaciones" \
+                #or intencion == "promociones" or intencion == "mensaje_covid":
                 if estado == "toluca":
                     print("PASO 152")
-                    mensaje = "¡Estas son las sucursales cercanas a ti!" \
+                    if mp != "tienda_linea":
+                        mensaje = "¡Estas son las sucursales cercanas a ti!" \
                               + "\n  Almacenes Anfora – San Lorenzo" \
                               + "\n🏨Alfredo del Mazo 702, Delegación San Lorenzo Tepaltitlán, C.P. 50010 Toluca de " \
                                 "Lerdo" \
@@ -181,7 +190,76 @@ class SmartBot:
                               + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
                               + "\n   Domingo: 10:00 am a 6:00 pm" \
                               + "\n📞722 212 9731" \
-                              + "\nhttps://goo.gl/maps/p7DgbEUF3yFhYDmP6"
+                              + "\nhttps://goo.gl/maps/p7DgbEUF3yFhYDmP6" \
+                              + "\n" \
+                              + "\n1. Regresar al menú principal🔙" \
+                              + "\n2. Salir👋"
+
+                    else:
+                        mensaje = "¡Estas son las sucursales cercanas a ti!" \
+                                  + "\n  Almacenes Anfora – San Lorenzo" \
+                                  + "\n🏨Alfredo del Mazo 702, Delegación San Lorenzo Tepaltitlán, C.P. 50010 Toluca de " \
+                                    "Lerdo" \
+                                  + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
+                                  + "\n" + "  Domingo: 10:00 am a 6:00 pm" \
+                                  + "\n📞722 237 3726" \
+                                  + "\nhttps://goo.gl/maps/zDJf14V9xunFWY7z7" \
+                                  + "\n" \
+                                  + "\n  Almacenes Anfora – Metepec" \
+                                  + "\n🏨Av. Pino Suárez 2400-A, Fraccionamiento Xinantécatl,  C.P. 52140 Metepec" \
+                                  + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
+                                  + "\n" + "  Domingo: 10:00 am a 6:00 pm" \
+                                  + "\n📞722 280 1254" \
+                                  + "\nhttps://goo.gl/maps/sxBQrqSNiZXDS1xQ7" \
+                                  + "\n" \
+                                  + "\n  Almacenes Anfora – Tenancingo" \
+                                  + "\n🏨Guadalupe Victoria 105, Centro Tenancingo, C.P. 52400 Tenancingo" \
+                                  + "\n🕑Lunes, martes, miércoles y viernes" \
+                                  + "\n  10:00 am a 8:00 pm" \
+                                  + "\n  Jueves y Sábado: 09:00 am a 8:00 pm" \
+                                  + "\n   Domingos: de 9:00 am a 7:00 pm" \
+                                  + "\n📞714 142 3190" \
+                                  + "\nhttps://goo.gl/maps/F7n9oQrE2Z3zZ3Rp6" \
+                                  + "\n" \
+                                  + "\n  Almacenes Anfora – Zinacantepec" \
+                                  + "\n🏨PASEO ADOLFO LÓPEZ MATEOS No. 1608, COLONIA, San Mateo Oxtotitlán, C.P. 50100 " \
+                                    "Toluca de Lerdo" \
+                                  + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
+                                  + "\n   Domingo: 10:00 am a 6:00 pm" \
+                                  + "\n📞 722 278 5136" \
+                                  + "\nhttps://goo.gl/maps/GqiyQEUUB3Hwgodq7" \
+                                  + "\n" \
+                                  + "\n  Almacenes Anfora – Juárez 1" \
+                                  + "\n🏨Av. Juárez Sur 119, Centro, C.P. 50000 Toluca, Estado de México" \
+                                  + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
+                                  + "\n  Domingo: 10:00 am a 6:00 pm" \
+                                  + "\n📞722 214 0284" \
+                                  + "\nhttps://goo.gl/maps/cq4QiTQcfGPXXnwM6" \
+                                  + "\n" \
+                                  + "\n  Almacenes Anfora – Juárez 2" \
+                                  + "\n🏨Av. Juárez Sur No. 206 Colonia Centro, Toluca,  Estado de México C.P. 50000" \
+                                  + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
+                                  + "\n📞722 214 2800" \
+                                  + "\nhttps://goo.gl/maps/5fMLvGdy1xDSm9yS9" \
+                                  + "\n" \
+                                  + "\n  Almacenes Anfora – Portales" \
+                                  + "\n🏨Portal 20 de Noviembre No. 109 interiores D Y C Colonia  Centro C.p. 50000 Toluca" \
+                                  + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
+                                  + "\n   Domingo: 10:00 am a 6:00 pm" \
+                                  + "\n📞722 213 5054" \
+                                  + "\nhttps://goo.gl/maps/geaW5KTeD4166FS8A" \
+                                  + "\n" \
+                                  + "\n  Almacenes Anfora – Terminal" \
+                                  + "\n🏨Avenida Paseo Tollocan 501, Américas Cárdenas, 50130 Toluca de Lerdo" \
+                                  + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
+                                  + "\n   Domingo: 10:00 am a 6:00 pm" \
+                                  + "\n📞722 212 9731" \
+                                  + "\nhttps://goo.gl/maps/p7DgbEUF3yFhYDmP6" \
+                                  + "\n" \
+                                  + "Ahora ingresa tu sucursal mas cercana para continuar con tu compra" \
+                                  + "\n1. Regresar al menú principal🔙" \
+                                  + "\n2. Salir👋"
+
 
                 elif estado == "ciudad_de_mexico":
                     mensaje = "¡Estas son las sucursales cercanas a ti!" \
@@ -335,7 +413,7 @@ class SmartBot:
 
                 elif intencion == "chiapas":
                     mensaje = "¡Estas son las sucursales cercanas a ti!" \
-                              + "\nAlmacenes Anfora – Tuxtla Gutièrrez" \
+                              + "\nAlmacenes Anfora – Tuxtla Gutiérrez" \
                               + "\n🏨11A Oriente Norte 221, Col. Hidalgo, Tuxtla Gutiérrez, Chiapas, CP 29040" \
                               + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
                               + "\n   Domingo: 10:00 am a 6:00 pm" \
@@ -400,9 +478,10 @@ class SmartBot:
                                   "@#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
 
                 else:
-                    mensaje = "Ingresa nuevamente tu N°" \
-                              + "\n1. Regresar al menú principal🔙" \
-                              + "\n2. Salir👋"
+                    mensaje, users = self.saludar(users)
+                    #mensaje = "Ingresa nuevamente tu N°" \
+                    #          + "\n1. Regresar al menú principal🔙" \
+                    #          + "\n2. Salir👋"
                     users = menu_principal_salir(users)
 
                 return mensaje, users
@@ -449,7 +528,7 @@ class SmartBot:
                 ct = datetime.now(tz=tz)
                 day = ct.day
                 if day <= 16:
-                    mensaje = "En seguida te contactaré con un agente de Ventas @#ADDITIONALTEXT#@hy cambttps://www.broadcasterbot.com/cliente/almacenesanfora/1q.jpg " \
+                    mensaje = "En seguida te contactaré con un agente de Ventas @#ADDITIONALTEXT#@https://www.broadcasterbot.com/cliente/almacenesanfora/1q.jpg " \
                           "@#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
                 else:
                     mensaje = "En seguida te contactaré con un agente de Ventas @#ADDITIONALTEXT#@https://www.broadcasterbot.com/cliente/almacenesanfora/2q.jpg" \
