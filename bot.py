@@ -458,24 +458,21 @@ class SmartBot:
                 elif mtl == "rastrear_pedido" and ct_now - date < timedelta(minutes=5) and text.isdigit():
                     if len(text) == 4:
                         self.update_request('numero_orden', )
-                        mensaje = "En seguida te contactaré con un agente de Ventas @#ADDITIONALTEXT#@@#COMPLETE#@ " \
-                                  "@#ADDITIONALTEXT#@@#DELEGATE#@"
+                        mensaje = "En seguida te contactaré con un agente de Ventas @#ADDITIONALTEXT#@@#DELEGATE#@"
                     else:
                         mensaje = "Ingresa nuevamente tu N° de orden por favor" \
                                   + "\n1. Regresar al menú principal🔙" \
                                   + "\n2. Salir"
                         users = menu_principal_salir(users)
                 elif mtl == "problema_pedido" and text.isdigit():
-                    mensaje = "En seguida te contactaré con un agente de Ventas @#ADDITIONALTEXT#@@#COMPLETE#@ " \
-                              "@#ADDITIONALTEXT#@@#DELEGATE#@"
+                    mensaje = "En seguida te contactaré con un agente de Ventas @#ADDITIONALTEXT#@@#DELEGATE#@"
                 elif mtl == "cancelar_pedido" and text.isdigit():
                     if self.laboral():
-                        mensaje = "En seguida te contactaré con un agente de Ventas @#ADDITIONALTEXT#@@#COMPLETE#@ " \
-                                  "@#ADDITIONALTEXT#@@#DELEGATE#@"
+                        mensaje = "En seguida te contactaré con un agente de Ventas @#ADDITIONALTEXT#@@#DELEGATE#@"
                     else:
                         mensaje = "Hemos recibido tu mensaje y una persona te atenderá lo antes posible. Nuestros " \
                                   "horarios de servicio son de Lunes a Sábado de 0 8: 00 am a 05: 00 pm. " \
-                                  "@#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
+                                  " @#ADDITIONALTEXT#@@#DELEGATE#@"
 
                 else:
                     mensaje, users = self.saludar(users)
@@ -515,7 +512,7 @@ class SmartBot:
 #                        mensaje si no esta el pedido
 #                        Almacenes Anfora: A tu pedido le falta un poco más de tiempo, ten paciencia, por f
                 elif mtl == "problema_pedido" and valido:
-                    mensaje = "@#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
+                    mensaje = " @#ADDITIONALTEXT#@@#DELEGATE#@"
                 else:
                     mensaje = "Vuelve a ingresar tu fecha de nacimiento por favor" \
                               + "\n1. Regresar al menú principal🔙" \
@@ -529,10 +526,10 @@ class SmartBot:
                 day = ct.day
                 if day <= 16:
                     mensaje = "En seguida te contactaré con un agente de Ventas @#ADDITIONALTEXT#@https://www.broadcasterbot.com/cliente/almacenesanfora/1q.jpg " \
-                          "@#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
+                          " @#ADDITIONALTEXT#@@#DELEGATE#@"
                 else:
                     mensaje = "En seguida te contactaré con un agente de Ventas @#ADDITIONALTEXT#@https://www.broadcasterbot.com/cliente/almacenesanfora/2q.jpg" \
-                              "@#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
+                              " @#ADDITIONALTEXT#@@#DELEGATE#@"
                 return mensaje, users
 
             elif intencion == "dar_correo":
@@ -569,12 +566,11 @@ class SmartBot:
             elif intencion == "agente":
                 laboral = self.laboral()
                 if laboral:
-                    mensaje = "Comunicando con un operador @#ADDITIONALTEXT#@@#COMPLETE#@ " \
-                              "@#ADDITIONALTEXT#@@#DELEGATE#@"
+                    mensaje = "Comunicando con un operador @#ADDITIONALTEXT#@@#DELEGATE#@"
                 else:
                     mensaje = "Hemos recibido tu mensaje y una persona te atenderá lo antes posible. Nuestros " \
                               "horarios de servicio son de Lunes a Sábado de 0 8: 00 am a 05: 00 pm. " \
-                              "@#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
+                              " @#ADDITIONALTEXT#@@#DELEGATE#@"
                 return mensaje, users
 
         mensaje = ''

@@ -355,7 +355,7 @@ templates:
         payload: /salir
 
   utter_cotizaciones:
-  - text: "En seguida te contactaré con un agente de Ventas @#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
+  - text: "En seguida te contactaré con un agente de Ventas @#ADDITIONALTEXT#@@#DELEGATE#@"
 
   utter_mensaje_covid:
   - text: ""
@@ -374,7 +374,7 @@ templates:
         payload: /salir
 
   utter_agente_quiero_comprar:
-  - text: "En seguida te contactaré con un agente de Ventas. @#ADDITIONALTEXT#@@#COMPLETE#@ @#ADDITIONALTEXT#@@#DELEGATE#@"
+  - text: "En seguida te contactaré con un agente de Ventas. @#ADDITIONALTEXT#@@#DELEGATE#@"
 
 session_config:
   session_expiration_time: 60
