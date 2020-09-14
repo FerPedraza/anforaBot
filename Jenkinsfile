@@ -11,7 +11,7 @@ def getContainerInfo() {
 }
 
 def getEnvironments() {
-  def port = 5005
+  def port = 5004
 
   return [
     local: [
@@ -113,7 +113,7 @@ def upContainer(info, String args = '') {
 def startContainer() {
   def containerInfo = getContainerInfo()
   def config = getConfig()
-  upContainer(containerInfo, " -p ${config.runPort}:5005")
+  upContainer(containerInfo, " -p ${config.runPort}:5004")
 }
 
 def loadBackend() {
