@@ -1011,6 +1011,8 @@ class SmartBot:
             if lista[i].find("@#DELEGATE#@") != -1 or lista[i].find("@#COMPLETE#@") != -1:
                 banderas.append(str(lista[i]))
             if lista[i].find(".jpg") != -1:
+                if lista[i][-1] == " ":
+                    lista[i] = lista[i][:-1]
                 imagenes.append(str(lista[i]))
         for i in range(len(banderas)):
             mensajes.append(banderas[i])
