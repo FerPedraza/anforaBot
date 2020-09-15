@@ -125,13 +125,15 @@ class SmartBot:
                 print("PASO 149")
                 estado = intencion
                 mp = self.colection.find_one({"user_id": self.main_user}).get("request").get("menu_principal").get('opcion')
+                menu_tienda_linea = self.colection.find_one({"user_id": self.main_user}).get("request").get("menu_tienda_linea").get('opcion')
                 print("ESTO ES MP")
                 print(mp)
                 #intencion == "sucursales" or intencion == "tienda_linea" or intencion == "cotizaciones" \
                 #or intencion == "promociones" or intencion == "mensaje_covid":
                 if estado == "toluca":
                     print("PASO 152")
-                    if mp != "tienda_linea":
+                    if menu_tienda_linea != "quiero_comprar":
+                    #if mp != "tienda_linea":
                         mensaje = "¡Estas son las sucursales cercanas a ti!" \
                               + "\n  Almacenes Anfora – San Lorenzo" \
                               + "\n🏨Alfredo del Mazo 702, Delegación San Lorenzo Tepaltitlán, C.P. 50010 Toluca de " \
@@ -256,13 +258,15 @@ class SmartBot:
                                   + "\n📞722 212 9731" \
                                   + "\nhttps://goo.gl/maps/p7DgbEUF3yFhYDmP6" \
                                   + "\n" \
-                                  + "Ahora ingresa tu sucursal mas cercana para continuar con tu compra" \
+                                  + "\nAhora ingresa tu sucursal mas cercana para continuar con tu compra" \
                                   + "\n1. Regresar al menú principal🔙" \
                                   + "\n2. Salir👋"
 
 
                 elif estado == "ciudad_de_mexico":
-                    mensaje = "¡Estas son las sucursales cercanas a ti!" \
+                    if menu_tienda_linea != "quiero_comprar":
+                    #if mp != "tienda_linea":
+                        mensaje = "¡Estas son las sucursales cercanas a ti!" \
                               + "\nAlmacenes Anfora – Lopez" \
                               + "\n🏨LOPEZ No. 50 COLONIA CENTRO DELEGACION CUAUHTEMOC C.P. 06050" \
                               + "\n🕑Lunes a Sábado: 9:30 am a 8:00 pm" \
@@ -294,9 +298,44 @@ class SmartBot:
                               + "\n" \
                               + "\n1. Regresar al menú principal🔙" \
                               + "\n2. Salir👋"
-
+                    else:
+                        mensaje = "¡Estas son las sucursales cercanas a ti!" \
+                                  + "\nAlmacenes Anfora – Lopez" \
+                                  + "\n🏨LOPEZ No. 50 COLONIA CENTRO DELEGACION CUAUHTEMOC C.P. 06050" \
+                                  + "\n🕑Lunes a Sábado: 9:30 am a 8:00 pm" \
+                                  + "\n   Domingo: 10:00 am a 6:00 pm" \
+                                  + "\n📞55 5130 3280" \
+                                  + "\nhttps://goo.gl/maps/hwG7vmZA6tiSUvMe7" \
+                                  + "\n" \
+                                  + "\n  Almacenes Anfora – Aranda" \
+                                  + "\n🏨ARANDA No. 18 o AYUNTAMIENTO No. 15 COLONIA CENTRO DELEGACION CUAUHTEMOC " \
+                                  + "C.P.06050" \
+                                  + "\n🕑Lunes a Sábado: 9:30 am a 8:00 pm" \
+                                  + "\n   Domingo: 10:00 am a 6:00 pm" \
+                                  + "\n📞55 5518 0290" \
+                                  + "\nhttps://goo.gl/maps/hwG7vmZA6tiSUvMe7" \
+                                  + "\n" \
+                                  + "\n  Almacenes Anfora – Artículo 123" \
+                                  + "\n🏨ARTICULO 123 No. 10 COLONIA CENTRO C.P.06050 DELGACION CUAUHTEMOC" \
+                                  + "\n🕑Lunes a Sábado: 9:00 am a 7:00 pm" \
+                                  + "\n   Domingo: 10:30 am a 6:30 pm" \
+                                  + "\n📞55 5512 6509" \
+                                  + "\nhttps://goo.gl/maps/3yCGdHPefD2kLhh98" \
+                                  + "\n" \
+                                  + "\n  Almacenes Anfora – Tacubaya" \
+                                  + "\n🏨ANTONIO MACEO No. 27 COLONIA TACUBAYA C.P.11870 MIGUEL HIDALGO" \
+                                  + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
+                                  + "\n   Domingo: 10:00 am a 6:00 pm" \
+                                  + "\n📞55 5271 8799" \
+                                  + "\nhttps://goo.gl/maps/ZUZHYEg7B7CmQvt26" \
+                                  + "\n" \
+                                  + "\nAhora ingresa tu sucursal mas cercana para continuar con tu compra" \
+                                  + "\n1. Regresar al menú principal🔙" \
+                                  + "\n2. Salir👋"
                 elif intencion == "mexico":
-                    mensaje = "¡Estas son las sucursales cercanas a ti!" \
+                    if menu_tienda_linea != "quiero_comprar":
+                    #if mp != "tienda_linea":
+                        mensaje = "¡Estas son las sucursales cercanas a ti!" \
                               + "\n  Almacenes Anfora – Ecatepec" \
                               + "\n🏨Blvd. Insurgentes Esq. Emiliano Zapata locales 02 Y 03, San Cristóbal Centro, " \
                                 "55000 Ecatepec de Morelos" \
@@ -323,9 +362,40 @@ class SmartBot:
                               + "\n" \
                               + "\n1. Regresar al menú principal🔙" \
                               + "\n2. Salir👋"
+                    else:
+                        mensaje = "¡Estas son las sucursales cercanas a ti!" \
+                                  + "\n  Almacenes Anfora – Ecatepec" \
+                                  + "\n🏨Blvd. Insurgentes Esq. Emiliano Zapata locales 02 Y 03, San Cristóbal Centro, " \
+                                    "55000 Ecatepec de Morelos" \
+                                  + "\n🕑Lunes a Sábado: 9:30 am a 7:30 pm" \
+                                  + "\n   Domingo: 10:00 am a 6:00 pm" \
+                                  + "\n📞55 5787 0911" \
+                                  + "\nhttps://goo.gl/maps/x7gwmaFufip9xC4u8" \
+                                  + "\n" \
+                                  + "\n  Almacenes Anfora – Atizapán" \
+                                  + "\n🏨Carretera Atizapán Nicolas Romero Esq. Av Adolfo López Mateos 11, Local 6A y 7, " \
+                                  + "El Pedregal de Atizapán, 52948 Atizapán De Zaragoza" \
+                                  + "\n🕑Lunes a Sábado: 9:00 am a 7:00 pm" \
+                                  + "\n   Domingo: 10:00 am a 6:00 pm" \
+                                  + "\n📞55 5077 7316" \
+                                  + "\nhttps://goo.gl/maps/KjpQmnsW2P6BpwtM7" \
+                                  + "\n" \
+                                  + "\n  Almacenes Anfora – Chalco" \
+                                  + "\n🏨Av. Nacional no.57 Col. San Sebastian Mpio. De Chalco, Estado de México, " \
+                                    "C.P.  56600" \
+                                  + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
+                                  + "\n   Domingo: 10:00 am a 6:00 pm" \
+                                  + "\n📞55 5982 8368 y 55 3092 1009" \
+                                  + "\nhttps://goo.gl/maps/mE3xzUmgmTZLT7GQ7" \
+                                  + "\n" \
+                                  + "\nAhora ingresa tu sucursal mas cercana para continuar con tu compra" \
+                                  + "\n1. Regresar al menú principal🔙" \
+                                  + "\n2. Salir👋"
 
                 elif intencion == "queretaro":
-                    mensaje = "¡Estas son las sucursales cercanas a ti!" \
+                    if menu_tienda_linea != "quiero_comprar":
+                    #if mp != "tienda_linea":
+                        mensaje = "¡Estas son las sucursales cercanas a ti!" \
                               + "\nAlmacenes Anfora – Querétaro Zaragoza" \
                               + "\n🏨Calle Ignacio Zaragoza 41, El Carrizal, 76030 Santiago de Querétaro, QRO" \
                               + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
@@ -350,9 +420,38 @@ class SmartBot:
                               + "\n" \
                               + "\n1. Regresar al menú principal🔙" \
                               + "\n2. Salir👋"
+                    else:
+                        mensaje = "¡Estas son las sucursales cercanas a ti!" \
+                                  + "\nAlmacenes Anfora – Querétaro Zaragoza" \
+                                  + "\n🏨Calle Ignacio Zaragoza 41, El Carrizal, 76030 Santiago de Querétaro, QRO" \
+                                  + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
+                                  + "\n   Domingo: 10:00 am a 6:00 pm" \
+                                  + "\n📞442 193 5585" \
+                                  + "\nhttps://goo.gl/maps/T5age1xc4Tks7Zzr5" \
+                                  + "\n" \
+                                  + "\nAlmacenes Anfora – Querétaro Alameda" \
+                                  + "\n🏨Avenida Michoacán No 119, Colonia Centro, 76000 Querétaro, Qro." \
+                                  + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
+                                  + "\n   Domingo: 10:00 am a 6:00 pm" \
+                                  + "\n📞442 483 3429" \
+                                  + "\nhttps://goo.gl/maps/tgG117iksdk1qtEB9" \
+                                  + "\n" \
+                                  + "\nAlmacenes Anfora – San Juan del Río" \
+                                  + "\n🏨Boulevard Hidalgo 66, Colonia Centro San Juan del Río, San Juan Del Río " \
+                                    "Querétaro, México, C.P. 76800" \
+                                  + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
+                                  + "\n   Domingo: 10:00 am a 6:00 pm" \
+                                  + "\n📞427 272 5539" \
+                                  + "\nhttps://goo.gl/maps/GqhpTyNky91KUbXu6" \
+                                  + "\n" \
+                                  + "\nAhora ingresa tu sucursal mas cercana para continuar con tu compra" \
+                                  + "\n1. Regresar al menú principal🔙" \
+                                  + "\n2. Salir👋"
 
                 elif intencion == "veracruz":
-                    mensaje = "¡Estas son las sucursales cercanas a ti!" \
+                    if menu_tienda_linea != "quiero_comprar":
+                    #if mp != "tienda_linea":
+                        mensaje = "¡Estas son las sucursales cercanas a ti!" \
                               + "\nAlmacenes Anfora – Orizaba" \
                               + "\n🏨AVENIDA ORIENTE 4 No. 40 COLONIA CENTRO, ORIZABA VERACRUZ C.P.94300" \
                               + "\n🕑Lunes a Sábado: 10:30 am a 8:30 pm" \
@@ -362,9 +461,23 @@ class SmartBot:
                               + "\n" \
                               + "\n1. Regresar al menú principal🔙" \
                               + "\n2. Salir👋"
+                    else:
+                        mensaje = "¡Estas son las sucursales cercanas a ti!" \
+                                  + "\nAlmacenes Anfora – Orizaba" \
+                                  + "\n🏨AVENIDA ORIENTE 4 No. 40 COLONIA CENTRO, ORIZABA VERACRUZ C.P.94300" \
+                                  + "\n🕑Lunes a Sábado: 10:30 am a 8:30 pm" \
+                                  + "\n   Domingo: 10:00 am a 6:00 pm" \
+                                  + "\n📞272 725 8495" \
+                                  + "\nhttps://goo.gl/maps/rraVWVcLLAcfkAAC9" \
+                                  + "\n" \
+                                  + "\nAhora ingresa tu sucursal mas cercana para continuar con tu compra" \
+                                  + "\n1. Regresar al menú principal🔙" \
+                                  + "\n2. Salir👋"
 
                 elif intencion == "hidalgo":
-                    mensaje = "¡Estas son las sucursales cercanas a ti!" \
+                    if menu_tienda_linea != "quiero_comprar":
+                    #if mp != "tienda_linea":
+                        mensaje = "¡Estas son las sucursales cercanas a ti!" \
                               + "\nAlmacenes Anfora – Tula de Allende" \
                               + "\n🏨ALLE LEANDRO VALLE NO. 102 PLANTA BAJA, COL. CENTRO, MPIO. TULA DE ALLENDE, " \
                               + "ESTADO DE HIDALGO, C.P. 42800" \
@@ -390,9 +503,39 @@ class SmartBot:
                               + "\n" \
                               + "\n1. Regresar al menú principal🔙" \
                               + "\n2. Salir👋"
+                    else:
+                        mensaje = "¡Estas son las sucursales cercanas a ti!" \
+                                  + "\nAlmacenes Anfora – Tula de Allende" \
+                                  + "\n🏨ALLE LEANDRO VALLE NO. 102 PLANTA BAJA, COL. CENTRO, MPIO. TULA DE ALLENDE, " \
+                                  + "ESTADO DE HIDALGO, C.P. 42800" \
+                                  + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
+                                  + "\n   Domingo: 10:00 am a 6:00 pm" \
+                                  + "\n📞773 732 6127 y 773 732 7036" \
+                                  + "\nhttps://goo.gl/maps/GcU5pGPhQQKk8FyQ7" \
+                                  + "\n" \
+                                  + "\nAlmacenes Anfora – Tulancingo" \
+                                  + "\n🏨CALLE SAN LUIS POTOSI NO. 101 ESQUINA. AV. 21 DE MARZO COL. VICENTE GUERRERO " \
+                                  + "MPIO. TULANCINGO DE BRAVO ESTADO DE HIDALGO C.P. 43630" \
+                                  + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
+                                  + "\n   Domingo: 10:00 am a 6:00 pm" \
+                                  + "\n📞775 112 0414" \
+                                  + "\nhttps://goo.gl/maps/qf2j6CG4p1Mfc5D26" \
+                                  + "\n" \
+                                  + "\nAlmacenes Anfora – Pachuca" \
+                                  + "\n🏨AVENIDA JUAREZ No. 501 COLONIA PERIODISTA ,PACHUCA DE SOTO HIDALGO C.P.:42060" \
+                                  + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
+                                  + "\n   Domingo: 11:00 am a 6:00 pm" \
+                                  + "\n📞771 718 1868" \
+                                  + "\nhttps://goo.gl/maps/GpPgW2Hs2871g4eD7" \
+                                  + "\n" \
+                                  + "\nAhora ingresa tu sucursal mas cercana para continuar con tu compra" \
+                                  + "\n1. Regresar al menú principal🔙" \
+                                  + "\n2. Salir👋"
 
                 elif intencion == "guanajuato":
-                    mensaje = "¡Estas son las sucursales cercanas a ti!" \
+                    if menu_tienda_linea != "quiero_comprar":
+                    #if mp != "tienda_linea":
+                        mensaje = "¡Estas son las sucursales cercanas a ti!" \
                               + "\nAlmacenes Anfora – León Centro" \
                               + "\n🏨Calle Belisario Domínguez, Col. León de los Aldamas Centro, León, Guanajuato, " \
                                 "CP 37000" \
@@ -410,9 +553,31 @@ class SmartBot:
                               + "\n" \
                               + "\n1. Regresar al menú principal🔙" \
                               + "\n2. Salir👋"
+                    else:
+                        mensaje = "¡Estas son las sucursales cercanas a ti!" \
+                                  + "\nAlmacenes Anfora – León Centro" \
+                                  + "\n🏨Calle Belisario Domínguez, Col. León de los Aldamas Centro, León, Guanajuato, " \
+                                    "CP 37000" \
+                                  + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
+                                  + "\n   Domingo: 10:00 am a 6:00 pm" \
+                                  + "\n📞 477 713 3220 y 477 713 3060" \
+                                  + "\nhttps://goo.gl/maps/PsJnizTzTi8U7kBS9" \
+                                  + "\n" \
+                                  + "\nAlmacenes Anfora – León Delta" \
+                                  + "\n🏨Blvd. Delta 101, Col. Fracc. Industrial Delta, León, Guanajuato, CP 37545" \
+                                  + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
+                                  + "\n   Domingo: 10:00 am a 6:00 pm" \
+                                  + "\n📞 477 167 5629 y 477 761 2379" \
+                                  + "\nhttps://goo.gl/maps/tKjk3fR62Gjok5FDA" \
+                                  + "\n" \
+                                  + "\nAhora ingresa tu sucursal mas cercana para continuar con tu compra" \
+                                  + "\n1. Regresar al menú principal🔙" \
+                                  + "\n2. Salir👋"
 
                 elif intencion == "chiapas":
-                    mensaje = "¡Estas son las sucursales cercanas a ti!" \
+                    if menu_tienda_linea != "quiero_comprar":
+                    #if mp != "tienda_linea":
+                        mensaje = "¡Estas son las sucursales cercanas a ti!" \
                               + "\nAlmacenes Anfora – Tuxtla Gutiérrez" \
                               + "\n🏨11A Oriente Norte 221, Col. Hidalgo, Tuxtla Gutiérrez, Chiapas, CP 29040" \
                               + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
@@ -422,6 +587,18 @@ class SmartBot:
                               + "\n" \
                               + "\n1. Regresar al menú principal🔙" \
                               + "\n2. Salir👋"
+                    else:
+                        mensaje = "¡Estas son las sucursales cercanas a ti!" \
+                                  + "\nAlmacenes Anfora – Tuxtla Gutiérrez" \
+                                  + "\n🏨11A Oriente Norte 221, Col. Hidalgo, Tuxtla Gutiérrez, Chiapas, CP 29040" \
+                                  + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
+                                  + "\n   Domingo: 10:00 am a 6:00 pm" \
+                                  + "\n📞961 600 0610 y 961 346 7160" \
+                                  + "\nhttps://goo.gl/maps/3ZkxsGaAX4SdS9CS6" \
+                                  + "\n" \
+                                  + "\nAhora ingresa tu sucursal mas cercana para continuar con tu compra" \
+                                  + "\n1. Regresar al menú principal🔙" \
+                                  + "\n2. Salir👋"
                 else:
                     mensaje = "Por el momento, no contamos con sucursal en tu estado ☹. ¡Compra en https://www.almacenesanfora.com/, contamos con envió a toda la Republica Mexicana! 🚚" \
                               + "\n1. Regresar al menú principal🔙" \
@@ -476,9 +653,6 @@ class SmartBot:
 
                 else:
                     mensaje, users = self.saludar(users)
-                    #mensaje = "Ingresa nuevamente tu N°" \
-                    #          + "\n1. Regresar al menú principal🔙" \
-                    #          + "\n2. Salir👋"
                     users = menu_principal_salir(users)
 
                 return mensaje, users

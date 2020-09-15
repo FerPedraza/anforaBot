@@ -195,8 +195,7 @@ intents:
 slots: {}
 templates:
   utter_agente_quiero_comprar:
-  - text: En seguida te contactaré con un agente de Ventas. @#ADDITIONALTEXT#@@#COMPLETE#@
-      @#ADDITIONALTEXT#@@#DELEGATE#@
+  - text: En seguida te contactaré con un agente de Ventas. @#ADDITIONALTEXT#@@#DELEGATE#@
   utter_aguascalientes:
   - buttons:
     - payload: /saludar
@@ -254,8 +253,7 @@ templates:
       title: Salir👋
     text: El estado que introdujo no cuenta con sucursales😯
   utter_cotizaciones:
-  - text: En seguida te contactaré con un agente de Ventas @#ADDITIONALTEXT#@@#COMPLETE#@
-      @#ADDITIONALTEXT#@@#DELEGATE#@
+  - text: En seguida te contactaré con un agente de Ventas @#ADDITIONALTEXT#@@#DELEGATE#@
   utter_durango:
   - buttons:
     - payload: /saludar
