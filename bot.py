@@ -11,6 +11,7 @@ from text.limpia_texto import middle_clean_text
 from validacion.valid_email import is_valid_email
 from datetime import datetime, timedelta
 
+
 def menu_principal_salir(users):
     botones = [{'payload': 'saludar',
                 'title': 'Regresar al menú inicial'},
@@ -43,8 +44,7 @@ class SmartBot:
         if platform.node() == "u1" or platform.node() == "DESKTOP-0CKRHA6":
             ip = "localhost"
         else:
-            ip = "172.17.0.8" #172.17.0.3
-        # 172.17.0.3 docker server default 172.31.0.2 #docker local 172.17.0.2
+            ip = "172.17.0.8"
         b_client = pymongo.MongoClient(ip, 27017)
         db = b_client['Chatbots']
         self.colection = db['Anfora']
@@ -52,17 +52,12 @@ class SmartBot:
 
     def bot(self, text, users):
         bandera_botones = False
-        print("95a")
         if users['buttons']:
-            print("97a")
             # Las siguientes 5 lineas son para verificar que si se introdujo un número, este se encuentre dentro
             # del rango de opciones de botones que se tienen, de lo contrario soltará un mensaje de error.
             num_btns = [x.get('payload') for x in users['buttons']]
             if self.original_text.isdigit() and num_btns and int(self.original_text) < 9:
-                print("102a")
                 if len(num_btns) < int(self.original_text):
-                    print("104a")
-                    print("BOTONES NO SE ENTENDIO")
                     mensaje = 'Lo siento no entendí qué quisiste decir, por favor introduce una opción válida' \
                         + "\n1. Regresar al menú principal🔙" \
                         + "\n2. Salir👋"
@@ -73,7 +68,6 @@ class SmartBot:
             option = [x['payload'] for x in users['buttons'] if
                       str(clean_text(text)).lower() in map(lambda valor: valor.lower(), x.values())]
             if option:
-                print("113a")
                 text = option[0]
                 bandera_botones = True
         text = middle_clean_text(text)
@@ -89,51 +83,34 @@ class SmartBot:
         # Aqui se guarda informacion de alguna opcion del menú principal sin que implique respuesta al usuario
         if intencion == "sucursales" or intencion == "tienda_linea" or intencion == "cotizaciones" \
                 or intencion == "promociones" or intencion == "mensaje_covid":
-            print("128a")
             tz = pytz.timezone('America/Mexico_City')
             ct = datetime.now(tz=tz).replace(tzinfo=None)
             self.update_request(campo="menu_principal", valor=intencion, date=ct)
         elif intencion == "quiero_comprar" or intencion == "rastrear_pedido" or intencion == "problema_pedido" \
                 or intencion == "cancelar_pedido":
-            print("134a")
             tz = pytz.timezone('America/Mexico_City')
             ct = datetime.now(tz=tz).replace(tzinfo=None)
-            print("CT DE 130", ct)
             self.update_request(campo="menu_tienda_linea", valor=intencion, date=ct)
         if users['name'] == 'Humano':
-            print("140a")
             # Este if evalua la confianza del texto, si es una frase o palabra diferente a las del entrenamiento
             # la tomara como que no la conoce y se ejecutará esta parte del codigo.
             if confianza < 0.55 and intencion != "dar_correo" and intencion != "dar_numero" \
                     and intencion != "agente_quiero_comprar" and intencion != "problema_pedido":
-                print("144a")
                 mensaje, users = self.saludar(users)
-
-                # self.save_info(text, mensaje, NLU, users['buttons'])
                 return mensaje, users
             # Se despliegan todas las intenciones dinamicas
-            # Se despliegan todas las intenciones dinamicas
             elif intencion == "saludar":
-                print("152a")
                 mensaje, users = self.saludar(users)
-                self.save_info(text, mensaje, NLU, users['buttons'])
                 return mensaje, users
 
             elif intencion == "mexico" or intencion == "ciudad_de_mexico" or intencion == "queretaro" \
                     or intencion == "veracruz" or intencion == "hidalgo" or intencion == "guanajuato" \
                     or intencion == "chiapas" or intencion == "toluca":
-                print("PASO 149")
                 estado = intencion
-                mp = self.colection.find_one({"user_id": self.main_user}).get("request").get("menu_principal").get('opcion')
-                menu_tienda_linea = self.colection.find_one({"user_id": self.main_user}).get("request").get("menu_tienda_linea").get('opcion')
-                print("ESTO ES MP")
-                print(mp)
-                #intencion == "sucursales" or intencion == "tienda_linea" or intencion == "cotizaciones" \
-                #or intencion == "promociones" or intencion == "mensaje_covid":
+                menu_tienda_linea = self.colection.find_one({"user_id": self.main_user}).get("request")\
+                    .get("menu_tienda_linea").get('opcion')
                 if estado == "toluca":
-                    print("PASO 152")
                     if menu_tienda_linea != "quiero_comprar":
-                    #if mp != "tienda_linea":
                         mensaje = "¡Estas son las sucursales cercanas a ti!" \
                               + "\n  Almacenes Anfora – *San Lorenzo*" \
                               + "\n🏨Alfredo del Mazo 702, Delegación San Lorenzo Tepaltitlán, C.P. 50010 Toluca de " \
@@ -200,8 +177,8 @@ class SmartBot:
                     else:
                         mensaje = "¡Estas son las sucursales cercanas a ti!" \
                                   + "\n  Almacenes Anfora – *San Lorenzo*" \
-                                  + "\n🏨Alfredo del Mazo 702, Delegación San Lorenzo Tepaltitlán, C.P. 50010 Toluca de " \
-                                    "Lerdo" \
+                                  + "\n🏨Alfredo del Mazo 702, Delegación San Lorenzo Tepaltitlán, C.P. 50010 Toluca " \
+                                    "de Lerdo" \
                                   + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
                                   + "\n" + "  Domingo: 10:00 am a 6:00 pm" \
                                   + "\n📞722 237 3726" \
@@ -224,8 +201,8 @@ class SmartBot:
                                   + "\nhttps://goo.gl/maps/F7n9oQrE2Z3zZ3Rp6" \
                                   + "\n" \
                                   + "\n  Almacenes Anfora – *Zinacantepec*" \
-                                  + "\n🏨PASEO ADOLFO LÓPEZ MATEOS No. 1608, COLONIA, San Mateo Oxtotitlán, C.P. 50100 " \
-                                    "Toluca de Lerdo" \
+                                  + "\n🏨PASEO ADOLFO LÓPEZ MATEOS No. 1608, COLONIA, San Mateo Oxtotitlán, C.P. " \
+                                    "50100 Toluca de Lerdo" \
                                   + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
                                   + "\n   Domingo: 10:00 am a 6:00 pm" \
                                   + "\n📞 722 278 5136" \
@@ -262,10 +239,8 @@ class SmartBot:
                                   + "\n1. Regresar al menú principal🔙" \
                                   + "\n2. Salir👋"
 
-
                 elif estado == "ciudad_de_mexico":
                     if menu_tienda_linea != "quiero_comprar":
-                    #if mp != "tienda_linea":
                         mensaje = "¡Estas son las sucursales cercanas a ti!" \
                               + "\nAlmacenes Anfora – *Lopez*" \
                               + "\n🏨LOPEZ No. 50 COLONIA CENTRO DELEGACION CUAUHTEMOC C.P. 06050" \
@@ -394,7 +369,6 @@ class SmartBot:
 
                 elif intencion == "queretaro":
                     if menu_tienda_linea != "quiero_comprar":
-                    #if mp != "tienda_linea":
                         mensaje = "¡Estas son las sucursales cercanas a ti!" \
                               + "\nAlmacenes Anfora – *Querétaro Zaragoza*" \
                               + "\n🏨Calle Ignacio Zaragoza 41, El Carrizal, 76030 Santiago de Querétaro, QRO" \
@@ -476,7 +450,6 @@ class SmartBot:
 
                 elif intencion == "hidalgo":
                     if menu_tienda_linea != "quiero_comprar":
-                    #if mp != "tienda_linea":
                         mensaje = "¡Estas son las sucursales cercanas a ti!" \
                               + "\nAlmacenes Anfora – *Tula de Allende*" \
                               + "\n🏨ALLE LEANDRO VALLE NO. 102 PLANTA BAJA, COL. CENTRO, MPIO. TULA DE ALLENDE, " \
@@ -576,7 +549,6 @@ class SmartBot:
 
                 elif intencion == "chiapas":
                     if menu_tienda_linea != "quiero_comprar":
-                    #if mp != "tienda_linea":
                         mensaje = "¡Estas son las sucursales cercanas a ti!" \
                               + "\nAlmacenes Anfora – *Tuxtla Gutiérrez*" \
                               + "\n🏨11A Oriente Norte 221, Col. Hidalgo, Tuxtla Gutiérrez, Chiapas, CP 29040" \
@@ -615,7 +587,6 @@ class SmartBot:
                 return mensaje, users
 
             elif intencion == "dar_numero":
-                # mp = self.colection.find_one({"user_id": self.main_user}).get("request").get("menu_principal")
                 mtl0 = self.colection.find_one({"user_id": self.main_user}).get("request").get("menu_tienda_linea")
                 mtl = mtl0.get("opcion")
                 date = mtl0.get("date")
@@ -673,7 +644,6 @@ class SmartBot:
                         valido = False
                 else:
                     valido = False
-                print("VALIDO", valido)
                 if mtl == "rastrear_pedido" and valido:
                     if valido:
                         # aqui va un ws
@@ -706,7 +676,6 @@ class SmartBot:
                 return mensaje, users
 
             elif intencion == "dar_correo":
-                print(text)
                 if is_valid_email(text):
                     mensaje = "¡Perfecto! 👏, Prepárate 📝" \
                               + "💡 TIP: Puedes mandar la foto de tu lista con el nombre de cada artículo y cantidad " \
@@ -748,16 +717,13 @@ class SmartBot:
 
         mensaje = ''
         if bandera_botones:
-            print("516a")
             users['buttons'] = []
         if speech:
-            print("519a")
             mensaje, users = valida_botones(speech, users)
         var = re.compile("{nombre}")
         if re.search(var, mensaje):
-            print("523a")
             mensaje = mensaje.format(nombre=users['name'])
-        self.save_info(text, mensaje, NLU, users['buttons'])
+        #self.save_info(text, mensaje, NLU, users['buttons'])
         print("*" * 40)
         print("USERS")
         print(users)
@@ -952,25 +918,6 @@ class SmartBot:
         users['buttons'] = botones
         return mensaje, users
 
-    def delegate_requests(self, opcion, minutes, seconds):
-        br = self.colection.find_one({"user_id": self.main_user}).get("request").get("bad_requests")
-        values_list = []
-        for dicc in br:
-            for key in dicc.keys():
-                if key == opcion:
-                    for value in dicc.values():
-                        values_list.append(value)
-        values_list.sort()
-        if values_list:
-            ti = values_list[-1] - timedelta(minutes=minutes, seconds=seconds)
-            contador = 0
-            for i in values_list:
-                if i > ti:
-                    contador = contador + 1
-        else:
-            contador = 0
-        return contador
-
     def get_response(self, D, interpreter, agent, users):
         # Se definen las variables del modelo
         # texto
@@ -1018,8 +965,3 @@ class SmartBot:
             mensajes.append(banderas[i])
 
         return {"cuerpo": mensajes, "imagen": imagenes, "compania": "Almacenes Anfora"}
-
-# 3
-# if __name__ == '__main__':
-#    main()
-# 2
