@@ -606,7 +606,7 @@ class SmartBot:
                                   + "\n2. Salir"
                     users = menu_principal_salir(users)
                 elif mtl == "rastrear_pedido" and ct_now - date < timedelta(minutes=5) and text.isdigit():
-                    if len(text) == 4:
+                    if len(text) == 8:
                         self.update_request('numero_orden', )
                         mensaje = "En seguida te contactaré con un agente de Ventas @#ADDITIONALTEXT#@@#DELEGATE#@"
                     else:
