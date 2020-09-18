@@ -97,10 +97,12 @@ class SmartBot:
             if confianza < 0.55 and intencion != "dar_correo" and intencion != "dar_numero" \
                     and intencion != "agente_quiero_comprar" and intencion != "problema_pedido":
                 mensaje, users = self.saludar(users)
+
                 return mensaje, users
             # Se despliegan todas las intenciones dinamicas
             elif intencion == "saludar":
                 mensaje, users = self.saludar(users)
+                self.save_info(text, mensaje, NLU, users['buttons'])
                 return mensaje, users
 
             elif intencion == "mexico" or intencion == "ciudad_de_mexico" or intencion == "queretaro" \
@@ -916,6 +918,7 @@ class SmartBot:
             botones[i]['number'] = str(i + 1)
             botones[i]['letter number'] = convert_to_letters(i + 1)
         users['buttons'] = botones
+
         return mensaje, users
 
     def get_response(self, D, interpreter, agent, users):
