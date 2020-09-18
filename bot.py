@@ -45,7 +45,7 @@ class SmartBot:
             ip = "localhost"
         else:
             ip = "172.17.0.8"
-        b_client = pymongo.MongoClient("localhost", 27017)
+        b_client = pymongo.MongoClient("10.100.13.20ad", 27017)
         db = b_client['Bots']
         self.colection = db['Anfora']
         self.facebook = facebook
