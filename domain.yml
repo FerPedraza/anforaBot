@@ -1,0 +1,381 @@
+actions:
+- utter_sucursales
+- utter_tienda_linea
+- utter_quiero_comprar
+- utter_rastrear_pedido
+- utter_problema_pedido
+- utter_aguascalientes
+- utter_baja_california
+- utter_baja_california_sur
+- utter_campeche
+- utter_coahuila
+- utter_colima
+- utter_chihuahua
+- utter_durango
+- utter_guerrero
+- utter_jalisco
+- utter_michoacan
+- utter_morelos
+- utter_nayarit
+- utter_nuevo_leon
+- utter_oaxaca
+- utter_puebla
+- utter_quintana_roo
+- utter_san_luis_potosi
+- utter_sinaloa
+- utter_sonora
+- utter_tabasco
+- utter_tamaulipas
+- utter_tlaxcala
+- utter_yucatan
+- utter_zacatecas
+- utter_cotizaciones
+- utter_mensaje_covid
+- utter_salir
+- utter_agente_quiero_comprar
+- utter_cancelar_pedido
+
+intents:
+- saludar
+- sucursales
+- tienda_linea
+- cotizaciones
+- promociones
+- mensaje_covid
+- salir
+- mexico
+- ciudad_de_mexico
+- queretaro
+- veracruz
+- hidalgo
+- guanajuato
+- chiapas
+- quiero_comprar
+- rastrear_pedido
+- problema_pedido
+- cancelar_pedido
+- aguascalientes
+- baja_california
+- baja_california_sur
+- campeche
+- coahuila
+- colima
+- chihuahua
+- durango
+- guerrero
+- jalisco
+- méxico
+- michoacan
+- morelos
+- nayarit
+- nuevo_leon
+- oaxaca
+- puebla
+- quintana_roo
+- san_luis_potosi
+- sinaloa
+- sonora
+- tabasco
+- tamaulipas
+- tlaxcala
+- yucatan
+- zacatecas
+- decir_sucursal
+- dar_numero
+- dar_correo
+- agente_quiero_comprar
+- dar_fecha_nacimiento
+- agente
+- toluca
+
+
+templates:
+  utter_salir:
+  - text: "Te agradecemos haber utilizado el servicio de WhatsApp de Almacenes Anfora🍽️🛒 @#ADDITIONALTEXT#@@#COMPLETE#@"
+
+  utter_sucursales:
+  - text: "¡Escribe el ESTADO del cual nos contactas, por favor"
+    buttons:
+      - title: "Regresar al menú principal🔙"
+        payload: /saludar
+      - title: "Salir👋"
+        payload: /salir
+
+  utter_tienda_linea:
+  - text: "¿Qué deseas? Escribe el número."
+    buttons:
+      - title: "Quiero comprar🍽"
+        payload: /quiero_comprar
+      - title: "Quiero rastrear mi pedido 🚚"
+        payload: /rastrear_pedido
+      - title: "Tengo un problema con mi pedido 💬"
+        payload: /problema_pedido
+      - title: "Necesito cancelar mi pedido❌"
+        payload: /cancelar_pedido
+      - title: "Regresar al menú principal🔙"
+        payload: /saludar
+      - title: "Salir👋"
+        payload: /salir
+
+  utter_quiero_comprar:
+  - text: "¡Equipa tu cocina! 🍽️
+           \nEscribe la dirección o nombre de la tienda 👇
+           \nO presiona 1 para buscar las tiendas más cercanas a tu ubicación"
+    buttons:
+      - title: "Sucursales (Horario, teléfono y ubicación)"
+        payload: /sucursales
+      - title: "Regresar al menú principal🔙"
+        payload: /saludar
+      - title: "Salir👋"
+        payload: /salir
+
+  utter_aguascalientes:
+  - text: "El estado que introdujo no cuenta con sucursales😯"
+    buttons:
+      - title: "Regresar al menú principal🔙"
+        payload: /saludar
+      - title: "Salir👋"
+        payload: /salir
+
+  utter_baja_california:
+  - text: "El estado que introdujo no cuenta con sucursales😯"
+    buttons:
+      - title: "Regresar al menú principal🔙"
+        payload: /saludar
+      - title: "Salir👋"
+        payload: /salir
+
+  utter_baja_california_sur:
+  - text: "El estado que introdujo no cuenta con sucursales😯"
+    buttons:
+      - title: "Regresar al menú principal🔙"
+        payload: /saludar
+      - title: "Salir👋"
+        payload: /salir
+
+  utter_campeche:
+  - text: "El estado que introdujo no cuenta con sucursales😯"
+    buttons:
+      - title: "Regresar al menú principal🔙"
+        payload: /saludar
+      - title: "Salir👋"
+        payload: /salir
+
+  utter_coahuila:
+  - text: "El estado que introdujo no cuenta con sucursales😯"
+    buttons:
+      - title: "Regresar al menú principal"
+        payload: /saludar
+      - title: "Salir👋"
+        payload: /salir
+
+  utter_colima:
+  - text: "El estado que introdujo no cuenta con sucursales😯"
+    buttons:
+      - title: "Regresar al menú principal🔙"
+        payload: /saludar
+      - title: "Salir👋"
+        payload: /salir
+
+  utter_chihuahua:
+  - text: "El estado que introdujo no cuenta con sucursales😯"
+    buttons:
+      - title: "Regresar al menú principal🔙"
+        payload: /saludar
+      - title: "Salir👋"
+        payload: /salir
+
+  utter_durango:
+  - text: "El estado que introdujo no cuenta con sucursales😯"
+    buttons:
+      - title: "Regresar al menú principal"
+        payload: /saludar
+      - title: "Salir👋"
+        payload: /salir
+
+  utter_guerrero:
+  - text: "El estado que introdujo no cuenta con sucursales😯"
+    buttons:
+      - title: "Regresar al menú principal🔙"
+        payload: /saludar
+      - title: "Salir👋"
+        payload: /salir
+
+  utter_jalisco:
+  - text: "El estado que introdujo no cuenta con sucursales😯"
+    buttons:
+      - title: "Regresar al menú principal🔙"
+        payload: /saludar
+      - title: "Salir👋"
+        payload: /salir
+
+  utter_mexico:
+  - text: "El estado que introdujo no cuenta con sucursales😯"
+    buttons:
+      - title: "Regresar al menú principal🔙"
+        payload: /saludar
+      - title: "Salir👋"
+        payload: /salir
+
+  utter_michoacan:
+  - text: "El estado que introdujo no cuenta con sucursales😯"
+    buttons:
+      - title: "Regresar al menú principal🔙"
+        payload: /saludar
+      - title: "Salir👋"
+        payload: /salir
+
+  utter_morelos:
+  - text: "El estado que introdujo no cuenta con sucursales😯"
+    buttons:
+      - title: "Regresar al menú principal🔙"
+        payload: /saludar
+      - title: "Salir👋"
+        payload: /salir
+
+  utter_nayarit:
+  - text: "El estado que introdujo no cuenta con sucursales😯"
+    buttons:
+      - title: "Regresar al menú principal🔙"
+        payload: /saludar
+      - title: "Salir👋"
+        payload: /salir
+
+  utter_nuevo_leon:
+  - text: "El estado que introdujo no cuenta con sucursales😯"
+    buttons:
+      - title: "Regresar al menú principal🔙"
+        payload: /saludar
+      - title: "Salir"
+        payload: /salir
+
+  utter_oaxaca:
+  - text: "El estado que introdujo no cuenta con sucursales😯"
+    buttons:
+      - title: "Regresar al menú principal🔙"
+        payload: /saludar
+      - title: "Salir👋"
+        payload: /salir
+
+  utter_puebla:
+  - text: "El estado que introdujo no cuenta con sucursales😯"
+    buttons:
+      - title: "Regresar al menú principal🔙"
+        payload: /saludar
+      - title: "Salir👋"
+        payload: /salir
+
+  utter_quintana_roo:
+  - text: "El estado que introdujo no cuenta con sucursales😯"
+    buttons:
+      - title: "Regresar al menú principal🔙"
+        payload: /saludar
+      - title: "Salir👋"
+        payload: /salir
+
+  utter_san_luis_potosi:
+  - text: "El estado que introdujo no cuenta con sucursales😯"
+    buttons:
+      - title: "Regresar al menú principal🔙"
+        payload: /saludar
+      - title: "Salir👋"
+        payload: /salir
+
+  utter_sinaloa:
+  - text: "El estado que introdujo no cuenta con sucursales😯"
+    buttons:
+      - title: "Regresar al menú principal🔙"
+        payload: /saludar
+      - title: "Salir👋"
+        payload: /salir
+
+  utter_sonora:
+  - text: "El estado que introdujo no cuenta con sucursales😯"
+    buttons:
+      - title: "Regresar al menú principal🔙"
+        payload: /saludar
+      - title: "Salir👋"
+        payload: /salir
+
+  utter_tabasco:
+  - text: "El estado que introdujo no cuenta con sucursales😯"
+    buttons:
+      - title: "Regresar al menú principal🔙"
+        payload: /saludar
+      - title: "Salir👋"
+        payload: /salir
+
+  utter_tamaulipas:
+  - text: "El estado que introdujo no cuenta con sucursales😯"
+    buttons:
+      - title: "Regresar al menú principal🔙"
+        payload: /saludar
+      - title: "Salir👋"
+        payload: /salir
+
+  utter_tlaxcala:
+  - text: "El estado que introdujo no cuenta con sucursales😯"
+    buttons:
+      - title: "Regresar al menú principal🔙"
+        payload: /saludar
+      - title: "Salir👋"
+        payload: /salir
+
+  utter_yucatan:
+  - text: "El estado que introdujo no cuenta con sucursales😯"
+    buttons:
+      - title: "Regresar al menú principal🔙"
+        payload: /saludar
+      - title: "Salir👋"
+        payload: /salir
+
+  utter_zacatecas:
+  - text: "El estado que introdujo no cuenta con sucursales😯"
+    buttons:
+      - title: "Regresar al menú principal🔙"
+        payload: /saludar
+      - title: "Salir👋"
+        payload: /salir
+
+  utter_rastrear_pedido:
+  - text: "Escribe tu Nº de orden para ver el estatus de tu pedido 📈🤔.
+          \nO si lo prefieres, escribe OPERADOR para ayudarte en otros temas."
+    buttons:
+      - title: "Regresar al menú principal🔙"
+        payload: /saludar
+      - title: "Salir👋"
+        payload: /salir
+
+  utter_problema_pedido:
+  - text: "Escribe tu Nº de orden para ver el estatus de tu pedido 📈🤔"
+    buttons:
+      - title: "Regresar al menú principal🔙"
+        payload: /saludar
+      - title: "Salir👋"
+        payload: /salir
+
+  utter_cotizaciones:
+  - text: "En seguida te contactaré con un agente de Ventas @#ADDITIONALTEXT#@@#DELEGATE#@"
+
+  utter_mensaje_covid:
+  - text: ""
+    buttons:
+      - title: "Regresar al menú principal🔙"
+        payload: /saludar
+      - title: "Salir👋 @#ADDITIONALTEXT#@https://www.broadcasterbot.com/cliente/almacenesanfora/0001.jpg"
+        payload: /salir
+
+  utter_cancelar_pedido:
+  - text: "Escribe tu Nº de orden para ver el estatus de tu pedido 📈🤔"
+    buttons:
+      - title: "Regresar al menú principal🔙"
+        payload: /saludar
+      - title: "Salir👋"
+        payload: /salir
+
+  utter_agente_quiero_comprar:
+  - text: "En seguida te contactaré con un agente de Ventas. @#ADDITIONALTEXT#@@#DELEGATE#@"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

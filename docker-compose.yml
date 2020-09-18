@@ -1,0 +1,11 @@
+version: '3'
+services:
+  bot:
+    image: bot_botanfora
+    container_name: bot_botanfora
+    build: .
+    volumes:
+      - .:/chatbots-frameworkbot
+    command: tail -f /dev/null
+    ports:
+      - '5005:5005'
