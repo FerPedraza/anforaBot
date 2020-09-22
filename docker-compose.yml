@@ -8,4 +8,4 @@ services:
       - .:/chatbots-frameworkbot
     command: tail -f /dev/null
     ports:
-      - '5005:5005'
+      - '5004:5004'

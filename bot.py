@@ -33,7 +33,7 @@ def valida_botones(speech, users):
         users['buttons'] = botones
         mensaje = speech[0]['text'] + '\n' + '\n'.join([x['number'] + '. ' + x['title'] for x in botones]).format(
             nombre=users['name'])
-        print('mensaje de valida botones', mensaje)
+        #print('mensaje de valida botones', mensaje)
     else:
         mensaje = speech[0]['text'].format(nombre=users['name'])
     return mensaje, users
@@ -45,7 +45,7 @@ class SmartBot:
             ip = "localhost"
         else:
             ip = "172.17.0.8"
-        b_client = pymongo.MongoClient("10.100.13.20", 27017)
+        b_client = pymongo.MongoClient("172.17.0.8", 27017) #serv mongo 10.100.13.20 #docker 172.17.0.8
         db = b_client['Bots']
         self.colection = db['Anfora']
         self.facebook = facebook
@@ -75,10 +75,11 @@ class SmartBot:
         NLU = self.extraer_intenciones(text)
         intencion = NLU['intent']['name']
         confianza = NLU['intent']['confidence']
-        print("#" * 30)
-        print(intencion)
-        print(confianza)
-        print("#" * 30)
+        #print("#" * 30)
+        #print(intencion)
+        #print(confianza)
+        #print("#" * 30)
+        self.save_info(None, None, None, None)
         # Aqui se limpia el texto si no esta dentro de intenciones particulares
         # Aqui se guarda informacion de alguna opcion del menú principal sin que implique respuesta al usuario
         if intencion == "sucursales" or intencion == "tienda_linea" or intencion == "cotizaciones" \
@@ -726,18 +727,18 @@ class SmartBot:
         if re.search(var, mensaje):
             mensaje = mensaje.format(nombre=users['name'])
         #self.save_info(text, mensaje, NLU, users['buttons'])
-        print("*" * 40)
-        print("USERS")
-        print(users)
-        print("TEXT")
-        print(text)
-        print("SPEECH")
-        print(speech)
-        print("INTENCION")
-        print(intencion)
-        print("CONFIANZA")
-        print(confianza)
-        print("*" * 40)
+        #print("*" * 40)
+        #print("USERS")
+        #print(users)
+        #print("TEXT")
+        #print(text)
+        #print("SPEECH")
+        #print(speech)
+        #print("INTENCION")
+        #print(intencion)
+        #print("CONFIANZA")
+        #print(confianza)
+        #print("*" * 40)
         # save info
         return mensaje, users
 
