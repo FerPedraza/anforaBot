@@ -281,8 +281,8 @@ templates:
     - payload: /saludar
       title: Regresar al menú principal🔙
     - payload: /salir
-      title: Salir👋 @#AT#@@#IMG#@https://www.broadcasterbot.com/cliente/almacenesanfora/0001.jpg
-    text: ''
+      title: Salir👋
+    text: '@#AT#@@#IMG#@https://www.broadcasterbot.com/cliente/almacenesanfora/0001.jpg'
   utter_mexico:
   - buttons:
     - payload: /saludar

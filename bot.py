@@ -75,10 +75,10 @@ class SmartBot:
         NLU = self.extraer_intenciones(text)
         intencion = NLU['intent']['name']
         confianza = NLU['intent']['confidence']
-        #print("#" * 30)
-        #print(intencion)
-        #print(confianza)
-        #print("#" * 30)
+        print("#" * 30)
+        print(intencion)
+        print(confianza)
+        print("#" * 30)
         self.save_info(None, None, None, None)
         # Aqui se limpia el texto si no esta dentro de intenciones particulares
         # Aqui se guarda informacion de alguna opcion del menú principal sin que implique respuesta al usuario
@@ -727,18 +727,18 @@ class SmartBot:
         if re.search(var, mensaje):
             mensaje = mensaje.format(nombre=users['name'])
         #self.save_info(text, mensaje, NLU, users['buttons'])
-        #print("*" * 40)
-        #print("USERS")
-        #print(users)
-        #print("TEXT")
-        #print(text)
-        #print("SPEECH")
-        #print(speech)
-        #print("INTENCION")
-        #print(intencion)
-        #print("CONFIANZA")
-        #print(confianza)
-        #print("*" * 40)
+        print("*" * 40)
+        print("USERS")
+        print(users)
+        print("TEXT")
+        print(text)
+        print("SPEECH")
+        print(speech)
+        print("INTENCION")
+        print(intencion)
+        print("CONFIANZA")
+        print(confianza)
+        print("*" * 40)
         # save info
         return mensaje, users
 

@@ -358,11 +358,11 @@ templates:
   - text: "@#AT#@@#TITLE#@En seguida te contactaré con un agente de Ventas @#AT#@@#DELEGATE#@"
 
   utter_mensaje_covid:
-  - text: ""
+  - text: "@#AT#@@#IMG#@https://www.broadcasterbot.com/cliente/almacenesanfora/0001.jpg"
     buttons:
       - title: "Regresar al menú principal🔙"
         payload: /saludar
-      - title: "Salir👋 @#AT#@@#IMG#@https://www.broadcasterbot.com/cliente/almacenesanfora/0001.jpg"
+      - title: "Salir👋"
         payload: /salir
 
   utter_cancelar_pedido:

@@ -56,6 +56,7 @@
 - medidas de proteccion
 - peligro covid
 - covid mensaje
+- mensaje covid
 
 ## intent:salir
 - salir
