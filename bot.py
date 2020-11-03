@@ -10,6 +10,7 @@ from validacion.valida_telefono import validar_telefono
 from text.limpia_texto import middle_clean_text
 from validacion.valid_email import is_valid_email
 from datetime import datetime, timedelta
+from pprint import pprint
 
 
 def menu_principal_salir(users):
@@ -31,8 +32,23 @@ def valida_botones(speech, users):
             botones[i]['number'] = str(i + 1)
             botones[i]['letter number'] = convert_to_letters(i + 1)
         users['buttons'] = botones
-        mensaje = speech[0]['text'] + '\n' + '\n'.join([x['number'] + '. ' + x['title'] for x in botones]).format(
-            nombre=users['name'])
+        print("ESTO VIENE DE 35")
+        print(type(speech[0]['text']))
+        print(type(botones))
+        pprint(botones)
+        print("lista")
+        print([x['number'] + '. ' + x['title'] for x in botones])
+        #mensaje = speech[0]['text']  + '\n'.join('@#AT#@@#OPTION#@' + [x['number'] + '. ' + x['title'] for x in botones]).format(
+        #    nombre=users['name'])
+        print(type(speech[0]['text']))
+        mensaje = speech[0]['text']
+        lista = [x['number'] + '. ' + x['title'] for x in botones]
+        for i in range(len(lista)):
+            mensaje = mensaje + '@#AT#@@#OPTION#@\n' + lista[i]
+        #mensaje = speech[0]['text'] + '@#AT#@@#OPTION#@\n'.join(
+        #     [x['number'] + '. ' + x['title'] for x in botones])
+        print("esto es 43")
+        print(mensaje)
         #print('mensaje de valida botones', mensaje)
     else:
         mensaje = speech[0]['text'].format(nombre=users['name'])
@@ -78,6 +94,9 @@ class SmartBot:
         print("#" * 30)
         print(intencion)
         print(confianza)
+        print(speech)
+        print("This is users")
+        print(users)
         print("#" * 30)
         self.save_info(None, None, None, None)
         # Aqui se limpia el texto si no esta dentro de intenciones particulares
@@ -175,7 +194,7 @@ class SmartBot:
                               + "\nhttps://goo.gl/maps/p7DgbEUF3yFhYDmP6" \
                               + "\n" \
                               + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
-                              + "@#AT#@@#OPTION#@\n2. Salir👋 @#AT#@@#COMPLETE#@"
+                              + "@#AT#@@#OPTION#@\n2. Salir👋"
 
                     else:
                         mensaje = "@#AT#@@#TITLE#@¡Estas son las sucursales cercanas a ti!" \
@@ -240,7 +259,7 @@ class SmartBot:
                                   + "\n" \
                                   + "\nAhora ingresa tu sucursal mas cercana para continuar con tu compra" \
                                   + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
-                                  + "@#AT#@@#OPTION#@\n2. Salir👋 @#AT#@@#COMPLETE#@"
+                                  + "@#AT#@@#OPTION#@\n2. Salir👋"
 
                 elif estado == "ciudad_de_mexico":
                     if menu_tienda_linea != "quiero_comprar":
@@ -275,7 +294,7 @@ class SmartBot:
                               + "\nhttps://goo.gl/maps/ZUZHYEg7B7CmQvt26" \
                               + "\n" \
                               + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
-                              + "@#AT#@@#OPTION#@\n2. Salir👋 @#AT#@@#COMPLETE#@"
+                              + "@#AT#@@#OPTION#@\n2. Salir👋"
                     else:
                         mensaje = "@#AT#@@#TITLE#@¡Estas son las sucursales cercanas a ti!" \
                                   + "\nAlmacenes Anfora – *Lopez*" \
@@ -309,7 +328,7 @@ class SmartBot:
                                   + "\n" \
                                   + "\nAhora ingresa tu sucursal mas cercana para continuar con tu compra" \
                                   + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
-                                  + "@#AT#@@#OPTION#@\n2. Salir👋 @#AT#@@#COMPLETE#@"
+                                  + "@#AT#@@#OPTION#@\n2. Salir👋"
                 elif intencion == "mexico":
                     if menu_tienda_linea != "quiero_comprar":
                     #if mp != "tienda_linea":
@@ -339,7 +358,7 @@ class SmartBot:
                               + "\nhttps://goo.gl/maps/mE3xzUmgmTZLT7GQ7" \
                               + "\n" \
                               + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
-                              + "@#AT#@@#OPTION#@\n2. Salir👋 @#AT#@@#COMPLETE#@"
+                              + "@#AT#@@#OPTION#@\n2. Salir👋"
                     else:
                         mensaje = "@#AT#@@#TITLE#@¡Estas son las sucursales cercanas a ti!" \
                                   + "\n  Almacenes Anfora – *Ecatepec*" \
@@ -368,7 +387,7 @@ class SmartBot:
                                   + "\n" \
                                   + "\nAhora ingresa tu sucursal mas cercana para continuar con tu compra" \
                                   + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
-                                  + "@#AT#@@#OPTION#@\n2. Salir👋 @#AT#@@#COMPLETE#@"
+                                  + "@#AT#@@#OPTION#@\n2. Salir👋"
 
                 elif intencion == "queretaro":
                     if menu_tienda_linea != "quiero_comprar":
@@ -396,7 +415,7 @@ class SmartBot:
                               + "\nhttps://goo.gl/maps/GqhpTyNky91KUbXu6" \
                               + "\n" \
                               + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
-                              + "@#AT#@@#OPTION#@\n2. Salir👋 @#AT#@@#COMPLETE#@"
+                              + "@#AT#@@#OPTION#@\n2. Salir👋"
                     else:
                         mensaje = "@#AT#@@#TITLE#@¡Estas son las sucursales cercanas a ti!" \
                                   + "\nAlmacenes Anfora – *Querétaro Zaragoza*" \
@@ -423,7 +442,7 @@ class SmartBot:
                                   + "\n" \
                                   + "\nAhora ingresa tu sucursal mas cercana para continuar con tu compra" \
                                   + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
-                                  + "@#AT#@@#OPTION#@\n2. Salir👋 @#AT#@@#COMPLETE#@"
+                                  + "@#AT#@@#OPTION#@\n2. Salir👋"
 
                 elif intencion == "veracruz":
                     if menu_tienda_linea != "quiero_comprar":
@@ -437,7 +456,7 @@ class SmartBot:
                               + "\nhttps://goo.gl/maps/rraVWVcLLAcfkAAC9" \
                               + "\n" \
                               + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
-                              + "@#AT#@@#OPTION#@\n2. Salir👋 @#AT#@@#COMPLETE#@"
+                              + "@#AT#@@#OPTION#@\n2. Salir👋"
                     else:
                         mensaje = "@#AT#@@#TITLE#@¡Estas son las sucursales cercanas a ti!" \
                                   + "\nAlmacenes Anfora – *Orizaba*" \
@@ -449,7 +468,7 @@ class SmartBot:
                                   + "\n" \
                                   + "\nAhora ingresa tu sucursal mas cercana para continuar con tu compra" \
                                   + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
-                                  + "@#AT#@@#OPTION#@\n2. Salir👋 @#AT#@@#COMPLETE#@"
+                                  + "@#AT#@@#OPTION#@\n2. Salir👋"
 
                 elif intencion == "hidalgo":
                     if menu_tienda_linea != "quiero_comprar":
@@ -478,7 +497,7 @@ class SmartBot:
                               + "\nhttps://goo.gl/maps/GpPgW2Hs2871g4eD7" \
                               + "\n" \
                               + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
-                              + "@#AT#@@#OPTION#@\n2. Salir👋 @#AT#@@#COMPLETE#@"
+                              + "@#AT#@@#OPTION#@\n2. Salir👋"
                     else:
                         mensaje = "@#AT#@@#TITLE#@¡Estas son las sucursales cercanas a ti!" \
                                   + "\nAlmacenes Anfora – *Tula de Allende*" \
@@ -506,7 +525,7 @@ class SmartBot:
                                   + "\n" \
                                   + "\nAhora ingresa tu sucursal mas cercana para continuar con tu compra" \
                                   + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
-                                  + "@#AT#@@#OPTION#@\n2. Salir👋 @#AT#@@#COMPLETE#@"
+                                  + "@#AT#@@#OPTION#@\n2. Salir👋"
 
                 elif intencion == "guanajuato":
                     if menu_tienda_linea != "quiero_comprar":
@@ -528,7 +547,7 @@ class SmartBot:
                               + "\nhttps://goo.gl/maps/tKjk3fR62Gjok5FDA" \
                               + "\n" \
                               + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
-                              + "@#AT#@@#OPTION#@\n2. Salir👋 @#AT#@@#COMPLETE#@"
+                              + "@#AT#@@#OPTION#@\n2. Salir👋"
                     else:
                         mensaje = "@#AT#@@#TITLE#@¡Estas son las sucursales cercanas a ti!" \
                                   + "\nAlmacenes Anfora – *León Centro*" \
@@ -548,7 +567,7 @@ class SmartBot:
                                   + "\n" \
                                   + "\nAhora ingresa tu sucursal mas cercana para continuar con tu compra" \
                                   + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
-                                  + "@#AT#@@#OPTION#@\n2. Salir👋 @#AT#@@#COMPLETE#@"
+                                  + "@#AT#@@#OPTION#@\n2. Salir👋"
 
                 elif intencion == "chiapas":
                     if menu_tienda_linea != "quiero_comprar":
@@ -561,7 +580,7 @@ class SmartBot:
                               + "\nhttps://goo.gl/maps/3ZkxsGaAX4SdS9CS6" \
                               + "\n" \
                               + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
-                              + "@#AT#@@#OPTION#@\n2. Salir👋 @#AT#@@#COMPLETE#@"
+                              + "@#AT#@@#OPTION#@\n2. Salir👋"
                     else:
                         mensaje = "@#AT#@@#TITLE#@¡Estas son las sucursales cercanas a ti!" \
                                   + "\nAlmacenes Anfora – *Tuxtla Gutiérrez*" \
@@ -573,11 +592,11 @@ class SmartBot:
                                   + "\n" \
                                   + "\nAhora ingresa tu sucursal mas cercana para continuar con tu compra" \
                                   + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
-                                  + "@#AT#@@#OPTION#@\n2. Salir👋 @#AT#@@#COMPLETE#@"
+                                  + "@#AT#@@#OPTION#@\n2. Salir👋"
                 else:
                     mensaje = "@#AT#@@#TITLE#@Por el momento, no contamos con sucursal en tu estado ☹. ¡Compra en https://www.almacenesanfora.com/, contamos con envió a toda la Republica Mexicana! 🚚" \
                               + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
-                              + "@#AT#@@#OPTION#@\n2. Salir👋 @#AT#@@#COMPLETE#@"
+                              + "@#AT#@@#OPTION#@\n2. Salir👋"
                 users = menu_principal_salir(users)
                 return mensaje, users
 
@@ -585,14 +604,14 @@ class SmartBot:
 
                 mensaje = "@#AT#@@#TITLE#@Por favor compárteme tu número de teléfono a 10 dígitos" \
                           + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
-                          + "@#AT#@@#OPTION#@\n2. Salir @#AT#@@#COMPLETE#@"
+                          + "@#AT#@@#OPTION#@\n2. Salir"
                 users = menu_principal_salir(users)
                 return mensaje, users
 
             elif intencion == "mensaje_covid":
                 mensaje = "@#AT#@@#IMG#@https://www.broadcasterbot.com/cliente/almacenesanfora/0001.jpg" \
                           + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
-                          + "@#AT#@@#OPTION#@\n2. Salir @#AT#@@#COMPLETE#@"
+                          + "@#AT#@@#OPTION#@\n2. Salir"
                 users = menu_principal_salir(users)
                 return mensaje, users
 
@@ -611,7 +630,7 @@ class SmartBot:
                     else:
                         mensaje = "@#AT#@@#TITLE#@Vuelve a introducir tu número por favor" \
                                   + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
-                                  + "@#AT#@@#OPTION#@\n2. Salir @#AT#@@#COMPLETE#@"
+                                  + "@#AT#@@#OPTION#@\n2. Salir"
                     users = menu_principal_salir(users)
                 elif mtl == "rastrear_pedido" and ct_now - date < timedelta(minutes=5) and text.isdigit():
                     if len(text) == 8:
@@ -620,7 +639,7 @@ class SmartBot:
                     else:
                         mensaje = "@#AT#@@#TITLE#@Ingresa nuevamente tu N° de orden por favor" \
                                   + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
-                                  + "@#AT#@@#OPTION#@\n2. Salir @#AT#@@#COMPLETE#@"
+                                  + "@#AT#@@#OPTION#@\n2. Salir"
                         users = menu_principal_salir(users)
                 elif mtl == "problema_pedido" and text.isdigit():
                     mensaje = "@#AT#@@#TITLE#@En seguida te contactaré con un agente de Ventas @#AT#@@#DELEGATE#@"
@@ -661,7 +680,7 @@ class SmartBot:
                                   "momento! "
                         mensaje = mensaje + "\nTu pedido ya está listo. 👇 \n¡Gracias por utilizar este servicio!" \
                             + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
-                            + "@#AT#@@#OPTION#@\n2. Salir👋 @#AT#@@#COMPLETE#@"
+                            + "@#AT#@@#OPTION#@\n2. Salir👋"
 #                        mensaje si no esta el pedido
 #                        Almacenes Anfora: A tu pedido le falta un poco más de tiempo, ten paciencia, por f
                 elif mtl == "problema_pedido" and valido:
@@ -669,7 +688,7 @@ class SmartBot:
                 else:
                     mensaje = "@#AT#@@#TITLE#@Vuelve a ingresar tu fecha de nacimiento por favor" \
                               + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
-                              + "@#AT#@@#OPTION#@\n2. Salir👋 @#AT#@@#COMPLETE#@"
+                              + "@#AT#@@#OPTION#@\n2. Salir👋"
                 users = menu_principal_salir(users)
                 return mensaje, users
 
@@ -695,7 +714,7 @@ class SmartBot:
                               + "@#AT#@@#OPTION#@\n1. Si" \
                               + "@#AT#@@#OPTION#@\n2. No" \
                               + "@#AT#@@#OPTION#@\n3. Regresar al menú principal🔙" \
-                              + "@#AT#@@#OPTION#@\n4. Salir👋 @#AT#@@#COMPLETE#@"
+                              + "@#AT#@@#OPTION#@\n4. Salir👋"
                     botones = [{'payload': 'agente_quiero_comprar',
                                 'title': 'Si'},
                                {'payload': 'saludar',
@@ -711,7 +730,7 @@ class SmartBot:
                 else:
                     mensaje = "@#AT#@@#TITLE#@Vuelve a ingresar tu correo por favor" \
                               + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
-                              + "@#AT#@@#OPTION#@\n2. Salir👋 @#AT#@@#COMPLETE#@"
+                              + "@#AT#@@#OPTION#@\n2. Salir👋"
                     users = menu_principal_salir(users)
                 return mensaje, users
 
@@ -730,9 +749,13 @@ class SmartBot:
             users['buttons'] = []
         if speech:
             mensaje, users = valida_botones(speech, users)
+            print("THIS IS MESSAGE FROM VALIDA BOTONES")
+            print(mensaje)
         var = re.compile("{nombre}")
         if re.search(var, mensaje):
             mensaje = mensaje.format(nombre=users['name'])
+            print("this is mesaje form 757")
+            print(mensaje)
         #self.save_info(text, mensaje, NLU, users['buttons'])
         print("*" * 40)
         print("USERS")
@@ -890,7 +913,7 @@ class SmartBot:
         # weekday = ct.isoweekday()
         if self.laboral():
             mensaje = "@#AT#@@#TITLE#@¡Hola! 👋 Soy el Asistente Virtual de Almacenes Anfora. 🤖 🍴" \
-                      + "@#AT#@@#OPTION#@\n¿Qué deseas? Escribe el número." \
+                      + "\n¿Qué deseas? Escribe el número." \
                       + "@#AT#@@#OPTION#@\n1. Sucursales (Horario, teléfono y ubicación) ☎️" \
                       + "@#AT#@@#OPTION#@\n2. Tienda en línea 🛒" \
                       + "@#AT#@@#OPTION#@\n3. Cotizaciones 💰" \
@@ -901,7 +924,7 @@ class SmartBot:
         else:
             mensaje = "@#AT#@@#TITLE#@¡Hola! 👋 Soy el Asistente Virtual de Almacenes Anfora. 🤖 🍴" \
                       + "Nuestros horarios de servicio son de Lunes a Sábado de 08:00 am a 05:00 pm." \
-                      + "@#AT#@@#OPTION#@\n¿Qué deseas? Escribe el número." \
+                      + "\n¿Qué deseas? Escribe el número." \
                       + "@#AT#@@#OPTION#@\n1. Sucursales (Horario, teléfono y ubicación) ☎️" \
                       + "@#AT#@@#OPTION#@\n2. Tienda en línea 🛒" \
                       + "@#AT#@@#OPTION#@\n3. Cotizaciones 💰" \
@@ -960,6 +983,8 @@ class SmartBot:
         if not users.get(self.main_user):
             users[self.main_user] = {'name': 'Humano', 'buttons': []}
         response, users[self.main_user] = self.bot(self.original_text, users[self.main_user])
+        print("ESTO ES RESPONSE")
+        print(response)
         response = str(response)
         titles = []
         images = []
@@ -972,6 +997,9 @@ class SmartBot:
         texts = []
         messages = []
         lista = response.split("@#AT#@")
+        print("=0" * 30)
+        print(lista)
+        print("=0" * 30)
         text = ""
 
         for elem in lista:
@@ -1005,7 +1033,7 @@ class SmartBot:
                 texts.append(text)
             elif "@#DELEGATE#@" in elem:
                 flags.append('@#DELEGATE#@')
-            elif "@#COMPLETE@#" in elem:
+            elif "@#COMPLETE#@" in elem:
                 flags.append('@#COMPLETE#@')
 
         text_options = ""
@@ -1059,7 +1087,7 @@ class SmartBot:
                 if index == len(options) - 1:
                     opcion = opcion.rstrip("\n")
                 dic = {"description": opcion,
-                       "value": index}
+                       "value": index + 1}
                 text_options = text_options + ' ' + opcion
                 opciones.append(dic)
         optionTypes = ""
