@@ -44,7 +44,7 @@ class SmartBot:
         if platform.node() == "u1" or platform.node() == "DESKTOP-0CKRHA6":
             ip = "localhost"
         else:
-            ip = "172.17.0.6"
+            ip = "172.17.0.5"
         b_client = pymongo.MongoClient(ip, 27017) #serv mongo 10.100.13.20 #docker 172.17.0.8
         db = b_client['Bots']
         self.colection = db['Anfora']
@@ -964,14 +964,10 @@ class SmartBot:
         options = []
         texts = []
         messages = []
-        print("ESTO ES RESPONSE")
-        print(response)
         lista = response.split("@#AT#@")
         text = ""
-        print("THIS IS ORIGINAL LIST")
-        print(lista)
+
         for elem in lista:
-            print("\'" + elem + "\'")
             if "@#TITLE#@" in elem:
                 title = elem.replace('@#TITLE#@', '')
                 titles.append(title)
@@ -980,7 +976,7 @@ class SmartBot:
                 options_0.append(option)
             elif "@#IMG#@" in elem:
                 link_image = elem.replace('@#IMG#@', '')
-                image = {link_image: None}  # @AD@#@#IMAGE#@djjfhfhf.jpg #@AD@#@#OPTION#@pieDePagina
+                image = {link_image: None}
                 images.append(image)
             elif "@#PDF#@" in elem:
                 pdf = elem.replace('@#PDF#@', '')
@@ -990,7 +986,6 @@ class SmartBot:
                 xlsxs.append(xlsx)
             elif "@#CAPTION#@" in elem and images:
                 option = elem.replace('@#CAPTION#@', '')
-                # image[link_image] = option
                 images[-1][link_image] = option
             elif "@#TEXT_0#@" in elem:
                 text = elem.replace('@#TEXT_0#@', '')
@@ -1003,26 +998,13 @@ class SmartBot:
                 texts.append(text)
             elif "@#DELEGATE#@" in elem:
                 flags.append('@#DELEGATE#@')
-            elif "@#COMPLETE#@" in elem:
+            elif "@#COMPLETE@#" in elem:
                 flags.append('@#COMPLETE#@')
-            else:
-                print("ESTO  viene de ELSE")
-                print(len("@#COMPLETE@#"))
-                print(len(elem))
-                print(f"No se mando {elem}")
-        print("This is TEXTS!!")
-        print(texts_0)
-        print(texts)
-        # text = ""
-        # "rich card"
+
         text_options = ""
+
         for title in titles:
             text = text + title
-            # message = {
-            #            "file": {},
-            #            "text": title
-            #          }
-            # messages.append(message)
         for option in options:
             text = text + option
         for image in images:
@@ -1046,10 +1028,6 @@ class SmartBot:
             messages.append(message)
         for image in images:
             caption = list(image.values())[0]
-            print("ESTO ES CAPTION 1036")
-            print(caption)
-            print("esti es  text 1038")
-            # print(text)
             if caption:
                 text = caption + "\n" + text
         ls = []
@@ -1062,45 +1040,54 @@ class SmartBot:
             ls[0]['text'] = text
         new_title = ""
         for title in titles:
-            new_title = new_title + "\n" + title
+            new_title = new_title + "" + title
         if images:
             url2 = list(images[0].keys())[0]
         else:
             url2 = ""
         opciones = []
+        # ----
         if options:
-            j = 1
-            for opcion in options:
+            for index, opcion in enumerate(options):
+                if index == len(options) - 1:
+                    opcion = opcion.rstrip("\n")
                 dic = {"description": opcion,
-                       "value": str(j)}
+                       "value": index}
                 text_options = text_options + ' ' + opcion
                 opciones.append(dic)
-                j = j + 1
         optionTypes = ""
+
         if ls:
             optionTypes = "RICH_CARD"
         else:
             ls = [
                 {
                     "file": {},
-                    "text": new_title + ' ' + text_options
-                }
+                    "text": new_title + ' ' + text_options.strip()
+                },
             ]
+
         if not optionTypes and not text_options:
             optionTypes = "TEXT"
             return {"messages": ls,
                     "flags": flags,
                     "messagesOptions": {},
                     "optionTypes": optionTypes}
+            if not optionTypes and text_options:
+                optionTypes = "SUGGESTIONS"
+
         if not optionTypes and text_options:
             optionTypes = "SUGGESTIONS"
 
-        return {"messages": ls,
-                "flags": flags,
-                "messagesOptions": {
-                    "title": new_title,
-                    "description": new_title,
-                    "urlImage": url2,
-                    "options": opciones
-                },
-                "optionTypes": optionTypes}
+        return {
+            "messages": ls,
+            "flags": flags,
+            "messagesOptions": {
+                "title": new_title,
+                "description": new_title,
+                "urlImage": url2,
+                "options": opciones
+            },
+            "optionTypes": optionTypes,
+            "workGroupId": None
+        }
