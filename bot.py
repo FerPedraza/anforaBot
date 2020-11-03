@@ -901,7 +901,7 @@ class SmartBot:
                       + "@#AT#@@#OPTION#@\n4. Promociones 🔔" \
                       + "@#AT#@@#OPTION#@\n5. Almacenes Anfora: Antes de visitarnos, te invitamos a conocer las medidas preventivas " \
                         "que tenemos actualmente en nuestras tiendas, solo escribe 5" \
-                      + "@#AT#@@#OPTION#@\n6. Salir👋 @#AT#@https://www.broadcasterbot.com/cliente/almacenesanfora/logo.jpg"
+                      + "@#AT#@@#OPTION#@\n6. Salir👋 @#AT#@@#IMG#@https://www.broadcasterbot.com/cliente/almacenesanfora/logo.jpg"
         botones = [{'payload': 'sucursales',
                     'title': 'Sucursales (Horario, teléfono y ubicación)'},
                    {'payload': 'tienda_linea',
