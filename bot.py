@@ -589,6 +589,13 @@ class SmartBot:
                 users = menu_principal_salir(users)
                 return mensaje, users
 
+            elif intencion == "mensaje_covid":
+                mensaje = "@#AT#@@#IMG#@https://www.broadcasterbot.com/cliente/almacenesanfora/0001.jpg" \
+                          + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
+                          + "@#AT#@@#OPTION#@\n2. Salir"
+                users = menu_principal_salir(users)
+                return mensaje, users
+
             elif intencion == "dar_numero":
                 mtl0 = self.colection.find_one({"user_id": self.main_user}).get("request").get("menu_tienda_linea")
                 mtl = mtl0.get("opcion")

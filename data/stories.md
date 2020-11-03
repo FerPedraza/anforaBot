@@ -18,10 +18,6 @@
 * cotizaciones
  - utter_cotizaciones
  
-## mensaje_covid
-* mensaje_covid
- - utter_mensaje_covid   
- 
 ## baja_california
 * baja_california
  - utter_baja_california

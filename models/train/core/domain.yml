@@ -12,7 +12,6 @@ actions:
 - utter_durango
 - utter_guerrero
 - utter_jalisco
-- utter_mensaje_covid
 - utter_michoacan
 - utter_morelos
 - utter_nayarit
@@ -276,13 +275,6 @@ templates:
     - payload: /salir
       title: Salir👋
     text: '@#AT#@@#TITLE#@El estado que introdujo no cuenta con sucursales😯'
-  utter_mensaje_covid:
-  - buttons:
-    - payload: /saludar
-      title: Regresar al menú principal🔙
-    - payload: /salir
-      title: Salir👋
-    text: '@#AT#@@#IMG#@https://www.broadcasterbot.com/cliente/almacenesanfora/0001.jpg'
   utter_mexico:
   - buttons:
     - payload: /saludar

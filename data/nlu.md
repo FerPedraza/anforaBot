@@ -57,6 +57,7 @@
 - peligro covid
 - covid mensaje
 - mensaje covid
+- mensaje covid
 
 ## intent:salir
 - salir

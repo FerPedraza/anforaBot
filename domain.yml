@@ -30,7 +30,6 @@ actions:
 - utter_yucatan
 - utter_zacatecas
 - utter_cotizaciones
-- utter_mensaje_covid
 - utter_salir
 - utter_agente_quiero_comprar
 - utter_cancelar_pedido
@@ -356,14 +355,6 @@ templates:
 
   utter_cotizaciones:
   - text: "@#AT#@@#TITLE#@En seguida te contactaré con un agente de Ventas @#AT#@@#DELEGATE#@"
-
-  utter_mensaje_covid:
-  - text: "@#AT#@@#IMG#@https://www.broadcasterbot.com/cliente/almacenesanfora/0001.jpg"
-    buttons:
-      - title: "Regresar al menú principal🔙"
-        payload: /saludar
-      - title: "Salir👋"
-        payload: /salir
 
   utter_cancelar_pedido:
   - text: "@#AT#@@#TITLE#@Escribe tu Nº de orden para ver el estatus de tu pedido 📈🤔"
