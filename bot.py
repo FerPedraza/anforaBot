@@ -57,7 +57,7 @@ def valida_botones(speech, users):
 
 class SmartBot:
     def __init__(self, facebook=False):
-        if platform.node() == "u1" or platform.node() == "DESKTOP-0CKRHA6":
+        if platform.node() == "u1" or platform.node() == "DESKTOP-0CKRHA6" or platform.node() == "karma":
             ip = "localhost"
         else:
             ip = "172.17.0.5"
@@ -1046,7 +1046,7 @@ class SmartBot:
             url = list(image.keys())[0]
             message = {
                 "type": "image",
-                "url": url
+                "url": url.strip()
             }
             messages.append(message)
         for pdf in pdfs:
@@ -1077,7 +1077,7 @@ class SmartBot:
         for title in titles:
             new_title = new_title + "" + title
         if images:
-            url2 = list(images[0].keys())[0]
+            url2 = list(images[0].keys())[0].strip()
         else:
             url2 = ""
         opciones = []
