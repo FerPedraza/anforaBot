@@ -1098,7 +1098,7 @@ class SmartBot:
             ls = [
                 {
                     "file": {},
-                    "text": new_title + ' ' + text_options.strip()
+                    "text": new_title + '\n\n' + text_options.strip()
                 },
             ]
 
