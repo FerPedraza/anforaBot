@@ -24,6 +24,16 @@ def menu_principal_salir(users):
     users['buttons'] = botones
     return users
 
+"""
+
+
+        if re.fullmatch("[\w\.]+@(?:\w\.)+\w+", text):
+            intencion = "dar_correo"
+            confianza = 0.99
+        else:
+            confianza = 0.1
+"""
+
 
 def valida_botones(speech, users):
     if "buttons" in speech[0].keys():
@@ -101,6 +111,17 @@ class SmartBot:
         self.save_info(None, None, None, None)
         # Aqui se limpia el texto si no esta dentro de intenciones particulares
         # Aqui se guarda informacion de alguna opcion del menú principal sin que implique respuesta al usuario
+        
+        print("dewdwedoqweiiuqewhiuewqd")
+        print("------------------------")
+        print(text)
+        
+
+        if re.fullmatch("[\w\.]+@(?:\w+\.)+\w+", text):
+            print("Correo valido--------------------")
+            intencion = "dar_correo"
+            confianza = 0.99
+
         if intencion == "sucursales" or intencion == "tienda_linea" or intencion == "cotizaciones" \
                 or intencion == "promociones" or intencion == "mensaje_covid":
             tz = pytz.timezone('America/Mexico_City')
@@ -705,7 +726,10 @@ class SmartBot:
                 return mensaje, users
 
             elif intencion == "dar_correo":
+                print("--------------------------")
+                print(text)
                 if is_valid_email(text):
+                    print("CORREO ES VALIDO")
                     mensaje = "@#AT#@@#TITLE#@¡Perfecto! 👏, Prepárate 📝" \
                               + "💡 TIP: Puedes mandar la foto de tu lista con el nombre de cada artículo y cantidad " \
                                 "que " \

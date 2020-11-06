@@ -299,6 +299,8 @@
 - 3698520147
 
 ## intent:dar_correo
+- [^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+ 
+- [\w\.]+@(?:\w\.)+
 - email@gmail.com
 - email@hotmail.com
 - email@live.com
@@ -314,6 +316,7 @@
 - email@gmx.com
 - email@zoho.com
 - email@protomail.com
+
 
 ## regex:regex_mail
 - ^\d{6}$
@@ -350,7 +353,3 @@
 - cancelar pedido
 - cancelar mi pedido
 - quiero cancelar un pedido
-
-
-
-
