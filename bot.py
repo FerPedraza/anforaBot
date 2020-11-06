@@ -74,9 +74,9 @@ class SmartBot:
             num_btns = [x.get('payload') for x in users['buttons']]
             if self.original_text.isdigit() and num_btns and int(self.original_text) < 9:
                 if len(num_btns) < int(self.original_text):
-                    mensaje = 'Lo siento no entendí qué quisiste decir, por favor introduce una opción válida' \
-                        + "\n1. Regresar al menú principal🔙" \
-                        + "\n2. Salir👋"
+                    mensaje = '@#AT#@@#TITLE#@Lo siento no entendí qué quisiste decir, por favor introduce una opción válida' \
+                        + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
+                        + "@#AT#@@#OPTION#@\n2. Salir👋"
                     users = menu_principal_salir(users)
                     return mensaje, users
             # El siguiente if sirve para validar si la entrada recibida (text) hace referencia a un boton del mensaje
@@ -1072,15 +1072,20 @@ class SmartBot:
                    "text": ""}
             ls.append(dic)
         if text and ls:
-            ls[0]['text'] = text
+            ls[0]['text'] = text.rstrip()
         new_title = ""
         for title in titles:
             new_title = new_title + "" + title
+        new_title = new_title.rstrip()
         if images:
             url2 = list(images[0].keys())[0].strip()
         else:
             url2 = ""
         opciones = []
+
+        print("000000")
+        print(options)
+
         # ----
         if options:
             for index, opcion in enumerate(options):
@@ -1092,13 +1097,18 @@ class SmartBot:
                 opciones.append(dic)
         optionTypes = ""
 
+        print("llllllssssss")
+        print(ls)
+
         if ls:
             optionTypes = "RICH_CARD"
         else:
+            if text_options != "":
+                text_options = "\n" + text_options
             ls = [
                 {
                     "file": {},
-                    "text": new_title + '\n\n' + text_options.strip()
+                    "text": new_title.strip() + text_options.rstrip()
                 },
             ]
 
@@ -1118,8 +1128,8 @@ class SmartBot:
             "messages": ls,
             "flags": flags,
             "messagesOptions": {
-                "title": new_title,
-                "description": new_title,
+                "title": new_title.rstrip(),
+                "description": new_title.rstrip(),
                 "urlImage": url2,
                 "options": opciones
             },
