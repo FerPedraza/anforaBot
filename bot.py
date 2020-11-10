@@ -10,7 +10,6 @@ from validacion.valida_telefono import validar_telefono
 from text.limpia_texto import middle_clean_text
 from validacion.valid_email import is_valid_email
 from datetime import datetime, timedelta
-from pprint import pprint
 
 
 def menu_principal_salir(users):
@@ -24,16 +23,6 @@ def menu_principal_salir(users):
     users['buttons'] = botones
     return users
 
-"""
-
-
-        if re.fullmatch("[\w\.]+@(?:\w\.)+\w+", text):
-            intencion = "dar_correo"
-            confianza = 0.99
-        else:
-            confianza = 0.1
-"""
-
 
 def valida_botones(speech, users):
     if "buttons" in speech[0].keys():
@@ -42,24 +31,10 @@ def valida_botones(speech, users):
             botones[i]['number'] = str(i + 1)
             botones[i]['letter number'] = convert_to_letters(i + 1)
         users['buttons'] = botones
-        print("ESTO VIENE DE 35")
-        print(type(speech[0]['text']))
-        print(type(botones))
-        pprint(botones)
-        print("lista")
-        print([x['number'] + '. ' + x['title'] for x in botones])
-        #mensaje = speech[0]['text']  + '\n'.join('@#AT#@@#OPTION#@' + [x['number'] + '. ' + x['title'] for x in botones]).format(
-        #    nombre=users['name'])
-        print(type(speech[0]['text']))
         mensaje = speech[0]['text']
         lista = [x['number'] + '. ' + x['title'] for x in botones]
         for i in range(len(lista)):
             mensaje = mensaje + '@#AT#@@#OPTION#@\n' + lista[i]
-        #mensaje = speech[0]['text'] + '@#AT#@@#OPTION#@\n'.join(
-        #     [x['number'] + '. ' + x['title'] for x in botones])
-        print("esto es 43")
-        print(mensaje)
-        #print('mensaje de valida botones', mensaje)
     else:
         mensaje = speech[0]['text'].format(nombre=users['name'])
     return mensaje, users
@@ -101,24 +76,9 @@ class SmartBot:
         NLU = self.extraer_intenciones(text)
         intencion = NLU['intent']['name']
         confianza = NLU['intent']['confidence']
-        print("#" * 30)
-        print(intencion)
-        print(confianza)
-        print(speech)
-        print("This is users")
-        print(users)
-        print("#" * 30)
         self.save_info(None, None, None, None)
-        # Aqui se limpia el texto si no esta dentro de intenciones particulares
-        # Aqui se guarda informacion de alguna opcion del menú principal sin que implique respuesta al usuario
-        
-        print("dewdwedoqweiiuqewhiuewqd")
-        print("------------------------")
-        print(text)
-        
 
         if re.fullmatch("[\w\.]+@(?:\w+\.)+\w+", text):
-            print("Correo valido--------------------")
             intencion = "dar_correo"
             confianza = 0.99
 
@@ -726,10 +686,7 @@ class SmartBot:
                 return mensaje, users
 
             elif intencion == "dar_correo":
-                print("--------------------------")
-                print(text)
                 if is_valid_email(text):
-                    print("CORREO ES VALIDO")
                     mensaje = "@#AT#@@#TITLE#@¡Perfecto! 👏, Prepárate 📝" \
                               + "💡 TIP: Puedes mandar la foto de tu lista con el nombre de cada artículo y cantidad " \
                                 "que " \
@@ -773,27 +730,9 @@ class SmartBot:
             users['buttons'] = []
         if speech:
             mensaje, users = valida_botones(speech, users)
-            print("THIS IS MESSAGE FROM VALIDA BOTONES")
-            print(mensaje)
         var = re.compile("{nombre}")
         if re.search(var, mensaje):
             mensaje = mensaje.format(nombre=users['name'])
-            print("this is mesaje form 757")
-            print(mensaje)
-        #self.save_info(text, mensaje, NLU, users['buttons'])
-        print("*" * 40)
-        print("USERS")
-        print(users)
-        print("TEXT")
-        print(text)
-        print("SPEECH")
-        print(speech)
-        print("INTENCION")
-        print(intencion)
-        print("CONFIANZA")
-        print(confianza)
-        print("*" * 40)
-        # save info
         return mensaje, users
 
     def extraer_intenciones(self, text):
@@ -1007,8 +946,6 @@ class SmartBot:
         if not users.get(self.main_user):
             users[self.main_user] = {'name': 'Humano', 'buttons': []}
         response, users[self.main_user] = self.bot(self.original_text, users[self.main_user])
-        print("ESTO ES RESPONSE")
-        print(response)
         response = str(response)
         titles = []
         images = []
@@ -1021,9 +958,6 @@ class SmartBot:
         texts = []
         messages = []
         lista = response.split("@#AT#@")
-        print("=0" * 30)
-        print(lista)
-        print("=0" * 30)
         text = ""
 
         for elem in lista:
@@ -1107,10 +1041,6 @@ class SmartBot:
             url2 = ""
         opciones = []
 
-        print("000000")
-        print(options)
-
-        # ----
         if options:
             for index, opcion in enumerate(options):
                 if index == len(options) - 1:
@@ -1120,9 +1050,6 @@ class SmartBot:
                 text_options = text_options + ' ' + opcion
                 opciones.append(dic)
         optionTypes = ""
-
-        print("llllllssssss")
-        print(ls)
 
         if ls:
             optionTypes = "RICH_CARD"
