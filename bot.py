@@ -31,9 +31,10 @@ def valida_botones(speech, users):
             botones[i]['number'] = str(i + 1)
             botones[i]['letter number'] = convert_to_letters(i + 1)
         users['buttons'] = botones
-        mensaje = speech[0]['text'] + '\n' + '\n'.join([x['number'] + '. ' + x['title'] for x in botones]).format(
-            nombre=users['name'])
-        #print('mensaje de valida botones', mensaje)
+        mensaje = speech[0]['text']
+        lista = [x['number'] + '. ' + x['title'] for x in botones]
+        for i in range(len(lista)):
+            mensaje = mensaje + '@#AT#@@#OPTION#@\n' + lista[i]
     else:
         mensaje = speech[0]['text'].format(nombre=users['name'])
     return mensaje, users
@@ -41,11 +42,11 @@ def valida_botones(speech, users):
 
 class SmartBot:
     def __init__(self, facebook=False):
-        if platform.node() == "u1" or platform.node() == "DESKTOP-0CKRHA6":
+        if platform.node() == "u1" or platform.node() == "DESKTOP-0CKRHA6" or platform.node() == "karma":
             ip = "localhost"
         else:
-            ip = "172.17.0.6"
-        b_client = pymongo.MongoClient(ip, 27017) #serv mongo 10.100.13.20 #docker 172.17.0.8
+            ip = "172.17.0.9"
+        b_client = pymongo.MongoClient("10.100.13.20", 27017) #serv mongo 10.100.13.20 #docker 172.17.0.8
         db = b_client['Bots']
         self.colection = db['Anfora']
         self.facebook = facebook
@@ -58,9 +59,9 @@ class SmartBot:
             num_btns = [x.get('payload') for x in users['buttons']]
             if self.original_text.isdigit() and num_btns and int(self.original_text) < 9:
                 if len(num_btns) < int(self.original_text):
-                    mensaje = 'Lo siento no entendí qué quisiste decir, por favor introduce una opción válida' \
-                        + "\n1. Regresar al menú principal🔙" \
-                        + "\n2. Salir👋"
+                    mensaje = '@#AT#@@#TITLE#@Lo siento no entendí qué quisiste decir, por favor introduce una opción válida' \
+                        + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
+                        + "@#AT#@@#OPTION#@\n2. Salir👋"
                     users = menu_principal_salir(users)
                     return mensaje, users
             # El siguiente if sirve para validar si la entrada recibida (text) hace referencia a un boton del mensaje
@@ -75,13 +76,12 @@ class SmartBot:
         NLU = self.extraer_intenciones(text)
         intencion = NLU['intent']['name']
         confianza = NLU['intent']['confidence']
-        #print("#" * 30)
-        #print(intencion)
-        #print(confianza)
-        #print("#" * 30)
         self.save_info(None, None, None, None)
-        # Aqui se limpia el texto si no esta dentro de intenciones particulares
-        # Aqui se guarda informacion de alguna opcion del menú principal sin que implique respuesta al usuario
+
+        if re.fullmatch("[\w\.]+@(?:\w+\.)+\w+", text):
+            intencion = "dar_correo"
+            confianza = 0.99
+
         if intencion == "sucursales" or intencion == "tienda_linea" or intencion == "cotizaciones" \
                 or intencion == "promociones" or intencion == "mensaje_covid":
             tz = pytz.timezone('America/Mexico_City')
@@ -114,7 +114,7 @@ class SmartBot:
                     .get("menu_tienda_linea").get('opcion')
                 if estado == "toluca":
                     if menu_tienda_linea != "quiero_comprar":
-                        mensaje = "¡Estas son las sucursales cercanas a ti!" \
+                        mensaje = "@#AT#@@#TITLE#@¡Estas son las sucursales cercanas a ti!" \
                               + "\n  Almacenes Anfora – *San Lorenzo*" \
                               + "\n🏨Alfredo del Mazo 702, Delegación San Lorenzo Tepaltitlán, C.P. 50010 Toluca de " \
                                 "Lerdo" \
@@ -174,11 +174,11 @@ class SmartBot:
                               + "\n📞722 212 9731" \
                               + "\nhttps://goo.gl/maps/p7DgbEUF3yFhYDmP6" \
                               + "\n" \
-                              + "\n1. Regresar al menú principal🔙" \
-                              + "\n2. Salir👋"
+                              + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
+                              + "@#AT#@@#OPTION#@\n2. Salir👋"
 
                     else:
-                        mensaje = "¡Estas son las sucursales cercanas a ti!" \
+                        mensaje = "@#AT#@@#TITLE#@¡Estas son las sucursales cercanas a ti!" \
                                   + "\n  Almacenes Anfora – *San Lorenzo*" \
                                   + "\n🏨Alfredo del Mazo 702, Delegación San Lorenzo Tepaltitlán, C.P. 50010 Toluca " \
                                     "de Lerdo" \
@@ -239,12 +239,12 @@ class SmartBot:
                                   + "\nhttps://goo.gl/maps/p7DgbEUF3yFhYDmP6" \
                                   + "\n" \
                                   + "\nAhora ingresa tu sucursal mas cercana para continuar con tu compra" \
-                                  + "\n1. Regresar al menú principal🔙" \
-                                  + "\n2. Salir👋"
+                                  + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
+                                  + "@#AT#@@#OPTION#@\n2. Salir👋"
 
                 elif estado == "ciudad_de_mexico":
                     if menu_tienda_linea != "quiero_comprar":
-                        mensaje = "¡Estas son las sucursales cercanas a ti!" \
+                        mensaje = "@#AT#@@#TITLE#@¡Estas son las sucursales cercanas a ti!" \
                               + "\nAlmacenes Anfora – *Lopez*" \
                               + "\n🏨LOPEZ No. 50 COLONIA CENTRO DELEGACION CUAUHTEMOC C.P. 06050" \
                               + "\n🕑Lunes a Sábado: 9:30 am a 8:00 pm" \
@@ -274,10 +274,10 @@ class SmartBot:
                               + "\n📞55 5271 8799" \
                               + "\nhttps://goo.gl/maps/ZUZHYEg7B7CmQvt26" \
                               + "\n" \
-                              + "\n1. Regresar al menú principal🔙" \
-                              + "\n2. Salir👋"
+                              + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
+                              + "@#AT#@@#OPTION#@\n2. Salir👋"
                     else:
-                        mensaje = "¡Estas son las sucursales cercanas a ti!" \
+                        mensaje = "@#AT#@@#TITLE#@¡Estas son las sucursales cercanas a ti!" \
                                   + "\nAlmacenes Anfora – *Lopez*" \
                                   + "\n🏨LOPEZ No. 50 COLONIA CENTRO DELEGACION CUAUHTEMOC C.P. 06050" \
                                   + "\n🕑Lunes a Sábado: 9:30 am a 8:00 pm" \
@@ -308,12 +308,12 @@ class SmartBot:
                                   + "\nhttps://goo.gl/maps/ZUZHYEg7B7CmQvt26" \
                                   + "\n" \
                                   + "\nAhora ingresa tu sucursal mas cercana para continuar con tu compra" \
-                                  + "\n1. Regresar al menú principal🔙" \
-                                  + "\n2. Salir👋"
+                                  + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
+                                  + "@#AT#@@#OPTION#@\n2. Salir👋"
                 elif intencion == "mexico":
                     if menu_tienda_linea != "quiero_comprar":
                     #if mp != "tienda_linea":
-                        mensaje = "¡Estas son las sucursales cercanas a ti!" \
+                        mensaje = "@#AT#@@#TITLE#@¡Estas son las sucursales cercanas a ti!" \
                               + "\n  Almacenes Anfora – *Ecatepec*" \
                               + "\n🏨Blvd. Insurgentes Esq. Emiliano Zapata locales 02 Y 03, San Cristóbal Centro, " \
                                 "55000 Ecatepec de Morelos" \
@@ -338,10 +338,10 @@ class SmartBot:
                               + "\n📞55 5982 8368 y 55 3092 1009" \
                               + "\nhttps://goo.gl/maps/mE3xzUmgmTZLT7GQ7" \
                               + "\n" \
-                              + "\n1. Regresar al menú principal🔙" \
-                              + "\n2. Salir👋"
+                              + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
+                              + "@#AT#@@#OPTION#@\n2. Salir👋"
                     else:
-                        mensaje = "¡Estas son las sucursales cercanas a ti!" \
+                        mensaje = "@#AT#@@#TITLE#@¡Estas son las sucursales cercanas a ti!" \
                                   + "\n  Almacenes Anfora – *Ecatepec*" \
                                   + "\n🏨Blvd. Insurgentes Esq. Emiliano Zapata locales 02 Y 03, San Cristóbal Centro, " \
                                     "55000 Ecatepec de Morelos" \
@@ -367,12 +367,12 @@ class SmartBot:
                                   + "\nhttps://goo.gl/maps/mE3xzUmgmTZLT7GQ7" \
                                   + "\n" \
                                   + "\nAhora ingresa tu sucursal mas cercana para continuar con tu compra" \
-                                  + "\n1. Regresar al menú principal🔙" \
-                                  + "\n2. Salir👋"
+                                  + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
+                                  + "@#AT#@@#OPTION#@\n2. Salir👋"
 
                 elif intencion == "queretaro":
                     if menu_tienda_linea != "quiero_comprar":
-                        mensaje = "¡Estas son las sucursales cercanas a ti!" \
+                        mensaje = "@#AT#@@#TITLE#@¡Estas son las sucursales cercanas a ti!" \
                               + "\nAlmacenes Anfora – *Querétaro Zaragoza*" \
                               + "\n🏨Calle Ignacio Zaragoza 41, El Carrizal, 76030 Santiago de Querétaro, QRO" \
                               + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
@@ -395,10 +395,10 @@ class SmartBot:
                               + "\n📞427 272 5539" \
                               + "\nhttps://goo.gl/maps/GqhpTyNky91KUbXu6" \
                               + "\n" \
-                              + "\n1. Regresar al menú principal🔙" \
-                              + "\n2. Salir👋"
+                              + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
+                              + "@#AT#@@#OPTION#@\n2. Salir👋"
                     else:
-                        mensaje = "¡Estas son las sucursales cercanas a ti!" \
+                        mensaje = "@#AT#@@#TITLE#@¡Estas son las sucursales cercanas a ti!" \
                                   + "\nAlmacenes Anfora – *Querétaro Zaragoza*" \
                                   + "\n🏨Calle Ignacio Zaragoza 41, El Carrizal, 76030 Santiago de Querétaro, QRO" \
                                   + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
@@ -422,13 +422,13 @@ class SmartBot:
                                   + "\nhttps://goo.gl/maps/GqhpTyNky91KUbXu6" \
                                   + "\n" \
                                   + "\nAhora ingresa tu sucursal mas cercana para continuar con tu compra" \
-                                  + "\n1. Regresar al menú principal🔙" \
-                                  + "\n2. Salir👋"
+                                  + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
+                                  + "@#AT#@@#OPTION#@\n2. Salir👋"
 
                 elif intencion == "veracruz":
                     if menu_tienda_linea != "quiero_comprar":
                     #if mp != "tienda_linea":
-                        mensaje = "¡Estas son las sucursales cercanas a ti!" \
+                        mensaje = "@#AT#@@#TITLE#@¡Estas son las sucursales cercanas a ti!" \
                               + "\nAlmacenes Anfora – *Orizaba*" \
                               + "\n🏨AVENIDA ORIENTE 4 No. 40 COLONIA CENTRO, ORIZABA VERACRUZ C.P.94300" \
                               + "\n🕑Lunes a Sábado: 10:30 am a 8:30 pm" \
@@ -436,10 +436,10 @@ class SmartBot:
                               + "\n📞272 725 8495" \
                               + "\nhttps://goo.gl/maps/rraVWVcLLAcfkAAC9" \
                               + "\n" \
-                              + "\n1. Regresar al menú principal🔙" \
-                              + "\n2. Salir👋"
+                              + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
+                              + "@#AT#@@#OPTION#@\n2. Salir👋"
                     else:
-                        mensaje = "¡Estas son las sucursales cercanas a ti!" \
+                        mensaje = "@#AT#@@#TITLE#@¡Estas son las sucursales cercanas a ti!" \
                                   + "\nAlmacenes Anfora – *Orizaba*" \
                                   + "\n🏨AVENIDA ORIENTE 4 No. 40 COLONIA CENTRO, ORIZABA VERACRUZ C.P.94300" \
                                   + "\n🕑Lunes a Sábado: 10:30 am a 8:30 pm" \
@@ -448,12 +448,12 @@ class SmartBot:
                                   + "\nhttps://goo.gl/maps/rraVWVcLLAcfkAAC9" \
                                   + "\n" \
                                   + "\nAhora ingresa tu sucursal mas cercana para continuar con tu compra" \
-                                  + "\n1. Regresar al menú principal🔙" \
-                                  + "\n2. Salir👋"
+                                  + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
+                                  + "@#AT#@@#OPTION#@\n2. Salir👋"
 
                 elif intencion == "hidalgo":
                     if menu_tienda_linea != "quiero_comprar":
-                        mensaje = "¡Estas son las sucursales cercanas a ti!" \
+                        mensaje = "@#AT#@@#TITLE#@¡Estas son las sucursales cercanas a ti!" \
                               + "\nAlmacenes Anfora – *Tula de Allende*" \
                               + "\n🏨ALLE LEANDRO VALLE NO. 102 PLANTA BAJA, COL. CENTRO, MPIO. TULA DE ALLENDE, " \
                               + "ESTADO DE HIDALGO, C.P. 42800" \
@@ -477,10 +477,10 @@ class SmartBot:
                               + "\n📞771 718 1868" \
                               + "\nhttps://goo.gl/maps/GpPgW2Hs2871g4eD7" \
                               + "\n" \
-                              + "\n1. Regresar al menú principal🔙" \
-                              + "\n2. Salir👋"
+                              + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
+                              + "@#AT#@@#OPTION#@\n2. Salir👋"
                     else:
-                        mensaje = "¡Estas son las sucursales cercanas a ti!" \
+                        mensaje = "@#AT#@@#TITLE#@¡Estas son las sucursales cercanas a ti!" \
                                   + "\nAlmacenes Anfora – *Tula de Allende*" \
                                   + "\n🏨ALLE LEANDRO VALLE NO. 102 PLANTA BAJA, COL. CENTRO, MPIO. TULA DE ALLENDE, " \
                                   + "ESTADO DE HIDALGO, C.P. 42800" \
@@ -505,13 +505,13 @@ class SmartBot:
                                   + "\nhttps://goo.gl/maps/GpPgW2Hs2871g4eD7" \
                                   + "\n" \
                                   + "\nAhora ingresa tu sucursal mas cercana para continuar con tu compra" \
-                                  + "\n1. Regresar al menú principal🔙" \
-                                  + "\n2. Salir👋"
+                                  + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
+                                  + "@#AT#@@#OPTION#@\n2. Salir👋"
 
                 elif intencion == "guanajuato":
                     if menu_tienda_linea != "quiero_comprar":
                     #if mp != "tienda_linea":
-                        mensaje = "¡Estas son las sucursales cercanas a ti!" \
+                        mensaje = "@#AT#@@#TITLE#@¡Estas son las sucursales cercanas a ti!" \
                               + "\nAlmacenes Anfora – *León Centro*" \
                               + "\n🏨Calle Belisario Domínguez, Col. León de los Aldamas Centro, León, Guanajuato, " \
                                 "CP 37000" \
@@ -527,10 +527,10 @@ class SmartBot:
                               + "\n📞 477 167 5629 y 477 761 2379" \
                               + "\nhttps://goo.gl/maps/tKjk3fR62Gjok5FDA" \
                               + "\n" \
-                              + "\n1. Regresar al menú principal🔙" \
-                              + "\n2. Salir👋"
+                              + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
+                              + "@#AT#@@#OPTION#@\n2. Salir👋"
                     else:
-                        mensaje = "¡Estas son las sucursales cercanas a ti!" \
+                        mensaje = "@#AT#@@#TITLE#@¡Estas son las sucursales cercanas a ti!" \
                                   + "\nAlmacenes Anfora – *León Centro*" \
                                   + "\n🏨Calle Belisario Domínguez, Col. León de los Aldamas Centro, León, Guanajuato, " \
                                     "CP 37000" \
@@ -547,12 +547,12 @@ class SmartBot:
                                   + "\nhttps://goo.gl/maps/tKjk3fR62Gjok5FDA" \
                                   + "\n" \
                                   + "\nAhora ingresa tu sucursal mas cercana para continuar con tu compra" \
-                                  + "\n1. Regresar al menú principal🔙" \
-                                  + "\n2. Salir👋"
+                                  + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
+                                  + "@#AT#@@#OPTION#@\n2. Salir👋"
 
                 elif intencion == "chiapas":
                     if menu_tienda_linea != "quiero_comprar":
-                        mensaje = "¡Estas son las sucursales cercanas a ti!" \
+                        mensaje = "@#AT#@@#TITLE#@¡Estas son las sucursales cercanas a ti!" \
                               + "\nAlmacenes Anfora – *Tuxtla Gutiérrez*" \
                               + "\n🏨11A Oriente Norte 221, Col. Hidalgo, Tuxtla Gutiérrez, Chiapas, CP 29040" \
                               + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
@@ -560,10 +560,10 @@ class SmartBot:
                               + "\n📞961 600 0610 y 961 346 7160" \
                               + "\nhttps://goo.gl/maps/3ZkxsGaAX4SdS9CS6" \
                               + "\n" \
-                              + "\n1. Regresar al menú principal🔙" \
-                              + "\n2. Salir👋"
+                              + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
+                              + "@#AT#@@#OPTION#@\n2. Salir👋"
                     else:
-                        mensaje = "¡Estas son las sucursales cercanas a ti!" \
+                        mensaje = "@#AT#@@#TITLE#@¡Estas son las sucursales cercanas a ti!" \
                                   + "\nAlmacenes Anfora – *Tuxtla Gutiérrez*" \
                                   + "\n🏨11A Oriente Norte 221, Col. Hidalgo, Tuxtla Gutiérrez, Chiapas, CP 29040" \
                                   + "\n🕑Lunes a Sábado: 10:00 am a 8:00 pm" \
@@ -572,20 +572,27 @@ class SmartBot:
                                   + "\nhttps://goo.gl/maps/3ZkxsGaAX4SdS9CS6" \
                                   + "\n" \
                                   + "\nAhora ingresa tu sucursal mas cercana para continuar con tu compra" \
-                                  + "\n1. Regresar al menú principal🔙" \
-                                  + "\n2. Salir👋"
+                                  + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
+                                  + "@#AT#@@#OPTION#@\n2. Salir👋"
                 else:
-                    mensaje = "Por el momento, no contamos con sucursal en tu estado ☹. ¡Compra en https://www.almacenesanfora.com/, contamos con envió a toda la Republica Mexicana! 🚚" \
-                              + "\n1. Regresar al menú principal🔙" \
-                              + "\n2. Salir👋"
+                    mensaje = "@#AT#@@#TITLE#@Por el momento, no contamos con sucursal en tu estado ☹. ¡Compra en https://www.almacenesanfora.com/, contamos con envió a toda la Republica Mexicana! 🚚" \
+                              + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
+                              + "@#AT#@@#OPTION#@\n2. Salir👋"
                 users = menu_principal_salir(users)
                 return mensaje, users
 
             elif intencion == "decir_sucursal":
 
-                mensaje = "Por favor compárteme tu número de teléfono a 10 dígitos" \
-                          + "\n1. Regresar al menú principal🔙" \
-                          + "\n2. Salir"
+                mensaje = "@#AT#@@#TITLE#@Por favor compárteme tu número de teléfono a 10 dígitos" \
+                          + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
+                          + "@#AT#@@#OPTION#@\n2. Salir"
+                users = menu_principal_salir(users)
+                return mensaje, users
+
+            elif intencion == "mensaje_covid":
+                mensaje = "@#AT#@@#IMG#@https://www.broadcasterbot.com/cliente/almacenesanfora/0001.jpg" \
+                          + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
+                          + "@#AT#@@#OPTION#@\n2. Salir"
                 users = menu_principal_salir(users)
                 return mensaje, users
 
@@ -598,32 +605,32 @@ class SmartBot:
 
                 if mtl == "quiero_comprar" and ct_now - date < timedelta(minutes=5) and text.isdigit():
                     if validar_telefono(text):
-                        mensaje = "Por favor compárteme tu correo electrónico" \
-                                  + "\n1. Regresar al menú principal🔙" \
-                                  + "\n2. Salir"
+                        mensaje = "@#AT#@@#TITLE#@Por favor compárteme tu correo electrónico" \
+                                  + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
+                                  + "@#AT#@@#OPTION#@\n2. Salir"
                     else:
-                        mensaje = "Vuelve a introducir tu número por favor" \
-                                  + "\n1. Regresar al menú principal🔙" \
-                                  + "\n2. Salir"
+                        mensaje = "@#AT#@@#TITLE#@Vuelve a introducir tu número por favor" \
+                                  + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
+                                  + "@#AT#@@#OPTION#@\n2. Salir"
                     users = menu_principal_salir(users)
                 elif mtl == "rastrear_pedido" and ct_now - date < timedelta(minutes=5) and text.isdigit():
                     if len(text) == 8:
                         self.update_request('numero_orden', )
-                        mensaje = "En seguida te contactaré con un agente de Ventas @#ADDITIONALTEXT#@@#DELEGATE#@"
+                        mensaje = "En seguida te contactaré con un agente de Ventas @#AT#@@#DELEGATE#@"
                     else:
-                        mensaje = "Ingresa nuevamente tu N° de orden por favor" \
-                                  + "\n1. Regresar al menú principal🔙" \
-                                  + "\n2. Salir"
+                        mensaje = "@#AT#@@#TITLE#@Ingresa nuevamente tu N° de orden por favor" \
+                                  + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
+                                  + "@#AT#@@#OPTION#@\n2. Salir"
                         users = menu_principal_salir(users)
                 elif mtl == "problema_pedido" and text.isdigit():
-                    mensaje = "En seguida te contactaré con un agente de Ventas @#ADDITIONALTEXT#@@#DELEGATE#@"
+                    mensaje = "@#AT#@@#TITLE#@En seguida te contactaré con un agente de Ventas @#AT#@@#DELEGATE#@"
                 elif mtl == "cancelar_pedido" and text.isdigit():
                     if self.laboral():
-                        mensaje = "En seguida te contactaré con un agente de Ventas @#ADDITIONALTEXT#@@#DELEGATE#@"
+                        mensaje = "@#AT#@@#TITLE#@En seguida te contactaré con un agente de Ventas @#AT#@@#DELEGATE#@"
                     else:
-                        mensaje = "Hemos recibido tu mensaje y una persona te atenderá lo antes posible. Nuestros " \
+                        mensaje = "@#AT#@@#TITLE#@Hemos recibido tu mensaje y una persona te atenderá lo antes posible. Nuestros " \
                                   "horarios de servicio son de Lunes a Sábado de 0 8: 00 am a 05: 00 pm. " \
-                                  " @#ADDITIONALTEXT#@@#DELEGATE#@"
+                                  " @#AT#@@#DELEGATE#@"
                 else:
                     mensaje, users = self.saludar(users)
                     users = menu_principal_salir(users)
@@ -650,19 +657,19 @@ class SmartBot:
                 if mtl == "rastrear_pedido" and valido:
                     if valido:
                         # aqui va un ws
-                        mensaje = "Hemos recibido tu fecha de nacimiento, estamos buscando tu pedido 🔎 \n¡Espera un " \
+                        mensaje = "@#AT#@@#TITLE#@Hemos recibido tu fecha de nacimiento, estamos buscando tu pedido 🔎 \n¡Espera un " \
                                   "momento! "
                         mensaje = mensaje + "\nTu pedido ya está listo. 👇 \n¡Gracias por utilizar este servicio!" \
-                            + "\n1. Regresar al menú principal🔙" \
-                            + "\n2. Salir👋"
+                            + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
+                            + "@#AT#@@#OPTION#@\n2. Salir👋"
 #                        mensaje si no esta el pedido
 #                        Almacenes Anfora: A tu pedido le falta un poco más de tiempo, ten paciencia, por f
                 elif mtl == "problema_pedido" and valido:
-                    mensaje = " @#ADDITIONALTEXT#@@#DELEGATE#@"
+                    mensaje = " @#AT#@@#DELEGATE#@"
                 else:
-                    mensaje = "Vuelve a ingresar tu fecha de nacimiento por favor" \
-                              + "\n1. Regresar al menú principal🔙" \
-                              + "\n2. Salir👋"
+                    mensaje = "@#AT#@@#TITLE#@Vuelve a ingresar tu fecha de nacimiento por favor" \
+                              + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
+                              + "@#AT#@@#OPTION#@\n2. Salir👋"
                 users = menu_principal_salir(users)
                 return mensaje, users
 
@@ -671,24 +678,24 @@ class SmartBot:
                 ct = datetime.now(tz=tz)
                 day = ct.day
                 if day <= 16:
-                    mensaje = "En seguida te contactaré con un agente de Ventas @#ADDITIONALTEXT#@https://www.broadcasterbot.com/cliente/almacenesanfora/1q.jpg " \
-                          " @#ADDITIONALTEXT#@@#DELEGATE#@"
+                    mensaje = "@#AT#@@#TITLE#@En seguida te contactaré con un agente de Ventas @#AT#@@#IMG#@https://www.broadcasterbot.com/cliente/almacenesanfora/1q.jpg " \
+                          " @#AT#@@#DELEGATE#@"
                 else:
-                    mensaje = "En seguida te contactaré con un agente de Ventas @#ADDITIONALTEXT#@https://www.broadcasterbot.com/cliente/almacenesanfora/2q.jpg" \
-                              " @#ADDITIONALTEXT#@@#DELEGATE#@"
+                    mensaje = "@#AT#@@#TITLE#@En seguida te contactaré con un agente de Ventas @#AT#@@#IMG#@https://www.broadcasterbot.com/cliente/almacenesanfora/2q.jpg" \
+                              " @#AT#@@#DELEGATE#@"
                 return mensaje, users
 
             elif intencion == "dar_correo":
                 if is_valid_email(text):
-                    mensaje = "¡Perfecto! 👏, Prepárate 📝" \
+                    mensaje = "@#AT#@@#TITLE#@¡Perfecto! 👏, Prepárate 📝" \
                               + "💡 TIP: Puedes mandar la foto de tu lista con el nombre de cada artículo y cantidad " \
                                 "que " \
                               + "necesitas (piezas)." \
                                 " Un agente tomará tu pedido ¿Estás listo?" \
-                              + "\n1. Si" \
-                              + "\n2. No" \
-                              + "\n3. Regresar al menú principal🔙" \
-                              + "\n4. Salir👋"
+                              + "@#AT#@@#OPTION#@\n1. Si" \
+                              + "@#AT#@@#OPTION#@\n2. No" \
+                              + "@#AT#@@#OPTION#@\n3. Regresar al menú principal🔙" \
+                              + "@#AT#@@#OPTION#@\n4. Salir👋"
                     botones = [{'payload': 'agente_quiero_comprar',
                                 'title': 'Si'},
                                {'payload': 'saludar',
@@ -702,20 +709,20 @@ class SmartBot:
                         botones[i]['letter number'] = convert_to_letters(i + 1)
                     users['buttons'] = botones
                 else:
-                    mensaje = "Vuelve a ingresar tu correo por favor" \
-                              + "\n1. Regresar al menú principal🔙" \
-                              + "\n2. Salir👋"
+                    mensaje = "@#AT#@@#TITLE#@Vuelve a ingresar tu correo por favor" \
+                              + "@#AT#@@#OPTION#@\n1. Regresar al menú principal🔙" \
+                              + "@#AT#@@#OPTION#@\n2. Salir👋"
                     users = menu_principal_salir(users)
                 return mensaje, users
 
             elif intencion == "agente":
                 laboral = self.laboral()
                 if laboral:
-                    mensaje = "Comunicando con un operador @#ADDITIONALTEXT#@@#DELEGATE#@"
+                    mensaje = "@#AT#@@#TITLE#@Comunicando con un operador @#AT#@@#DELEGATE#@"
                 else:
-                    mensaje = "Hemos recibido tu mensaje y una persona te atenderá lo antes posible. Nuestros " \
+                    mensaje = "@#AT#@@#TITLE#@Hemos recibido tu mensaje y una persona te atenderá lo antes posible. Nuestros " \
                               "horarios de servicio son de Lunes a Sábado de 0 8: 00 am a 05: 00 pm. " \
-                              " @#ADDITIONALTEXT#@@#DELEGATE#@"
+                              " @#AT#@@#DELEGATE#@"
                 return mensaje, users
 
         mensaje = ''
@@ -726,20 +733,6 @@ class SmartBot:
         var = re.compile("{nombre}")
         if re.search(var, mensaje):
             mensaje = mensaje.format(nombre=users['name'])
-        #self.save_info(text, mensaje, NLU, users['buttons'])
-        #print("*" * 40)
-        #print("USERS")
-        #print(users)
-        #print("TEXT")
-        #print(text)
-        #print("SPEECH")
-        #print(speech)
-        #print("INTENCION")
-        #print(intencion)
-        #print("CONFIANZA")
-        #print(confianza)
-        #print("*" * 40)
-        # save info
         return mensaje, users
 
     def extraer_intenciones(self, text):
@@ -882,26 +875,26 @@ class SmartBot:
         # hour = ct.hour
         # weekday = ct.isoweekday()
         if self.laboral():
-            mensaje = "¡Hola! 👋 Soy el Asistente Virtual de Almacenes Anfora. 🤖 🍴" \
+            mensaje = "@#AT#@@#TITLE#@¡Hola! 👋 Soy el Asistente Virtual de Almacenes Anfora. 🤖 🍴" \
                       + "\n¿Qué deseas? Escribe el número." \
-                      + "\n1. Sucursales (Horario, teléfono y ubicación) ☎️" \
-                      + "\n2. Tienda en línea 🛒" \
-                      + "\n3. Cotizaciones 💰" \
-                      + "\n4. Promociones 🔔" \
-                      + "\n5. Almacenes Anfora: Antes de visitarnos, te invitamos a conocer las medidas preventivas " \
+                      + "@#AT#@@#OPTION#@\n1. Sucursales (Horario, teléfono y ubicación) ☎️" \
+                      + "@#AT#@@#OPTION#@\n2. Tienda en línea 🛒" \
+                      + "@#AT#@@#OPTION#@\n3. Cotizaciones 💰" \
+                      + "@#AT#@@#OPTION#@\n4. Promociones 🔔" \
+                      + "@#AT#@@#OPTION#@\n5. Almacenes Anfora: Antes de visitarnos, te invitamos a conocer las medidas preventivas " \
                         "que tenemos actualmente en nuestras tiendas, solo escribe 5" \
-                      + "\n6. Salir👋 @#ADDITIONALTEXT#@https://www.broadcasterbot.com/cliente/almacenesanfora/logo.jpg"
+                      + "@#AT#@@#OPTION#@\n6. Salir👋 @#AT#@@#IMG#@https://www.broadcasterbot.com/cliente/almacenesanfora/logo.jpg"
         else:
-            mensaje = "¡Hola! 👋 Soy el Asistente Virtual de Almacenes Anfora. 🤖 🍴" \
+            mensaje = "@#AT#@@#TITLE#@¡Hola! 👋 Soy el Asistente Virtual de Almacenes Anfora. 🤖 🍴" \
                       + "Nuestros horarios de servicio son de Lunes a Sábado de 08:00 am a 05:00 pm." \
                       + "\n¿Qué deseas? Escribe el número." \
-                      + "\n1. Sucursales (Horario, teléfono y ubicación) ☎️" \
-                      + "\n2. Tienda en línea 🛒" \
-                      + "\n3. Cotizaciones 💰" \
-                      + "\n4. Promociones 🔔" \
-                      + "\n5. Almacenes Anfora: Antes de visitarnos, te invitamos a conocer las medidas preventivas " \
+                      + "@#AT#@@#OPTION#@\n1. Sucursales (Horario, teléfono y ubicación) ☎️" \
+                      + "@#AT#@@#OPTION#@\n2. Tienda en línea 🛒" \
+                      + "@#AT#@@#OPTION#@\n3. Cotizaciones 💰" \
+                      + "@#AT#@@#OPTION#@\n4. Promociones 🔔" \
+                      + "@#AT#@@#OPTION#@\n5. Almacenes Anfora: Antes de visitarnos, te invitamos a conocer las medidas preventivas " \
                         "que tenemos actualmente en nuestras tiendas, solo escribe 5" \
-                      + "\n6. Salir👋 @#ADDITIONALTEXT#@https://www.broadcasterbot.com/cliente/almacenesanfora/logo.jpg"
+                      + "@#AT#@@#OPTION#@\n6. Salir👋 @#AT#@@#IMG#@https://www.broadcasterbot.com/cliente/almacenesanfora/logo.jpg"
         botones = [{'payload': 'sucursales',
                     'title': 'Sucursales (Horario, teléfono y ubicación)'},
                    {'payload': 'tienda_linea',
@@ -939,33 +932,158 @@ class SmartBot:
         else:
             self.original_text = 'xxxx'
         # coordenadas
-        if D.get("lat") or D.get("lng"):
-            self.original_text = "xxxxx"
-            self.lat = ""
-            self.lng = ""
+        self.lat = D.get("lat")
+        self.lng = D.get("lng")
+        if D.get("lat") and D.get("lng"):
+            self.original_text = "mapa"
+        else:
+            lat = ""
+            lng = ""
         if D.get("audio"):
             audio = D.get("audio")
-            D["body"] = 'xxxxx'
+            D["body"] = 'xxxx'
         # Se verifica si el usuario existe
         if not users.get(self.main_user):
             users[self.main_user] = {'name': 'Humano', 'buttons': []}
-        respuesta, users[self.main_user] = self.bot(self.original_text, users[self.main_user])
-        mensajes = []
-        imagenes = []
-        banderas = []
-        res = str(respuesta)
-        lista = res.split(" @#ADDITIONALTEXT#@")
-        for i in range(len(lista)):
-            if lista[i].find("@#DELEGATE#@") == -1 and lista[i].find("@#COMPLETE#@") == -1 \
-                    and lista[i].find(".jpg") == -1:
-                mensajes.append(str(lista[i]))
-            if lista[i].find("@#DELEGATE#@") != -1 or lista[i].find("@#COMPLETE#@") != -1:
-                banderas.append(str(lista[i]))
-            if lista[i].find(".jpg") != -1:
-                if lista[i][-1] == " ":
-                    lista[i] = lista[i][:-1]
-                imagenes.append(str(lista[i]))
-        for i in range(len(banderas)):
-            mensajes.append(banderas[i])
+        response, users[self.main_user] = self.bot(self.original_text, users[self.main_user])
+        response = str(response)
+        titles = []
+        images = []
+        pdfs = []
+        xlsxs = []
+        flags = []
+        options_0 = []
+        texts_0 = []
+        options = []
+        texts = []
+        messages = []
+        lista = response.split("@#AT#@")
+        text = ""
 
-        return {"cuerpo": mensajes, "imagen": imagenes, "compania": "Almacenes Anfora"}
+        for elem in lista:
+            if "@#TITLE#@" in elem:
+                title = elem.replace('@#TITLE#@', '')
+                titles.append(title)
+            elif "@#OPTION_0#@" in elem:
+                option = elem.replace('@#OPTION_0#@', '')
+                options_0.append(option)
+            elif "@#IMG#@" in elem:
+                link_image = elem.replace('@#IMG#@', '')
+                image = {link_image: None}
+                images.append(image)
+            elif "@#PDF#@" in elem:
+                pdf = elem.replace('@#PDF#@', '')
+                pdfs.append(pdf)
+            elif "@#XLSX#@" in elem:
+                xlsx = elem.replace('@#XLSX#@', '')
+                xlsxs.append(xlsx)
+            elif "@#CAPTION#@" in elem and images:
+                option = elem.replace('@#CAPTION#@', '')
+                images[-1][link_image] = option
+            elif "@#TEXT_0#@" in elem:
+                text = elem.replace('@#TEXT_0#@', '')
+                texts_0.append(text)
+            elif "@#OPTION#@" in elem:
+                option = elem.replace('@#OPTION#@', '')
+                options.append(option)
+            elif "@#TEXT#@" in elem:
+                text = elem.replace('@#TEXT#@', '')
+                texts.append(text)
+            elif "@#DELEGATE#@" in elem:
+                flags.append('@#DELEGATE#@')
+            elif "@#COMPLETE#@" in elem:
+                flags.append('@#COMPLETE#@')
+
+        text_options = ""
+
+        for title in titles:
+            text = text + title
+        for option in options:
+            text = text + option
+        for image in images:
+            url = list(image.keys())[0]
+            message = {
+                "type": "image",
+                "url": url.strip()
+            }
+            messages.append(message)
+        for pdf in pdfs:
+            message = {
+                "type": "pdf",
+                "url": pdf
+            }
+            messages.append(message)
+        for xlsx in xlsxs:
+            message = {
+                "type": "xlsx",
+                "url": xlsx
+            }
+            messages.append(message)
+        for image in images:
+            caption = list(image.values())[0]
+            if caption:
+                text = caption + "\n" + text
+        ls = []
+        for message in messages:
+            dic = {"file":
+                       message,
+                   "text": ""}
+            ls.append(dic)
+        if text and ls:
+            ls[0]['text'] = text.rstrip()
+        new_title = ""
+        for title in titles:
+            new_title = new_title + "" + title
+        new_title = new_title.rstrip()
+        if images:
+            url2 = list(images[0].keys())[0].strip()
+        else:
+            url2 = ""
+        opciones = []
+
+        if options:
+            for index, opcion in enumerate(options):
+                if index == len(options) - 1:
+                    opcion = opcion.rstrip("\n")
+                dic = {"description": opcion,
+                       "value": index + 1}
+                text_options = text_options + ' ' + opcion
+                opciones.append(dic)
+        optionTypes = ""
+
+        if ls:
+            optionTypes = "RICH_CARD"
+        else:
+            if text_options != "":
+                text_options = "\n" + text_options
+            ls = [
+                {
+                    "file": {},
+                    "text": new_title.strip() + text_options.rstrip()
+                },
+            ]
+
+        if not optionTypes and not text_options:
+            optionTypes = "TEXT"
+            return {"messages": ls,
+                    "flags": flags,
+                    "messagesOptions": {},
+                    "optionTypes": optionTypes}
+            if not optionTypes and text_options:
+                optionTypes = "SUGGESTIONS"
+
+        if not optionTypes and text_options:
+            optionTypes = "SUGGESTIONS"
+
+        return {
+            "messages": ls,
+            "flags": flags,
+            "messagesOptions": {
+                "title": new_title.rstrip(),
+                "description": new_title.rstrip(),
+                "urlImage": url2,
+                "options": opciones
+            },
+            "optionTypes": optionTypes,
+            "workGroupId": None
+        }
