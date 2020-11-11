@@ -2,10 +2,10 @@
   "config": "99914b932bd37a50b983c5e7c90ae93b",
   "core-config": "95c1b632bd1c398582f24965d588acc2",
   "nlu-config": "e9aa5c2ecccc9a4a273b7d67a64c85c7",
-  "domain": 2008895274986675010,
-  "nlg": "c7125c9e54d5a8c6a222c067b2bf3a33",
+  "domain": 1775917159358388068,
+  "nlg": "d1e7934de437344e1c62a5fd82444f08",
   "messages": 89935203893999183,
-  "stories": 258197402831514359,
-  "trained_at": 1600186852.6028354,
+  "stories": 2075976031769546355,
+  "trained_at": 1604421974.7553213,
   "version": "1.5.0"
 }

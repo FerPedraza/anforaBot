@@ -3,110 +3,107 @@
     "action_listen": {
       "slots": []
     },
-    "utter_morelos": {
-      "slots": []
-    },
-    "utter_michoacan": {
-      "slots": []
-    },
-    "utter_salir": {
-      "slots": []
-    },
-    "utter_quintana_roo": {
-      "slots": []
-    },
-    "utter_coahuila": {
-      "slots": []
-    },
-    "utter_baja_california_sur": {
-      "slots": []
-    },
-    "utter_sinaloa": {
-      "slots": []
-    },
-    "utter_mensaje_covid": {
-      "slots": []
-    },
-    "utter_chihuahua": {
-      "slots": []
-    },
-    "utter_tlaxcala": {
-      "slots": []
-    },
-    "utter_quiero_comprar": {
+    "utter_tienda_linea": {
       "slots": []
     },
     "utter_puebla": {
       "slots": []
     },
-    "utter_guerrero": {
-      "slots": []
-    },
-    "utter_zacatecas": {
-      "slots": []
-    },
-    "utter_oaxaca": {
-      "slots": []
-    },
-    "utter_campeche": {
-      "slots": []
-    },
     "utter_nayarit": {
       "slots": []
     },
-    "utter_durango": {
+    "utter_tlaxcala": {
       "slots": []
     },
-    "utter_sucursales": {
+    "utter_michoacan": {
       "slots": []
     },
-    "utter_tienda_linea": {
-      "slots": []
-    },
-    "utter_rastrear_pedido": {
-      "slots": []
-    },
-    "utter_problema_pedido": {
-      "slots": []
-    },
-    "utter_cotizaciones": {
-      "slots": []
-    },
-    "utter_tamaulipas": {
-      "slots": []
-    },
-    "utter_colima": {
-      "slots": []
-    },
-    "utter_agente_quiero_comprar": {
-      "slots": []
-    },
-    "utter_sonora": {
-      "slots": []
-    },
-    "utter_tabasco": {
+    "utter_sinaloa": {
       "slots": []
     },
     "utter_san_luis_potosi": {
       "slots": []
     },
-    "utter_baja_california": {
+    "utter_durango": {
       "slots": []
     },
-    "utter_nuevo_leon": {
+    "utter_quiero_comprar": {
+      "slots": []
+    },
+    "utter_sucursales": {
+      "slots": []
+    },
+    "utter_tabasco": {
+      "slots": []
+    },
+    "utter_baja_california_sur": {
+      "slots": []
+    },
+    "utter_problema_pedido": {
       "slots": []
     },
     "utter_cancelar_pedido": {
       "slots": []
     },
-    "utter_yucatan": {
+    "utter_nuevo_leon": {
+      "slots": []
+    },
+    "utter_zacatecas": {
+      "slots": []
+    },
+    "utter_sonora": {
+      "slots": []
+    },
+    "utter_agente_quiero_comprar": {
+      "slots": []
+    },
+    "utter_tamaulipas": {
+      "slots": []
+    },
+    "utter_rastrear_pedido": {
+      "slots": []
+    },
+    "utter_campeche": {
+      "slots": []
+    },
+    "utter_coahuila": {
+      "slots": []
+    },
+    "utter_colima": {
+      "slots": []
+    },
+    "utter_salir": {
+      "slots": []
+    },
+    "utter_baja_california": {
+      "slots": []
+    },
+    "utter_chihuahua": {
+      "slots": []
+    },
+    "utter_guerrero": {
+      "slots": []
+    },
+    "utter_cotizaciones": {
       "slots": []
     },
     "utter_jalisco": {
       "slots": []
+    },
+    "utter_oaxaca": {
+      "slots": []
+    },
+    "utter_quintana_roo": {
+      "slots": []
+    },
+    "utter_morelos": {
+      "slots": []
+    },
+    "utter_yucatan": {
+      "slots": []
     }
   },
-  "python": "3.7.5",
+  "python": "3.7.9",
   "max_histories": [
     5,
     5,
@@ -118,7 +115,7 @@
     "rasa.core.policies.keras_policy.KerasPolicy",
     "rasa.core.policies.mapping_policy.MappingPolicy"
   ],
-  "trained_at": "20200915-112219",
+  "trained_at": "20201103-104722",
   "rasa": "1.5.0",
   "tensorflow": "1.15.2",
   "sklearn": "0.20.4"
