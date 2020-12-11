@@ -45,7 +45,7 @@ class SmartBot:
         if platform.node() == "u1" or platform.node() == "DESKTOP-0CKRHA6" or platform.node() == "karma":
             ip = "localhost"
         else:
-            ip = "172.17.0.9"
+            ip = "10.100.4.30"
         b_client = pymongo.MongoClient("10.100.13.20", 27017) #serv mongo 10.100.13.20 #docker 172.17.0.8
         db = b_client['Bots']
         self.colection = db['Anfora']
@@ -330,6 +330,14 @@ class SmartBot:
                               + "\n📞55 5077 7316" \
                               + "\nhttps://goo.gl/maps/KjpQmnsW2P6BpwtM7" \
                               + "\n" \
+                              + "\n  Almacenes Anfora – *Tlanlnepantla*" \
+                              + "\n🏨Calle Cuitláhuac 93" \
+                              + " San Javier 54030 Tlalnepantla de Baz, Méx." \
+                              + "\n🕑Lunes a Sábado: 9:00 am a 7:00 pm" \
+                              + "\n   Domingo: 10:00 am a 6:00 pm" \
+                              + "\n📞55 5130 3280 ext. 3308" \
+                              + "\nhttps://goo.gl/maps/X19mGKfu6sm23DZp9" \
+                              + "\n" \
                               + "\n  Almacenes Anfora – *Chalco*" \
                               + "\n🏨Av. Nacional no.57 Col. San Sebastian Mpio. De Chalco, Estado de México, " \
                                 "C.P.  56600" \
@@ -357,6 +365,14 @@ class SmartBot:
                                   + "\n   Domingo: 10:00 am a 6:00 pm" \
                                   + "\n📞55 5077 7316" \
                                   + "\nhttps://goo.gl/maps/KjpQmnsW2P6BpwtM7" \
+                                  + "\n" \
+                                  + "\n  Almacenes Anfora – *Tlanlnepantla*" \
+                                  + "\n🏨Calle Cuitláhuac 93" \
+                                  + " San Javier 54030 Tlalnepantla de Baz, Méx." \
+                                  + "\n🕑Lunes a Sábado: 9:00 am a 7:00 pm" \
+                                  + "\n   Domingo: 10:00 am a 6:00 pm" \
+                                  + "\n📞55 5130 3280 ext. 3308" \
+                                  + "\nhttps://goo.gl/maps/X19mGKfu6sm23DZp9" \
                                   + "\n" \
                                   + "\n  Almacenes Anfora – *Chalco*" \
                                   + "\n🏨Av. Nacional no.57 Col. San Sebastian Mpio. De Chalco, Estado de México, " \

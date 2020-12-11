@@ -256,6 +256,8 @@
 - aranda
 - articulo 123
 - ecatepec
+- tlalnepantla
+- tlalne
 - chalco
 - tacubaya
 - queretaro zaragoza
@@ -281,6 +283,8 @@
 - sucursal aranda
 - sucursal articulo 123
 - sucursal ecatepec
+- sucursal tlalnepantla
+- sucursal tlalne
 - sucursal chalco
 - sucursal tacubaya
 - sucursal queretaro zaragoza
