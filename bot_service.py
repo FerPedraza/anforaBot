@@ -6,15 +6,21 @@ from bot import SmartBot
 from unpacking_tar import unpacking_tar
 from start_logs import logs
 global interpreter,agent,users,B_Client
-
+import os
 # desempaqueta ultimo modelo entrenado
 unpacking_tar()
 
 path_model = './models/train/'
 path_nlu = './models/train/nlu'
 
-agent = Agent.load(path_model)
-interpreter = RasaNLUInterpreter(path_nlu)
+BOTANFORA_DIR = os.path.dirname(os.path.abspath(__file__))
+MODELS_PATH = os.path.join(BOTANFORA_DIR, 'models')
+MODELS_TRAIN_PATH = os.path.join(MODELS_PATH, 'train')
+NLU_PATH = os.path.join(MODELS_TRAIN_PATH, 'nlu')
+
+
+agent = Agent.load(MODELS_TRAIN_PATH)
+interpreter = RasaNLUInterpreter(NLU_PATH)
 Bot=SmartBot()
 
 app = Flask(__name__)

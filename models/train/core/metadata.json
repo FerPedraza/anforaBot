@@ -103,19 +103,15 @@
       "slots": []
     }
   },
-  "python": "3.7.9",
+  "python": "3.7.4",
   "max_histories": [
-    5,
-    5,
-    null
+    5
   ],
   "ensemble_name": "rasa.core.policies.ensemble.SimplePolicyEnsemble",
   "policy_names": [
-    "rasa.core.policies.memoization.MemoizationPolicy",
-    "rasa.core.policies.keras_policy.KerasPolicy",
-    "rasa.core.policies.mapping_policy.MappingPolicy"
+    "rasa.core.policies.memoization.AugmentedMemoizationPolicy"
   ],
-  "trained_at": "20201103-104722",
+  "trained_at": "20201211-175431",
   "rasa": "1.5.0",
   "tensorflow": "1.15.2",
   "sklearn": "0.20.4"
